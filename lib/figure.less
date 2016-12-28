@@ -26,13 +26,13 @@ div.left, section.left, div.right, section.left {
   border-top: 1px solid transparent;
 }
 
-@media @floatBreak { 
+@media @floatBreak {
 
   figure.left,
   figure.right {
     width: calc(50% - 1rem);
     clear: both;
-    @oneThirdLine: (@lineHeight / 3);
+    // @oneThirdLine: (@lineHeight / 3);
     margin-top: ~'@{oneThirdLine}rem';
   }
 
@@ -52,9 +52,9 @@ div.left, section.left, div.right, section.left {
   }
 
   // so if the text is of to the side, the figure takes up remaining space
-  .right figure.left, 
+  .right figure.left,
   .left figure.right {
-    width: calc(100% - @textWidth);
+    // width: calc(100% - @textWidth);
   }
   .right figure.left {
     margin-left: -1rem;
@@ -144,11 +144,11 @@ figure .frame {
 
 figure.dark-text {
   &,
-  h1, 
-  h2, 
-  h3, 
-  h4, 
-  h5, 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
   h6 {
     color: #111;
   }
@@ -162,7 +162,7 @@ html.javascript [x-cp-figure] {
     position: absolute;
     top: 0;
   }
-  .right { 
+  .right {
     position: absolute;
     right: 0;
   }
