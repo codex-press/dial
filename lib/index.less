@@ -3,9 +3,6 @@
 @laptop:  ~"(min-width: 801px) and (max-width: 1100px)";
 @desktop: ~"(min-width: 1101px)";
 
-@import '_variables.less';
-@import 'index.less';
-
 html {
   font-family: @font;
   color: @fontColor;
@@ -203,6 +200,7 @@ a:visited {
   margin: .5em;
 }
 
-@import "figure";
-@import "table";
-@import "utility_classes";
+@import "_variables.less";
+@import "figure.less";
+@import "table.less";
+@import "utility_classes.less";
