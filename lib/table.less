@@ -1,0 +1,42 @@
+table {
+  margin: 1rem auto;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+}
+
+th, td {
+  vertical-align: top;
+  padding: 0.5rem;
+}
+
+// text-width
+table.text-width {
+  width: 100%;
+  max-width: @textWidth;
+}
+
+// lined 
+table.lined tr {
+  border-bottom: .02em solid currentColor;
+  padding: 0.3rem;
+}
+
+// grid
+table.grid td {
+  border: .02em solid grey;
+  padding: 0.3rem;
+}
+
+// striped
+table.striped tbody tr:nth-child(odd) {
+  background-color: @stripedTableColor;
+}
+
+// padded
+table.padded th,
+table.padded td {
+  padding: 1rem;
+}
