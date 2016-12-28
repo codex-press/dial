@@ -1,12 +1,12 @@
 figure {
-  // width: @textWidth;
+  width: @textWidth;
   max-width: 100%;
   max-height: 100vh;
   margin: 1rem auto;
 }
 
 figcaption {
-  //color: @captionColor;
+  color: @captionColor;
   font-size: .9em;
 }
 
@@ -32,7 +32,7 @@ div.left, section.left, div.right, section.left {
   figure.right {
     width: calc(50% - 1rem);
     clear: both;
-    // @oneThirdLine: (@lineHeight / 3);
+    @oneThirdLine: (@lineHeight / 3);
     margin-top: ~'@{oneThirdLine}rem';
   }
 
@@ -54,7 +54,7 @@ div.left, section.left, div.right, section.left {
   // so if the text is of to the side, the figure takes up remaining space
   .right figure.left,
   .left figure.right {
-    // width: calc(100% - @textWidth);
+    width: calc(100% - @textWidth);
   }
   .right figure.left {
     margin-left: -1rem;
