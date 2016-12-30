@@ -63,7 +63,21 @@ aside.pullquote {
   padding: 20px;
   font-size: 2em;
   line-height: 1;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #ccc;
 }
+
+aside.pullquote:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100px;
+  top: -5px;
+  left: 0px;
+  border: 1px solid white;
 
 aside.pullquote .attribution:before {
   content: "\2014";
