@@ -64,8 +64,11 @@ font-family: 'Lato', sans-serif;
   margin: 1rem auto;
 }
 
+:not(p) > address.byline:before {
+  content: 'By';
+}
+
 :not(p) > address.byline {
-  content-left: 'By';
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2em;
   width: @textWidth;
