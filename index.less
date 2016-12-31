@@ -98,21 +98,21 @@ aside.sidebar {
   aside.sidebar.left {
     float: left;
     clear: both;
-    margin-right: 5rem;
+    //margin-right: 5rem;
   }
 
   aside.pullquote.right,
   aside.sidebar.right {
     float: right;
     clear: both;
-    margin-left: 5rem;
+    //margin-left: 5rem;
   }
 
-  //aside.pullquote.right,
-//  aside.pullquote.left {
-    //@oneThirdLine: (@lineHeight / 3);
-    //margin-top: ~'@{oneThirdLine}rem';
-  //}
+  aside.pullquote.right,
+  aside.pullquote.left {
+    @oneThirdLine: (@lineHeight / 3);
+    margin-top: ~'@{oneThirdLine}rem';
+  }
 
 
 }
