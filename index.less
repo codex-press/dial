@@ -4,14 +4,19 @@
 @import 'lib/index.less';
 
 html {
-  @media @mobile { font-size: 15px; }
+  @media @mobile { font-size: 16px; }
   @media @tablet { font-size: 16px; }
   @media @laptop { font-size: 18px; }
   @media @desktop { font-size: 20px; }
 }
 
 h1.hed {
-  font-weight: normal;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3.5em;
+  margin-top: 1em;
+  line-height: 0.75;
+  font-weight: 600;
+  color: @fontColor;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,15 +42,35 @@ p.intro,
 }
 
 aside.editors-note {
-  font-style: italic;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.7em;
+  text-align: center;
+  font-style: 'light-italic';
+  font-weight: 400;
   margin: 1rem auto;
+  padding: 20px;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #ccc;
+  line-height: 1;
 }
 
 aside.pullquote {
+  font-family: 'Ubuntu', sans-serif;
+  max-width: 400px;
   margin: 1rem auto;
-  font-style: italic;
-  font-size: 1.4em;
-  line-height: 1.5;
+  color: @anchorColor;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+  line-height: 1;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+
 }
 
 aside.pullquote .attribution:before {
@@ -71,14 +96,14 @@ aside.sidebar {
   aside.sidebar.left {
     float: left;
     clear: both;
-    margin-right: 1rem;
+    margin-right: 5rem;
   }
 
   aside.pullquote.right,
   aside.sidebar.right {
     float: right;
     clear: both;
-    margin-left: 1rem;
+    margin-left: 5rem;
   }
 
   aside.pullquote.right,
@@ -87,15 +112,29 @@ aside.sidebar {
     margin-top: ~'@{oneThirdLine}rem';
   }
 
-  aside.sidebar.right,
-  aside.sidebar.left {
-    margin-top: 0;
+
+}
+
+@media (max-width: 600px) {
+
+  aside.sidebar,
+  aside.pullquote {
+    float: none;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: @anchorColor;
+    color: #000;
+    border: none;
+    margin: 0;
+    font-size: 1.2em;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
 }
 
 // on extra large screens they stay somewhat in the middle
-@media (min-width: 1400px) {
+@media (min-width: 600px) {
 
   aside.sidebar.left,
   aside.pullquote.left {
@@ -110,7 +149,12 @@ aside.sidebar {
 }
 
 blockquote {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
   margin: 1rem auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding: 0 2rem;
 }
 
