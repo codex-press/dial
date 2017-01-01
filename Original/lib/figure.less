@@ -1,0 +1,178 @@
+figure {
+  width: @textWidth;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: 1rem auto;
+}
+
+figcaption {
+  color: @captionColor;
+  font-size: .9em;
+}
+
+figure.full-width,
+figure.full-window {
+  margin: 1rem -1rem;
+}
+
+// at the top of the story it's got no margin
+article > figure.full-window:first-child,
+article > :first-child > figure.full-window:first-child {
+  margin-top: 0;
+}
+
+// prevent margin collapse with children
+div.left, section.left, div.right, section.left {
+  border-top: 1px solid transparent;
+}
+
+@media @floatBreak {
+
+  figure.left,
+  figure.right {
+    width: calc(50% - 1rem);
+    clear: both;
+    @oneThirdLine: (@lineHeight / 3);
+    margin-top: ~'@{oneThirdLine}rem';
+  }
+
+  figure.left {
+    float: left;
+    margin-right: 1rem;
+  }
+
+  figure.right {
+    float: right;
+    margin-left: 1rem;
+  }
+
+  figure.left:first-child,
+  figure.right:first-child {
+    margin-top: 0;
+  }
+
+  // so if the text is of to the side, the figure takes up remaining space
+  .right figure.left,
+  .left figure.right {
+    width: calc(100% - @textWidth);
+  }
+  .right figure.left {
+    margin-left: -1rem;
+  }
+  .left figure.right {
+    margin-right: -1rem;
+  }
+
+}
+
+
+// // on very large screens they take up more space
+// @media (min-width: 1400px) {
+
+//   // this keeps it half into the center text column
+//   figure.left {
+//     margin-left: calc(10% - (@textWidth/2));
+//   }
+
+//   figure.right {
+//     margin-right: calc(10% - (@textWidth/2));
+//   }
+
+// }
+
+
+// positioning [x-cp-overlay]
+[x-cp-overlay] {
+  .content-bottom {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-bottom-right {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-bottom-center {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  // center vertically
+  .content-center {
+
+  }
+
+  .content-center-left {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-center-right {
+    display: flex;
+    align-items: flex-end;
+  }
+
+
+  // top
+  .content-center {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-right {
+
+  }
+
+}
+
+
+figure .frame {
+  p, aside, h1, h2, h3, h4, h5, h6 {
+    max-width: initial;
+    color: #eee;
+  }
+
+  .light-background {
+    background: hsla(0, 100%, 100%, .65);
+  }
+
+  .dark-background {
+    background: hsla(0, 0%, 0%, .65);
+  }
+}
+
+figure.dark-text {
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #111;
+  }
+}
+
+
+
+html.javascript [x-cp-figure] {
+
+  .top {
+    position: absolute;
+    top: 0;
+  }
+  .right {
+    position: absolute;
+    right: 0;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+  }
+  .left {
+    position: absolute;
+    left: 0;
+  }
+
+}
