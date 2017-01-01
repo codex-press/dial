@@ -42,15 +42,35 @@ p.intro,
 }
 
 aside.editors-note {
-  font-style: italic;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.7em;
+  text-align: center;
+  font-style: 'light-italic';
+  font-weight: 400;
   margin: 1rem auto;
+  padding: 20px;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #ccc;
+  line-height: 1;
 }
 
 aside.pullquote {
+  font-family: 'Ubuntu', sans-serif;
+  max-width: 400px;
   margin: 1rem auto;
-  font-style: italic;
-  font-size: 1.4em;
-  line-height: 1.5;
+  color: @anchorColor;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+  line-height: 1;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+
 }
 
 aside.pullquote .attribution:before {
@@ -68,7 +88,6 @@ aside.sidebar {
     font-size: 1.7rem;
   }
 }
-
 
 
 @media @floatBreak {
