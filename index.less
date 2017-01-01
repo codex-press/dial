@@ -55,7 +55,6 @@ aside.editors-note {
 }
 
 aside.pullquote {
-  max-width:400px;
   font-family: 'Ubuntu', sans-serif;
   color: @anchorColor;
   font-weight: bold;
@@ -117,6 +116,10 @@ aside.sidebar {
 // on extra large screens they stay somewhat in the middle
 @media (min-width: 1400px) {
 
+  aside.pullquote {
+    max-width:400px;
+  }
+  
   aside.sidebar.left,
   aside.pullquote.left {
     margin-left: 10%;
