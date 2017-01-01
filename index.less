@@ -40,36 +40,16 @@ p.intro,
 .intro p {
   text-align: justify;
 }
-
 aside.editors-note {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.7em;
-  text-align: center;
-  font-style: 'light-italic';
-  font-weight: 400;
+  font-style: italic;
   margin: 1rem auto;
-  border-top: 1px;
-  border-bottom: 1px;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-color: #ccc;
-  line-height: 1;
 }
 
 aside.pullquote {
-  max-width:450px;
-  font-family: 'Ubuntu', sans-serif;
   margin: 1rem auto;
-  color: @anchorColor;
-  font-weight: bold;
-  text-align: left;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 1.5em;
-  line-height: 1;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-
+  font-style: italic;
+  font-size: 1.4em;
+  line-height: 1.5;
 }
 
 aside.pullquote .attribution:before {
@@ -95,14 +75,14 @@ aside.sidebar {
   aside.sidebar.left {
     float: left;
     clear: both;
-    margin-right: 10%;
+    margin-right: 1rem;
   }
 
   aside.pullquote.right,
   aside.sidebar.right {
     float: right;
     clear: both;
-    margin-left: 10%;
+    margin-left: 1rem;
   }
 
   aside.pullquote.right,
@@ -111,28 +91,15 @@ aside.sidebar {
     margin-top: ~'@{oneThirdLine}rem';
   }
 
-
-}
-
-@media (max-width: 600px) {
-
-  aside.sidebar,
-  aside.pullquote {
-    float: none;
-    font-style: italic;
-    text-decoration: underline;
-    text-decoration-color: @anchorColor;
-    color: #000;
-    border: none;
-    margin: 0;
-    font-size: 1.2em;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  aside.sidebar.right,
+  aside.sidebar.left {
+    margin-top: 0;
   }
 
 }
+
 // on extra large screens they stay somewhat in the middle
-@media (max-width: 1400px;) {
+@media (min-width: 1400px) {
 
   aside.sidebar.left,
   aside.pullquote.left {
@@ -145,7 +112,6 @@ aside.sidebar {
   }
 
 }
-
 blockquote {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
