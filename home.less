@@ -1,0 +1,87 @@
+@import "lib/_variables";
+
+html {
+  font-family: @font;
+  color: @fontColor;
+  background-color: @backgroundColor;
+}
+
+.page.title {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+//general styling
+
+p {
+  font-family: 'Lora', serif;
+  padding-bottom: 4px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1.hed {
+font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+  margin: auto;
+}
+
+a {
+  color: @fontColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+  transition: 0.5s;
+}
+
+// news
+
+.news {
+  background-color: white;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  max-width: 70rem;
+  margin: auto;
+}
+
+p.news {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  margin-left: -1em;
+  border-bottom: 1px solid lightgrey;
+}
+
+p.byline {
+  font-size: 2px;
+}
+
+// subscribe
+
+h3 {
+  font-size: 1.8em;
+  padding-left: 2rem auto;
+  font-weight: bold;
+}
+
+figure.signup {
+  margin-right: 0px;
+}
+
+// explainer
+
+.explainer {
+  background-color: #F2F2F2;
+  margin: auto;
+}
