@@ -2,7 +2,6 @@
 
 html {
   font-family: @font;
-  color: @fontColor;
   background-color: @backgroundColor;
 }
 
@@ -19,6 +18,7 @@ html {
 
 p {
   font-family: 'Lora', serif;
+  font-color: gray;
   font-size: 1.1em;
   padding-bottom: 4px;
 }
@@ -50,36 +50,36 @@ a:hover {
 
 // top stories
 
+div.top-stories.cover {
+  width: full-width;
 
+}
 
 // news
 
-.news {
-  background-color: white;
-  padding-top: 1em;
-
-  max-width: 70rem;
-  margin: auto;
-}
-
 .newsarticle {
-  background-color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: -1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
   position: relative;
-  padding-right: 1em;
-  padding-left: 1em;
+  padding-right: 2em;
+  padding-left: 2em;
   float: right;
-  border-bottom: 1px solid lightgrey;
+  border: 1px solid lightgrey;
 }
 
+.byline {
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
 
 div.cover {
   width: 180px;
   position: relative;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   float: left;
   padding: 20px;
 }
@@ -87,12 +87,12 @@ div.cover {
 // subscribe
 
 .signup {
-  padding-top: 2em;
-  padding-right: 1em;
-  padding-left: 1em;
-  padding-bottom: 2em;
-  max-width: 70rem;
-  margin: auto;
+  position: relative;
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 
 h3 {
@@ -105,11 +105,14 @@ h3 {
 figure.signup {
   margin-right: -10%;
   position: relative;
+  padding-bottom: 1.5em;
 }
 
 // explainer
 
 .explainer {
-  background-color: #F2F2F2;
-  margin: auto;
+  text-align: center;
+  background-color: white;
+  padding-top: 0.6em;
+  padding-bottom: 1.5em;
 }
