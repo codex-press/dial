@@ -19,8 +19,8 @@ html {
 p {
   font-family: 'Lora', serif;
   font-color: gray;
-  font-size: 1.1em;
-  padding-bottom: 4px;
+  font-size: 1em;
+  padding-bottom: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,40 +48,35 @@ a:hover {
   transition: 0.5s;
 }
 
+
 // top stories
 
-.topbyline, .tophed, .toplede {
-  padding-left: 50px;
-  padding-right: 50px;
-  color: white;
+.top-news {
+  min-height: 20em;
+  margin-left: 1em;
+  margin-right: 1em;
+  background-color: white;
+  border: 1px solid lightgrey;
 }
 
-div.topkicker {
-  padding: 50px;
+.top-image {
+  margin: 0.5em;
+  position:relative;
+  overflow:auto;
+}
+
+.lede_image {
   position: absolute;
-}
+  width: 100%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 
-.toplede {
-  font-family: 'Josefin Sans', sans-serif;
-  padding-top: 12em;
-  float: left;
-  clear: both;
-  font-style: 700;
-}
+  }
 
-.topbyline {
-  font-family: 'Josefin Sans', sans-serif;
-  float: left;
-  clear: both;
-  font-weight: bold;
-  padding-top: 18em;
-}
-
-.tophed {
-  font-size: 2.3em;
-  color: white;
-  padding-top: 2em;
-
+div.lede_content {
+  padding: 20px;
 }
 
 // news
@@ -91,13 +86,18 @@ div.topkicker {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   margin-left: 1em;
-  margin-right: 2em;
+  margin-right: 1em;
   margin-bottom: 2em;
   position: relative;
   padding-right: 2em;
   padding-left: 2em;
   float: right;
   border: 1px solid lightgrey;
+}
+
+.newsarticle h2 {
+  padding-top: 0.1em;
+  padding-bottom: 0.4em;
 }
 
 .byline {
@@ -113,9 +113,27 @@ div.topkicker {
   background-color: white;
   padding-top: 0.6em;
   padding-bottom: 1.5em;
+  border: 1px solid lightgrey;
 }
 
 
+// debate
+
+.debate {
+  background-color: @anchorColor;
+  color: white;
+  padding: 20px;
+}
+
+.vs {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size: 3em;
+}
+
+.debate.text {
+ text-align: center;
+}
 
 // subscribe
 
@@ -141,6 +159,12 @@ figure.signup {
   margin-right: -25%;
   position: relative;
   padding-bottom: 1.5em;
+}
+
+@media (max-width: 800px) {
+  .signup {
+    margin-left: 0;
+  }
 }
 
 #mc_embed_signup {
