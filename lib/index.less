@@ -60,6 +60,8 @@ h1.large, h1.xlarge, h1.xxlarge {
   word-wrap: break-word;
 }
 
+
+
 p {
   font-family: 'Lora', sans-serif;
   font-size: 0.9em;
@@ -93,10 +95,15 @@ div > time.pubdate {
   width: @textWidth;
   max-width: 100%;
   margin: 0 auto;
+  color: grey;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.6em;
 }
 
 p.lede {
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 section > p:first-child,
@@ -198,6 +205,7 @@ a {
 a:hover {
   color: white;
   background-color: @anchorHoverColor;
+  transition: 0.3s;
 }
 
 a:visited {

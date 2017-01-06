@@ -9,27 +9,26 @@ html {
   @media @desktop { font-size: 20px; }
 }
 
-span.kicker {
-  position: relative;
-  margin: 5px;
-  padding-top: 2em;
-}
-
 article {
    position: relative;
    background: white;
    margin: 2em;
-   padding: 1em;
+   padding: 0 1em 1em 1em;
 }
 
 h1.hed {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 3.5em;
-  margin-top: 1em;
+  margin-top: -2em;
   line-height: 1em;
   font-weight: 600;
   color: @fontColor;
+  position: relative;
+  z-index: 2;
   background: white;
+  border-top: 5px solid blue;
+  padding: 0.2em;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -165,8 +164,9 @@ blockquote {
   font-weight: bold;
   font-size: 1.2em;
   margin: 1rem auto;
-  padding: 0 0 0 1em;
-  border-left: 0.4em solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding: 0 2rem;
 }
 
 @media (max-width: 600px) {
@@ -177,6 +177,7 @@ blockquote {
 
   h1.hed {
     font-size: 2.5em;
+    margin-top: -1em;
   }
 
   aside.sidebar.left,
