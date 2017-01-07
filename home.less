@@ -17,10 +17,10 @@ html {
 
 }
 
-@media (min-width: 1200px) {
-  .top-news, .news, .explainer, .debate, .views {
-    margin-left: 5em;
-    margin-right: 5em;
+@media (max-width: 800px) {
+
+  .top-news h2 {
+    font-size: 1.5em;
   }
 }
 
@@ -29,7 +29,7 @@ html {
   .top-news h2 {
     margin-left: -1em;
     margin-right: -1em;
-    font-size: 30px;
+    font-size: 1.2em;
   }
 
   .newsarticle, .explainer, .debate, .views {
@@ -42,6 +42,12 @@ html {
   }
 }
 
+@media (min-width: 1200px) {
+  .top-news, .news, .explainer, .debate, .views {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+}
 
 //general styling
 
@@ -94,24 +100,31 @@ a:hover {
 
 .hed-img {
   position: absolute;
-  top: 0;
+  top: 6em;
   left: 0;
   overflow: hidden;
   height: 100vw;
   width: 100vw;
   z-index: 1;
-  mask: url(mask.svg);
+  //mask: url(mask.svg);
 }
 
 .hed-hed {
+  font-size: 2.5em;
   text-align: center;
   position: relative;
   padding-top: 50px;
   margin-right: auto;
   margin-left: auto;
-  min-height: calc(100vw - 10px);
+  min-height: calc(100vw - 30em);
   width: calc(100% - 60px);
   z-index: 2;
+}
+
+.hed-details {
+  z-index: 2;
+  text-align: center;
+  position: relative;
 }
 
 .hed-description {
