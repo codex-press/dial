@@ -22,6 +22,11 @@ html {
   .top-news h2 {
     font-size: 1.5em;
   }
+
+  .news {
+    position: relative;
+    top: -10em;
+  }
 }
 
 @media (max-width: 450px) {
@@ -101,22 +106,37 @@ a:hover {
 .hed-img {
   max-height: 30em;
   position: absolute;
-  top: 6em;
+  top: 0em;
   bottom: auto;
   left: 0;
-  overflow: hidden;
-  height: 100vw;
-  width: 100vw;
+  overflow: auto;
+  height: 250vw;
+  width: 150vw;
   z-index: 1;
   mask: url(mask.svg);
   opacity: 0.4;
     filter: alpha(opacity=40);
 }
 
-.hed-img:hover {
-  mask: none;
-  opacity: 1;
-    filter: none;
+.top-news:hover {
+  h2 {
+    color: white;
+    background: @anchorColor;
+    transition: 0.2s;
+  }
+
+  .hed-details, .hed-description {
+    opacity: 0;
+    transition: 0.2s;
+
+  }
+  .hed-img {
+    mask: none;
+    opacity: 1;
+      filter: none;
+      transition: 0.5s;
+  }
+
 }
 
 .hed-hed {
@@ -146,6 +166,11 @@ a:hover {
 }
 
 // news
+
+.news {
+  position: relative;
+  top: 5em;
+}
 
 .newsarticle {
   font-size: 0.9em;
