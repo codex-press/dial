@@ -99,8 +99,10 @@ a:hover {
 }
 
 .hed-img {
+  max-height: 30em;
   position: absolute;
   top: 6em;
+  bottom: auto;
   left: 0;
   overflow: hidden;
   height: 100vw;
@@ -109,6 +111,12 @@ a:hover {
   mask: url(mask.svg);
   opacity: 0.4;
     filter: alpha(opacity=40);
+}
+
+.hed-img:hover {
+  mask: none;
+  opacity: 1;
+    filter: none;
 }
 
 .hed-hed {
