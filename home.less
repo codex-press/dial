@@ -22,7 +22,15 @@ html {
 @media (max-width: 800px) {
 
   .top-news h2 {
+    margin-left: -2em;
+    margin-right: -2em;
     font-size: 1.2em;
+  }
+
+  .top-news p {
+    font-size: 0.9em;
+    margin-left: -2em;
+    margin-right: -2em;
   }
 
 }
@@ -30,19 +38,24 @@ html {
 @media (max-width: 450px) {
 
   .top-news h2 {
-    margin-left: -1em;
-    margin-right: -1em;
+    margin-left: -4em;
+    margin-right: -4em;
+    font-size: 1em;
+  }
+
+  .top-news p {
     font-size: 0.9em;
+    margin-left: -4em;
+    margin-right: -4em;
   }
 
-  .newsarticle, .explainer, .debate, .views {
+  .news, .explainer, .debate, .views {
     margin-left: -1em;
     margin-right: -1em;
+    padding-bottom: 2em;
   }
 
-  .newsarticle {
-    margin-top: -2.1em;
-  }
+
 }
 
 @media (min-width: 1200px) {
@@ -58,8 +71,6 @@ p {
   font-family: 'Lora', serif;
   font-color: gray;
   font-size: 1em;
-  padding-bottom: auto;
-  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,6 +82,7 @@ h1.hed {
   letter-spacing: -0.01em;
   text-transform: uppercase;
   text-align: center;
+  padding-top: 1em;
 }
 
 h2 {
@@ -95,13 +107,28 @@ a:hover {
 
 // top stories
 
+.top-news {
+  padding-left: 5em;
+  padding-right: 5em;
+}
 
 .hed-details, #hed {
   line-height: 1;
     letter-spacing: -.02em;
 }
 
+#hed {
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+  padding-top: 1em;
+  margin-right: 2em;
+  margin-left: 2em;
+  z-index: 2;
+}
+
 #hed-img {
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -110,26 +137,13 @@ a:hover {
   width: 100%;
   margin: auto;
   z-index: 0;
-  mask: url(mask.svg);
+  //mask: url("mask.svg");
   opacity: 0.4;
   filter: alpha(opacity=40);
-  transition: opacity .35s;
-}
-
-#hed {
-  font-size: 2.5em;
-  text-align: center;
-  position: relative;
-  padding-top: 1em;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: calc(100vw - 30em);
-  width: calc(100% - 60px);
-  z-index: 2;
 }
 
 .hed-details {
-  padding-top: 2em;
+  padding-top: 4em;
   z-index: 2;
   text-align: center;
   position: relative;
@@ -137,18 +151,17 @@ a:hover {
 
 .hed-description {
   text-align: center;
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
+  padding-top: auto;
   z-index: 2;
 }
 
-#hed:hover {
+.top-news:hover {
 
   h2 {
     color: white;
     background: @anchorColor;
     transition: 0.2s;
+    text-decoration: underline;
   }
 
   .hed-details, .hed-description {
@@ -157,6 +170,7 @@ a:hover {
 
     #hed-img {
       opacity: 1;
+      filter: none;
     }
   }
 }
@@ -166,11 +180,9 @@ a:hover {
 .news {
   position: relative;
   background: white;
-  top: 10em;
 }
 
 .newsarticle {
-  background-color: white;
   margin-bottom: 2em;
   position: relative;
   padding-right: 1em;
@@ -185,7 +197,6 @@ a:hover {
 .newsarticle h2 {
   font-size: 1.4em;
   padding-top: 0.5em;
-  padding-bottom: 0.4em;
 }
 
 p.byline {
@@ -207,9 +218,10 @@ p.byline {
 
 .explainer {
   background-color: white;
-  padding-top: 0.6em;
-  padding-bottom: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  position: relative;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 
@@ -218,7 +230,9 @@ p.byline {
 .debate {
   background-color: @anchorColor;
   color: white;
-  padding: 20px;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 1.5em;
 }
 
 .vs {
@@ -229,6 +243,12 @@ p.byline {
 
 .debate.text {
  text-align: center;
+}
+
+// views
+
+.views {
+  background: white;
 }
 
 // subscribe
