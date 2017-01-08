@@ -39,7 +39,10 @@ h6    { font-size: 1.200em; }
 @h1Size: 2.986em;
 
 
-
+.full-width {
+  margin: -3rem 1rem;
+width: calc(100% + 6rem);
+}
 
 .headers(@size, @multiplier) {
   .@{size}      { font-size: ~'@{multiplier}em'; }

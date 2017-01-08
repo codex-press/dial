@@ -9,24 +9,22 @@ html {
 
 
 .page.title {
+  position: relative;
+  z-index: 2;
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2em;
-  text-color: white;
+  font-size: 1.5em;
+  margin: -1em;
 
 }
 
 @media (max-width: 800px) {
 
   .top-news h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
-  .news {
-    position: relative;
-    top: -10em;
-  }
 }
 
 @media (max-width: 450px) {
@@ -34,7 +32,7 @@ html {
   .top-news h2 {
     margin-left: -1em;
     margin-right: -1em;
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
 
   .newsarticle, .explainer, .debate, .views {
@@ -69,10 +67,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.hed {
-font-size: 4em;
+  font-size: 3em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   text-align: center;
-
 }
 
 h2 {
@@ -95,55 +93,34 @@ a:hover {
   z-index: -1;
 }
 
-
 // top stories
 
-.hed-details, .hed-hed {
+
+.hed-details, #hed {
   line-height: 1;
     letter-spacing: -.02em;
 }
 
-.hed-img {
-  max-height: 28em;
+#hed-img {
   position: absolute;
-  top: 4em;
-  bottom: auto;
+  top: 0;
+  bottom: 0;
   left: 0;
-  overflow: auto;
-  height: 100vw;
-  width: 100vw;
-  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  z-index: 0;
   mask: url(mask.svg);
   opacity: 0.4;
-    filter: alpha(opacity=40);
+  filter: alpha(opacity=40);
+  transition: opacity .35s;
 }
 
-.top-news:hover {
-  h2 {
-    color: white;
-    background: @anchorColor;
-    transition: 0.2s;
-  }
-
-  .hed-details, .hed-description {
-    opacity: 0;
-    transition: 0.2s;
-
-  }
-  .hed-img {
-    mask: none;
-    opacity: 1;
-      filter: none;
-      transition: 0.5s;
-  }
-
-}
-
-.hed-hed {
+#hed {
   font-size: 2.5em;
   text-align: center;
   position: relative;
-  padding-top: 50px;
+  padding-top: 1em;
   margin-right: auto;
   margin-left: auto;
   min-height: calc(100vw - 30em);
@@ -152,6 +129,7 @@ a:hover {
 }
 
 .hed-details {
+  padding-top: 2em;
   z-index: 2;
   text-align: center;
   position: relative;
@@ -165,35 +143,63 @@ a:hover {
   z-index: 2;
 }
 
+.top-news:hover {
+
+  h2 {
+    color: white;
+    background: @anchorColor;
+    transition: 0.2s;
+  }
+
+  .hed-details, .hed-description {
+    opacity: 0;
+    transition: 0.2s;
+
+    #hed-img {
+      opacity: 1;
+    }
+  }
+}
+
 // news
 
 .news {
   position: relative;
-  top: 5em;
+  background: white;
+  top: 10em;
 }
 
 .newsarticle {
-  font-size: 0.9em;
   background-color: white;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
   margin-bottom: 2em;
   position: relative;
-  padding-right: 2em;
-  padding-left: 2em;
+  padding-right: 1em;
+  padding-left: 1em;
   float: right;
-  border: 1px solid lightgrey;
+}
+
+.newsarticle p {
+  font-size: 0.85em;
 }
 
 .newsarticle h2 {
-  font-size: 1.5em;
-  padding-top: 0.1em;
+  font-size: 1.4em;
+  padding-top: 0.5em;
   padding-bottom: 0.4em;
 }
 
-.byline {
+p.byline {
   font-size: 0.7em;
+  color: grey;
   text-transform: uppercase;
+}
+
+.pubdate {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.8em;
+  color: grey;
+  text-transform: uppercase;
+  float: right;
 }
 
 
@@ -204,7 +210,6 @@ a:hover {
   padding-top: 0.6em;
   padding-bottom: 1.5em;
   margin-bottom: 1em;
-  border: 1px solid lightgrey;
 }
 
 
