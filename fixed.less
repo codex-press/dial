@@ -1,7 +1,12 @@
 @import "lib/_variables";
 
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
 body {
-  background-image: "hairheadpattern.jpg";
+  background-image: img("hairheadpattern.jpg");
   background-position: center;
   background-size: contain;
 }
