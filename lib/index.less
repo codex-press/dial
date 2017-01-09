@@ -16,7 +16,6 @@ html {
 }
 
 html {
-  font-family: @font;
   color: @fontColor;
   background-color: @backgroundColor;
 }
@@ -200,7 +199,7 @@ blockquote, aside, ul, ol {
 }
 
 ::selection {
-  background-color: #81D2C7;
+  background-color: @selectionColor;
 }
 
 code {
@@ -213,12 +212,14 @@ code {
 
 a {
   color: @anchorColor;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 a:hover {
   color: white;
   background-color: @anchorHoverColor;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -253,7 +254,7 @@ li {
 
 aside.pullquote {
   font-family: 'Ubuntu', sans-serif;
-  color: @anchorColor;
+  color: @detailColor;
   font-weight: bold;
   text-align: left;
   margin: 1rem auto;
@@ -267,7 +268,7 @@ aside.pullquote.left:before {
   display: block;
   position: relative;
   width: 45%;
-  border-top: 5px solid @anchorColor;
+  border-top: 5px solid @detailColor;
   top: -0.65em;
 }
 
@@ -276,7 +277,7 @@ aside.pullquote.left:after {
   display: block;
   position: relative;
   width: 45%;
-  border-top: 5px solid @anchorColor;
+  border-top: 5px solid @detailColor;
   margin-top: 1.3em;
   top: -0.60em;
 }
@@ -287,7 +288,7 @@ aside.pullquote.right:before {
   position: relative;
   width: 45%;
   margin-left: 10em;
-  border-top: 5px solid @anchorColor;
+  border-top: 5px solid @detailColor;
   top: -0.65em;
 }
 
@@ -297,7 +298,7 @@ aside.pullquote.right:after {
   position: relative;
   width: 45%;
   margin-left: 10em;
-  border-top: 5px solid @anchorColor;
+  border-top: 5px solid @detailColor;
   margin-top: 1.3em;
   top: -0.60em;
 }
@@ -353,7 +354,7 @@ blockquote {
   font-size: 1.2em;
   margin: 1rem auto;
   padding: 0 1rem;
-  border-left: 5px solid @anchorColor;
+  border-left: 5px solid @detailColor;
 }
 
 @media (max-width: 800px) {
