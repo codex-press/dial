@@ -11,7 +11,7 @@ html {
 .page.title {
   position: relative;
   z-index: 2;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.5em;
@@ -107,12 +107,13 @@ a:hover {
 
 // top stories
 
+
 .top-news {
   padding-left: 5em;
   padding-right: 5em;
 }
 
-.hed-details, #hed {
+#hed-details, #hed {
   line-height: 1;
     letter-spacing: -.02em;
 }
@@ -128,7 +129,6 @@ a:hover {
 }
 
 #hed-img {
-  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -137,12 +137,13 @@ a:hover {
   width: 100%;
   margin: auto;
   z-index: 0;
-  //mask: url("mask.svg");
-  opacity: 0.4;
+  mask: url("mask.svg");
+  mask-repeat: none;
+  opacity: 0.2;
   filter: alpha(opacity=40);
 }
 
-.hed-details {
+#hed-details {
   padding-top: 4em;
   z-index: 2;
   text-align: center;
@@ -164,7 +165,7 @@ a:hover {
     text-decoration: underline;
   }
 
-  .hed-details, .hed-description {
+  #hed-details, #hed-description {
     opacity: 0;
     transition: 0.2s;
 
