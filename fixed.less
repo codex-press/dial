@@ -1,5 +1,4 @@
 @import "lib/_variables";
-@import "background.png";
 
 @keyframes animatedBackground {
 	from { background-position: 0 0; }
@@ -9,8 +8,8 @@
 body {
   background: url("background.png");
   background-size: auto;
-  //animation: animatedBackground 2.4s linear infinite;
-  //will-change: background-position;
+  animation: animatedBackground 2.4s linear infinite;
+  will-change: background-position;
   overflow: hidden;
 }
 
@@ -35,13 +34,14 @@ body {
 }
 
 #mailchimp {
-	background: #f8f8f8;
   padding-bottom: 2em;
+  border-bottom: 1px solid grey;
 }
 
   #mailchimp input {
-		border: 1px solid grey;
     font-family: 'Ubuntu', sans-serif;
+    background: none;
+    border: none;
     font-size: 0.8em;
     margin-bottom: 10px;
     padding: 8px 10px 10px;
@@ -52,12 +52,20 @@ body {
 		#mailchimp input.name { background: #fff}
 		#mailchimp input[type="submit"] {
       font-family: "Ubuntu", sans-serif;
-      background: @anchorColor;
-			color: #fff;
+      background: none;
+			color: black;
+      font-weight: bold;
 			font-size: 0.8em;
 			width: 30%;
 
 		}
 			#mailchimp input[type="submit"]:hover {
-        background: @anchorHoverColor;
+        color: red;
       }
+
+
+@media (max-width: 450px) {
+  .center {
+    width: 80%;
+  }
+}
