@@ -53,23 +53,10 @@ p.intro,
 .intro p {
   text-align: justify;
 }
-aside.editors-note {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.7em;
-  text-align: center;
-  font-style: 'light-italic';
-  font-weight: 400;
-  margin: 1rem auto;
-  border-top: 1px;
-  border-bottom: 1px;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-color: #ccc;
-}
 
 aside.pullquote {
   font-family: 'Ubuntu', sans-serif;
-  color: blue;
+  color: @anchorColor;
   font-weight: bold;
   text-align: left;
   margin: 1rem auto;
@@ -153,7 +140,6 @@ aside.sidebar {
 
   aside.sidebar.right,
   aside.pullquote.right {
-    margin-right: 10%;
   }
 
 }
@@ -202,18 +188,4 @@ blockquote {
   padding: 0 2rem;
   }
 
-}
-
-ul, ol {
-  margin: 1rem auto;
-}
-
-li {
-  margin: .5rem 0;
-}
-
-.dropcap {
-  padding-right: .25rem;
-  font-size: 6.2em;
-  line-height: .78;
 }
