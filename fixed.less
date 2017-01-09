@@ -6,11 +6,8 @@
 }
 
 body {
-  background: url("background.png");
-  background-size: auto;
-  animation: animatedBackground 2.4s linear infinite;
-  will-change: background-position;
-  overflow: hidden;
+  overflow: auto;
+  height: 100%;
 }
 
 .page-title {
@@ -57,6 +54,8 @@ body {
       font-weight: bold;
 			font-size: 0.8em;
 			width: 30%;
+      -webkit-appearance:none;
+      -webkit-border-radius: 0;
 
 		}
 			#mailchimp input[type="submit"]:hover {
