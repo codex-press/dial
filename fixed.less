@@ -6,11 +6,11 @@
 }
 
 body {
-  background-image: url("hairheadpattern.jpg");
-  background-position: center;
-  background-size: contain;
-  animation-name: animatedBackground;
-  animation-duration: 40s;
+  background-image: url(https://outb2.imgix.net/method/micro_native/water/background.png);
+  background-size: auto;
+  opacity: 1;
+  animation: animatedBackground 2.4s linear infinite;
+  will-change: background-position;
 }
 
 .page-title {
@@ -21,3 +21,42 @@ body {
   text-align: center;
   font-size: 1.5em;
 }
+
+.center {
+  position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+  margin: auto;
+  width: 65%;
+  padding: 2em;
+  background: white;
+}
+
+#mailchimp {
+	background: #f8f8f8;
+  padding-bottom: 2em;
+}
+
+  #mailchimp input {
+		border: 1px solid grey;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    padding: 8px 10px 10px;
+    width: 70%;
+    float: left;
+	}
+		#mailchimp input.email { background: #fff }
+		#mailchimp input.name { background: #fff}
+		#mailchimp input[type="submit"] {
+      font-family: "Ubuntu", sans-serif;
+      background: @anchorColor;
+			color: #fff;
+			font-size: 0.8em;
+			width: 30%;
+
+		}
+			#mailchimp input[type="submit"]:hover {
+        background: @anchorHoverColor;
+      }
