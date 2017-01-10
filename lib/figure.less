@@ -19,18 +19,19 @@ figcaption {
 
 figure.full-width,
 figure.full-window {
-  margin: -5rem auto 0 auto;
-  width: calc(100%+6rem);
-  scroll-snap-points-y: repeat(100%);
-  scroll-snap-type: mandatory;
-  scroll-snap-destination: 100% 0%;
+  margin: -6rem -4rem 0 -4rem;
+  width: calc(100% + 8rem);
+  max-width: initial;
+  // scroll-snap-points-y: repeat(100%);
+  // scroll-snap-type: mandatory;
+  // scroll-snap-destination: 100% 0%;
 }
 
-// at the top of the story it's got no margin
-article > figure.full-window:first-child,
-article > :first-child > figure.full-window:first-child {
-  margin-top: 0;
-}
+// // at the top of the story it's got no margin
+// article > figure.full-window:first-child,
+// article > :first-child > figure.full-window:first-child {
+//   margin-top: 0;
+// }
 
 // prevent margin collapse with children
 div.left, section.left, div.right, section.left {

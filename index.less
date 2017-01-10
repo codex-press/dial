@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lora|Ubuntu');
 @import "lib/_variables.less";
 
-
 span.kicker {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 800;
@@ -11,3 +10,58 @@ span.kicker {
   padding-left: 2px;
   margin-bottom: 2em;
 }
+
+
+#dial-menu {
+
+  & {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 10000;
+  }
+
+  &.active:before {
+    content: ' ';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transition: backgorund 0.5s ease-out;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .open,
+  .close {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: white;
+    overflow: hidden;
+    background-color: #111;
+    opacity: 0;
+    transform: translateX(-100%);
+    transform-origin: 0 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  &.active nav {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  }
+
+  nav a {
+    display: block;
+    color: inherit;
+    padding: 1rem;
+  }
+
+}
+
