@@ -31,12 +31,16 @@ article {
    padding: 0 1em 1em 1em;
 }
 
+h1 {
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 1rem auto;
   line-height: 1.2;
 }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 600;
 }
@@ -80,6 +84,9 @@ p {
   width: @textWidth;
   max-width: 100%;
   margin: 1.4rem auto;
+  scroll-snap-points-y: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 100% 0%;
 }
 
 :not(p) > address.byline:before {

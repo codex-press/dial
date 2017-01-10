@@ -2,33 +2,15 @@
 @import 'lib/_variables.less';
 @import 'lib/index.less';
 
-html {
-  @media @mobile { font-size: 18px; }
-  @media @tablet { font-size: 16px; }
-  @media @laptop { font-size: 18px; }
-  @media @desktop { font-size: 20px; }
-}
-
-article {
-   position: relative;
-   background: white;
-   margin: 2em;
-   padding: 0 1em 1em 1em;
-}
-
 h1.hed {
   font-family: 'Ubuntu', sans-serif;
+  text-align: left;
   font-size: 3.2em;
-  margin-top: -1em;
-  width: 90%;
   line-height: 1em;
   font-weight: bold;
   color: @fontColor;
   position: relative;
   z-index: 2;
-  background: white;
-  border-top: 5px solid black;
-  padding: 0.2em;
   letter-spacing: -0.03em;
 }
 
@@ -52,140 +34,4 @@ p.dek {
 p.intro,
 .intro p {
   text-align: justify;
-}
-
-aside.pullquote {
-  font-family: 'Ubuntu', sans-serif;
-  color: @anchorColor;
-  font-weight: bold;
-  text-align: left;
-  margin: 1rem auto;
-  margin-top: 2rem;
-  font-size: 1.6em;
-  line-height: 1.5;
-}
-
-aside.pullquote:before {
-  content: '';
-  display: block;
-  position: relative;
-  width: 45%;
-  margin-top: 20px;
-  border-top: 1px solid grey;
-  top: -0.65em;
-}
-
-aside.pullquote:after {
-  content: '';
-  display: block;
-  position: relative;
-  width: 45%;
-  border-top: 1px solid grey;
-  margin-top: 40px;
-  top: -0.60em;
-}
-
-aside.pullquote .attribution:before {
-  content: "\2014";
-}
-
-aside.sidebar {
-  margin: 1rem auto;
-  padding: 0 1rem;
-  border: 1px solid grey;
-}
-
-aside.sidebar {
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 1.7rem;
-  }
-}
-
-@media @floatQuoteBreak {
-
-  aside.pullquote.left,
-  aside.sidebar.left {
-    float: left;
-    clear: both;
-    margin-right: 1rem;
-  }
-
-  aside.pullquote.right,
-  aside.sidebar.right {
-    float: right;
-    clear: both;
-    margin-left: 1rem;
-  }
-
-  aside.pullquote.right,
-  aside.pullquote.left {
-    @oneThirdLine: (@lineHeight / 3);
-    margin-top: ~'@{oneThirdLine}rem';
-  }
-
-  aside.sidebar.right,
-  aside.sidebar.left {
-    margin-top: 0;
-  }
-
-}
-
-// on extra large screens they stay somewhat in the middle
-@media (min-width: 1400px) {
-
-  aside.sidebar.left,
-  aside.pullquote.left {
-    margin-left: 10%;
-  }
-
-  aside.sidebar.right,
-  aside.pullquote.right {
-  }
-
-}
-
-
-blockquote {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 1rem auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding: 0 2rem;
-}
-
-@media (max-width: 600px) {
-
-  article {
-    margin: 0.2em;
-  }
-
-  h1.hed {
-    font-size: 2.5em;
-    margin-top: -1em;
-  }
-
-  aside.sidebar.left,
-  aside.pullquote.left {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 1rem auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding: 0 2rem;
-  }
-
-  aside.sidebar.right,
-  aside.pullquote.right {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 1rem auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding: 0 2rem;
-  }
-
 }

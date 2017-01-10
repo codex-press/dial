@@ -1,0 +1,21 @@
+<stylesheet ="sidenav.less">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">News</a>
+  <a href="#">Views</a>
+  <a href="#">The Debate</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
