@@ -9,8 +9,7 @@ article.ready.then(() => {
 
   dom('#dial-menu .close').on('click', e => {
     dom('#dial-menu').removeClass('active')
+
   });
 
 });
-
-

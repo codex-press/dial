@@ -16,6 +16,7 @@ span.kicker {
 
   & {
     height: 100%;
+    width: 70%;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,27 +35,30 @@ span.kicker {
 
   .open,
   .close {
-    font-size: 1.5em;
+    font-size: 2.4em;
     cursor: pointer;
   }
 
   nav {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
     position: absolute;
     top: 0;
     bottom: 0;
-    color: white;
+    color: black;
     overflow: hidden;
-    background-color: #111;
+    background-color: #ededed;
     opacity: 0;
     transform: translateX(-100%);
     transform-origin: 0 0;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   &.active nav {
     opacity: 1;
     transform: none;
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    transition: transform 0.5s ease-out;
   }
 
   nav a {
@@ -64,4 +68,3 @@ span.kicker {
   }
 
 }
-
