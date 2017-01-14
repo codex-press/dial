@@ -1,5 +1,6 @@
 @import '_variables.less';
 
+
 figure {
   width: calc(@textWidth + 10%);
   max-width: 100%;
@@ -27,11 +28,11 @@ figure.full-window {
   scroll-snap-destination: 100% 0%;
 }
 
-// // at the top of the story it's got no margin
-// article > figure.full-window:first-child,
-// article > :first-child > figure.full-window:first-child {
-//   margin-top: 0;
-// }
+// at the top of the story it's got no margin
+ article > figure.full-window:first-child,
+ article > :first-child > figure.full-window:first-child {
+   margin-top: auto;
+ }
 
 // prevent margin collapse with children
 div.left, section.left, div.right, section.left {
