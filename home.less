@@ -107,7 +107,81 @@ a:hover {
 
 // top stories
 
+.top-news {
+  background: white;
+  position: relative;
+  top: 3em;
+  height: 450px;
+  margin-bottom: 5em;
+  overflow: hidden;
+}
 
+.top-news span.kicker {
+  color: @anchorColor;
+}
+
+
+.hed-content {
+  top: 2em;
+  padding-right: 2em;
+}
+
+.top-news h2 {
+  font-size: 2.5em;
+}
+
+.top-news p {
+  font-size: 1.3em;
+  font-weight: 200;
+}
+
+cover {
+  background-size: cover;
+  height: 100% !important;
+  width: 100%; }
+
+#hed-img {
+  width: 80vw;
+  height: 100vh;
+}
+
+@media (max-width: 800px) {
+  .top-news {
+    top: 1em;
+    overflow: visible;
+  }
+  
+   .hed-content {
+    padding: 2em;
+    position: absolute;
+    z-index: 1000;
+    top: 22em;
+    width: 100%;
+    background: white;
+    margin-bottom: 90em;
+  }
+
+  
+   #hed-img {
+    width: 110vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 1em;
+    bottom: 0;
+    left: -3em;
+    right: 0;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .top-news {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+}
 
 // news
 
