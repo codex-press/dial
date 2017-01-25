@@ -20,17 +20,26 @@ article.ready.then(() => {
 });
 
 let lastMax = 0;
-let resetDebounced = u.debounce(200, () => lastMax = article.scroll());
+let lastScroll = 0;
+let resetDebounced = u.debounce(500, () => lastMax = article.scroll());
 
 article.on('scroll', () => {
-  if (article.scroll() > 0 && article.scroll() > lastMax - 100)
+
+  let shouldHide = (
+    article.scroll() > lastScroll ||
+    (article.scroll() > 0 && article.scroll() > lastMax - 100)
+  );
+
+  if (shouldHide)
     dom('#dial-menu .bar').addClass('hide')
   else
     dom('#dial-menu .bar').removeClass('hide')
 
+  lastScroll = article.scroll();
+
   if (article.scroll() > lastMax)
     lastMax = article.scroll();
 
-  resetDebounced();   
+  resetDebounced();
 });
 
