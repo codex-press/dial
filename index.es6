@@ -26,8 +26,8 @@ let resetDebounced = u.debounce(500, () => lastMax = article.scroll());
 article.on('scroll', () => {
 
   let shouldHide = (
-    article.scroll() > lastScroll ||
-    (article.scroll() > 0 && article.scroll() > lastMax - 100)
+    article.scroll() > 0 &&
+    (article.scroll() > lastScroll || article.scroll() > lastMax - 100)
   );
 
   if (shouldHide)
