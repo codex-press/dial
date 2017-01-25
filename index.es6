@@ -1,7 +1,13 @@
 import article from 'article';
 import dom from 'dom';
+import * as env from 'env';
+import * as u from 'utility';
 
 article.ready.then(() => {
+
+  // iPhone hack
+  if (env.device.iOS)
+    dom.body().insertAfter(dom.first('#dial-menu'));
 
   dom('#dial-menu .open').on('click', e => {
     dom('#dial-menu').addClass('active')
@@ -9,7 +15,22 @@ article.ready.then(() => {
 
   dom('#dial-menu .close').on('click', e => {
     dom('#dial-menu').removeClass('active')
-
   });
 
 });
+
+let lastMax = 0;
+let resetDebounced = u.debounce(200, () => lastMax = article.scroll());
+
+article.on('scroll', () => {
+  if (article.scroll() > 0 && article.scroll() > lastMax - 100)
+    dom('#dial-menu .bar').addClass('hide')
+  else
+    dom('#dial-menu .bar').removeClass('hide')
+
+  if (article.scroll() > lastMax)
+    lastMax = article.scroll();
+
+  resetDebounced();   
+});
+

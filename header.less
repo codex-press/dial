@@ -1,0 +1,82 @@
+#dial-menu {
+
+  & {
+    font-family: "Ubuntu", sans-serif;
+    user-select: none;
+  }
+
+  .bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+    background: white;
+    padding: 0.3rem;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:not(.active) .bar.hide {
+    transform: translateY(-100%);
+  }
+
+  .logo {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .open {
+    position: absolute;
+  }
+
+  .open,
+  .close {
+    font-size: 2em;
+    cursor: pointer;
+    padding-left: 0.1em;
+    z-index: 1;
+    line-height: 1;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 0 1em 1em 0.3em;
+    font-size: 2em;
+
+    color: black;
+    background-color: #ededed;
+    line-height: 1.4;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    transform: translateX(-100%);
+    transform-origin: 0 0;
+    transition: transform 250ms ease-in;
+    touch-action: pan-y;
+    -webkit-user-drag: none;
+    z-index: 100001;
+  }
+
+
+  &.active nav {
+    transform: none;
+    transition: transform 250ms ease-in;
+  }
+
+  nav a {
+    display: block;
+    color: inherit;
+    padding-left: 1rem;
+    outline: none;
+  }
+
+  nav a:hover {
+    color: grey;
+  }
+
+}

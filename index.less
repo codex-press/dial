@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Lora|Ubuntu|Raleway:500,600,700,900');
+
 @import "lib/_variables.less";
+@import "header";
 
 span.kicker {
   font-family: 'Raleway', sans-serif;
@@ -11,64 +13,3 @@ span.kicker {
 }
 
 
-#dial-menu {
-
-  & {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-  }
-
-  &.active:before {
-    content: ' ';
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-  }
-
-
-  .open,
-  .close {
-    font-size: 2em;
-    cursor: pointer;
-    padding-left: 0.1em;
-  }
-
-  nav {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    color: black;
-    overflow: hidden;
-    background-color: #ededed;
-    transform: translateX(-120%);
-    transform-origin: 0 0;
-    transition: transform 250ms ease-in;
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-drag: none;
-  }
-
-  &.active nav {
-    transform: none;
-    transition: transform 250ms ease-in;
-  }
-
-  nav a {
-    display: block;
-    width: 10em;
-    line-height: 0.7em;
-    color: inherit;
-    padding-left: 1rem;
-  }
-
-  nav a:hover {
-    color: grey;
-  }
-
-}
