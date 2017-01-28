@@ -6,44 +6,36 @@ html {
   background-color: @backgroundColor;
 }
 
-
-
-.page-title {
-  position: fixed;
-  top: -1em;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  z-index: 1000;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1.5em;
-  padding: 0.3em;
-  background: @backgroundColor;
-
-}
-
-@media (max-width: 800px) {
-
-    .cover {
-    height: 100%;
-  }
-
-  .newsarticle {
-    margin-bottom: auto !important;
-  }
-
-}
-
 @media (max-width: 450px) {
 
   .top-news, .news, .explainer, .debate, .views {
     margin-left: -1em;
     margin-right: -1em;
     padding-bottom: 2em;
+  }
+
+  .news {
+    margin-top: 10em;
+  }
+
+  .top-news {
+    margin-bottom: 22em;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .top-news {
+      top: 1em;
+      margin-bottom: 8em;
+    }
+
+  .top-news h2 {
+     font-size: 2em;
+   }
+
+  .cover {
+    height: 100%;
   }
 
 }
@@ -54,9 +46,28 @@ html {
     margin-right: 10%;
   }
 
+  #hed-img {
+    max-width: 65vw;
+  }
+
+  #hed-img .cover {
+    position: relative;
+    top: 0;
+    width: 86%;
+  }
+
+  .signup {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
 }
 
-
+@media (min-width: 1600px) {
+  .top-news {
+     height: 600px;
+    }
+}
 
 //general styling
 
@@ -68,14 +79,17 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
+  line-height: 95%;
+  font-weight: 700;
 }
 
 h1.hed {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: -0.01em;
-  text-transform: uppercase;
-  text-align: center;
+  text-align: left;
+  padding-left: 0.5em;
   padding-top: 1em;
+  border-top: 1px solid lightgrey;
 }
 
 h2 {
@@ -87,6 +101,10 @@ h2 {
 a {
   color: @fontColor;
   text-decoration: none;
+}
+
+a p {
+  color: #6b6b6b;
 }
 
 a:hover {
@@ -107,11 +125,10 @@ a:hover {
 // top stories
 
 .top-news {
-  background: white;
   position: relative;
-  top: 3em;
-  height: 450px;
-  margin-bottom: 5em;
+  top: 5em;
+  height: 400px;
+  margin-bottom: 7em;
   overflow: hidden;
 }
 
@@ -121,7 +138,7 @@ a:hover {
 
 
 .hed-content {
-  top: 2em;
+  padding-left: 1em;
   padding-right: 2em;
 }
 
@@ -129,19 +146,19 @@ a:hover {
   font-size: 2.5em;
 }
 
-.top-news p {
-  font-size: 1.3em;
-  font-weight: 200;
-}
-
 cover {
   background-size: cover;
   height: 100% !important;
-  width: 100%; }
+  width: 100%;
+}
+
+.img.grow {
+  margin: 0;}
 
 #hed-img {
   width: 80vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 
@@ -150,35 +167,25 @@ cover {
     font-size: 2.2em;
   }
 
-  .hed-content p {
-    font-size: 1.2em;
-  }
-
 }
 
 @media (max-width: 800px) {
   .top-news {
-    top: 1em;
+    top: -1em;
     overflow: visible;
-    margin-bottom: 14em;
+    margin-bottom: 17em;
   }
 
    .hed-content {
-    padding: 2em;
-    position: absolute;
-    z-index: 1000;
-    top: 22em;
-    width: 100%;
-    background: white;
+    padding-top: 1em;
+    position: relative;
+    top: 26em;
   }
 
     .hed-content h2 {
       font-size: 2em;
     }
 
-    .hed-content p {
-      font-size: 1.2em;
-    }
 
    #hed-img {
     width: 110vw;
@@ -190,30 +197,14 @@ cover {
     left: -2em;
     right: 0;
   }
-
-}
-
-@media (min-width: 1200px) {
-  .top-news {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
 }
 
 // news
 
-.news {
-  position: relative;
-  background: white;
-}
-
 .newsarticle {
   margin-bottom: 2em;
-  position: relative;
   padding-right: 1em;
   padding-left: 1em;
-  float: right;
 }
 
 .newsarticle p {
@@ -242,26 +233,47 @@ p.byline {
 
 // explainer
 
-.explainer {
-  margin-bottom: 1em;
-  position: relative;
-  background: white;
-}
+
 
 // views
 
-.views {
-  background: white;
+.views .cover {
+  margin-left: 1em;
+  margin-right: 1em;
   position: relative;
+  width: 15%;
+  max-height: 150px;
+  float: left;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .views .cover {
+    width: 35%;}
+}
+
+.viewarticle {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+
+.viewarticle p {
+  font-size: 0.7em;
+}
+
+.viewarticle h2 {
+  font-size: 1.4em;
+  padding-top: 0.1em;
 }
 
 // debate
 
 .debate {
-  background-color: white;
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-bottom: 1.5em;
+  margin-bottom: 2em;
+}
+
+.debate h1 {
+  text-align: center;
 }
 
 .debate span.light {
@@ -279,11 +291,11 @@ p.byline {
   content: '';
   display: block;
   border-bottom: 0.2px solid lightgrey;
-  width: 300px;
+  width: 200px;
   -webkit-transform-origin: 0 0;
   transform-origin: -1em -1em;
   -webkit-transform: rotate(-37deg) translateX(-50%);
-  transform: rotate(-37deg) translateX(-50%);
+  transform: rotate(-37deg) translateX(-80%);
   position: absolute;
   left: 50%;
   z-index: 1;
@@ -293,23 +305,12 @@ p.byline {
  text-align: center;
 }
 
-.debate h1 {
-  position: relative;
-  right: 50%;
-  width: 200%;
-  padding-bottom: 1em;
-  background: ;
-}
-
 .debate h3 {
   font-size: 2em;}
 
 .a2 {
   text-align: right;}
 
-.debate-img {
-  background: white;
-}
 
 figcaption {
   font-size: 1.5em;
