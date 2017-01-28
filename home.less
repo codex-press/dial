@@ -56,11 +56,6 @@ html {
     width: 86%;
   }
 
-  .signup {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
 }
 
 @media (min-width: 1600px) {
@@ -241,19 +236,22 @@ p.byline {
   margin-left: 1em;
   margin-right: 1em;
   position: relative;
-  width: 15%;
-  max-height: 150px;
+  width: 30%;
+  max-height: 120px;
   float: left;
   clear: both;
 }
 
 @media (max-width: 600px) {
-  .views .cover {
-    width: 35%;}
+
+  .viewarticle {
+    margin-bottom: 1em;
+  }
 }
 
 .viewarticle {
-  margin-bottom: 2em;
+  height: 150px;
+  margin-bottom: 0em;
   padding-bottom: 2em;
 }
 
@@ -263,13 +261,16 @@ p.byline {
 
 .viewarticle h2 {
   font-size: 1.4em;
-  padding-top: 0.1em;
+  padding-top: 0.2em;
+  margin-right: 0.5em;
 }
 
 // debate
 
 .debate {
   margin-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .debate h1 {
@@ -277,8 +278,9 @@ p.byline {
 }
 
 .debate span.light {
-  color: grey;
+  color: @anchorColor;
   text-transform: uppercase;
+  font-size: 0.8em;
 }
 
 .vs {
@@ -291,13 +293,13 @@ p.byline {
   content: '';
   display: block;
   border-bottom: 0.2px solid lightgrey;
-  width: 200px;
+  width: 150px;
   -webkit-transform-origin: 0 0;
   transform-origin: -1em -1em;
-  -webkit-transform: rotate(-37deg) translateX(-50%);
+  -webkit-transform: rotate(-37deg) translateX(-80%);
   transform: rotate(-37deg) translateX(-80%);
   position: absolute;
-  left: 50%;
+  left: 55%;
   z-index: 1;
 }
 
@@ -306,10 +308,29 @@ p.byline {
 }
 
 .debate h3 {
-  font-size: 2em;}
+  font-size: 1.6em;
+  line-height: 1.3em;
+}
 
 .a2 {
   text-align: right;}
+
+@media (max-width: 450px) {
+  .debate h3 {
+    text-align: center;
+    padding-bottom: 1em;}
+
+  .debate p {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.debate h3 a:hover {
+  color: white;
+  background: @anchorHoverColor;
+  transition: 0.1s ease-in;
+}
 
 
 figcaption {
@@ -334,6 +355,13 @@ figcaption {
   display: block;
   -webkit-font-smoothing: antialiased;
   }
+
+@media (min-width: 1200px) {
+  .signup {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
 
 .signup h3 {
   font-size: 2em;
@@ -399,10 +427,13 @@ footer {
   color: white;
   background: @detailColor;
   width: 100vw;
-  margin-left: -1.4em;
+  margin-left: -1.25em;
   padding: 2em;
 }
 
+footer h2 {
+  font-size: 1.5em;
+}
 
 footer #mailchimp input[type="submit"] {
   border: 1px solid grey;
@@ -425,6 +456,18 @@ footer #mailchimp input[type="submit"] {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 0.6em;
+  padding-bottom: 2em;
+}
+
+@media (max-width: 450px) {
+  footer #mailchimp input {
+    width: 100%;
+  }
+  footer #mailchimp input[type="submit"] {
+    width: 100%;
+    margin-top: -1.1em;
+    object-align: center;
+  }
 }
 
 @media (max-width: 800px) {

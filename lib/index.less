@@ -26,9 +26,7 @@ body {
 
 article {
    position: relative;
-   background: white;
-   margin: 2em;
-   padding: 0 1em 1em 1em;
+   padding: 0em 1em 1em 1em;
 }
 
 .full-window h1 {
@@ -74,8 +72,6 @@ h1.large, h1.xlarge, h1.xxlarge {
   word-wrap: break-word;
 }
 
-
-
 p {
   font-family: 'Lora', sans-serif;
   font-size: 0.9em;
@@ -116,7 +112,7 @@ div > time.pubdate {
 }
 
 .kicker {
-  padding-top: 2em;
+  padding-top: 4em;
 }
 
 p.lede {
@@ -139,6 +135,14 @@ section > p:first-child,
 blockquote, aside, ul, ol {
   width: @textWidth;
   max-width: 100%;
+}
+
+.authorbox p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9em;
+  color: grey;
+  padding-top: 0;
+  border-top: 1px solid lightgrey;
 }
 
 @media @floatBreak {
