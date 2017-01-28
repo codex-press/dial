@@ -17,6 +17,16 @@
     border-bottom: 1px solid lightgrey;
   }
 
+  .bar a {
+    text-decoration: none;
+    color: @fontColor;
+  }
+
+  .bar a:visited {
+    text-decoration: none;
+    color: @fontColor;
+  }
+
   &:not(.active) .bar.hide {
     transform: translateY(-100%);
   }
@@ -27,16 +37,6 @@
     font-size: 1.5em;
     max-width: 100%;
     text-align: center;
-  }
-
-  .logo a {
-    text-decoration: none;
-    color: @fontColor;
-  }
-
-  .logo a:visited {
-    text-decoration: none;
-    color: @fontColor;
   }
 
   .open {
