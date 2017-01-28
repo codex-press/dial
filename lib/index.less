@@ -73,7 +73,7 @@ h1.large, h1.xlarge, h1.xxlarge {
 }
 
 p {
-  font-family: 'Lora', sans-serif;
+  font-family: freight-text-pro, 'Lora', serif;
   font-size: 0.9em;
   font-weight: 400;
   line-height: 1.4;
@@ -139,9 +139,11 @@ blockquote, aside, ul, ol {
 
 .authorbox p {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  font-weight: 300;
   color: grey;
   padding-top: 0;
+  margin-top: 3em;
   border-top: 1px solid lightgrey;
 }
 
@@ -268,12 +270,14 @@ li {
 aside.pullquote {
   font-family: 'Raleway', sans-serif;
   color: @detailColor;
+  font-style: italic;
   font-weight: bold;
   text-align: left;
   margin: 1rem auto;
-  margin-top: 2rem;
+  padding-top: 1rem;
   font-size: 1.4em;
   line-height: 1.3;
+  width: 33%;
 }
 
 aside.pullquote:before {
@@ -281,18 +285,18 @@ aside.pullquote:before {
   display: block;
   position: relative;
   width: 45%;
-  border-top: 3px solid @detailColor;
-  top: -0.65em;
+  border-top: 5px solid @detailColor;
+  top: -0.3em;
 }
 
 aside.pullquote:after {
   content: '';
-  display: block;
+  display: none;
   position: relative;
   width: 45%;
-  border-top: 3px solid @detailColor;
+  border-top: 5px solid @detailColor;
   margin-top: 1.3em;
-  top: -0.60em;
+  top: -0.8em;
 }
 
 aside.pullquote.right:before {
@@ -300,20 +304,20 @@ aside.pullquote.right:before {
   display: block;
   position: relative;
   width: 45%;
-  margin-left: 10em;
-  border-top: 3px solid @detailColor;
-  top: -0.65em;
+  margin-left: 7em;
+  border-top: 5px solid @detailColor;
+  top: -0.3em;
 }
 
 aside.pullquote.right:after {
   content: '';
-  display: block;
+  display: none;
   position: relative;
   width: 45%;
-  margin-left: 10em;
-  border-top: 3px solid @detailColor;
+  margin-left: 7em;
+  border-top: 5px solid @detailColor;
   margin-top: 1.3em;
-  top: -0.60em;
+  top: -0.8em;
 }
 
 aside.pullquote .attribution:before {
@@ -362,7 +366,7 @@ aside.sidebar {
 }
 
 blockquote {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 1.2em;
   margin: 1rem auto;
@@ -387,8 +391,6 @@ blockquote {
 
   aside.sidebar.right,
   aside.pullquote.right {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
   font-size: 1.2em;
   }
 }
@@ -397,6 +399,10 @@ blockquote {
 // this causes the lines above and below the quotes to align left
 
 @media (max-width: 1087px) {
+
+  aside.pullquote {
+    width: @textWidth;
+  }
 
   aside.pullquote.right:before,
   aside.pullquote.right:after {
