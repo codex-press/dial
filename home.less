@@ -384,22 +384,22 @@ figcaption {
 // subscribe
 
 .signup {
-  background: @detailColor;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 1em;
-  padding-bottom: 5em;
-  color: white;
-  margin-left: -1em;
-  margin-right: -1em;
-  display: block;
+   border: 1px solid lightgrey;
+   box-shadow: 1px 1px 10px lightgrey;
+   height: 400px;
   -webkit-font-smoothing: antialiased;
-  }
+}
+
+.signuptext { 
+   text-align: center;
+   padding-top: 10%;
+   padding-bottom: 2em;
+}
 
 @media (min-width: 1200px) {
   .signup {
-    padding-left: 12%;
-    padding-right: 12%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -410,11 +410,7 @@ figcaption {
 }
 
 .signup span.kicker {
-    color: white;
-}
-
-.signup span.light {
-    color: lightgrey;
+    text-align: center;
 }
 
 @media (max-width: 800px) {
@@ -430,7 +426,7 @@ figcaption {
 
   #mailchimp input {
     font-family: 'Raleway', sans-serif;
-    border: none;
+    border-bottom: 1px solid lightgrey;
     font-size: 0.8em;
     margin-bottom: 1em;
     padding: 1em 1em 1em;
@@ -443,7 +439,7 @@ figcaption {
 		#mailchimp input[type="submit"] {
       font-family: "Raleway", sans-serif;
       text-align: center;
-      background: white;
+      background: none;
 			color: black;
       font-weight: bold;
 			font-size: 0.83em;
@@ -453,7 +449,7 @@ figcaption {
 
 		}
 			#mailchimp input[type="submit"]:hover {
-        background-color: @anchorHoverColor;
+        color: @anchorColor;
       }
 
 //footer
