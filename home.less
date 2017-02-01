@@ -384,16 +384,14 @@ figcaption {
 // subscribe
 
 .signup {
-   border: 1px solid lightgrey;
    box-shadow: 1px 1px 10px lightgrey;
    height: 400px;
   -webkit-font-smoothing: antialiased;
+   padding: 4em;
 }
 
 .signuptext { 
    text-align: center;
-   padding-top: 10%;
-   padding-bottom: 2em;
 }
 
 @media (min-width: 1200px) {
@@ -403,9 +401,15 @@ figcaption {
   }
 }
 
+.signup h2 {
+  text-transform: uppercase;
+  color: @anchorColor;
+  padding-bottom: 1em;
+}
+
 .signup h3 {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 400;
   margin: auto;
 }
 
@@ -422,11 +426,12 @@ figcaption {
 
 #mailchimp {
   padding-bottom: 0;
+  border-bottom: 1px solid lightgrey;
 }
 
   #mailchimp input {
     font-family: 'Raleway', sans-serif;
-    border-bottom: 1px solid lightgrey;
+    border: none;
     font-size: 0.8em;
     margin-bottom: 1em;
     padding: 1em 1em 1em;
@@ -435,11 +440,12 @@ figcaption {
     -webkit-border-radius: 0;
     float: left;
 	}
-		#mailchimp input.email { background: none; border: 1px solid grey; }
+		#mailchimp input.email { background: none; border: none; }
 		#mailchimp input[type="submit"] {
       font-family: "Raleway", sans-serif;
       text-align: center;
       background: none;
+      border: none;
 			color: black;
       font-weight: bold;
 			font-size: 0.83em;
