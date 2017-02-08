@@ -6,60 +6,76 @@ html {
 }
 
 @media (max-width: 450px) {
-
-  .top-news, .news, .explainer, .debate, .views {
-    margin-left: -1em;
-    margin-right: -1em;
-    padding-bottom: 2em;
+  .hed-content, .news, .viewsscroll, .explainer {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
-  .news {
-    margin-top: 10em;
+  .signup {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
-  .top-news {
-    margin-bottom: 22em;
+  .newsarticle, .viewarticle {
+    border-bottom: 1px solid #efefef;
   }
 
+  .newsarticle p {
+    margin-bottom: 1em;
+  }
+
+  .views h1 {
+    padding-left: 0.3em;
+  }
+
+  body {
+    padding: 0;
+  }
 }
 
 @media (max-width: 800px) {
-  .top-news {
-      top: 1em;
-      margin-bottom: 8em;
-    }
-
-  .top-news h2 {
-     font-size: 2em;
-   }
-
   .cover {
     height: 100%;
   }
+}
 
+@media (min-width: 800px) {
+  .top-news, .news, .views, .explainer {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+    .hed-content {
+      padding-right: 1em;
+      padding-top: 2em;
+    }
+}
+
+@media (min-width: 1000px) {
+  #hed-img .cover {
+      position: relative;
+      top: -5em;
+      }
 }
 
 @media (min-width: 1200px) {
-  .top-news, .news, .explainer, .views, .debate, {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
   #hed-img {
-    max-width: 65vw;
+    max-width: 70vw;
   }
 
   #hed-img .cover {
     position: relative;
-    top: 0;
+    top: -5em;
     width: 86%;
   }
-
 }
 
 @media (min-width: 1600px) {
   .top-news {
-     height: 600px;
+     height: 500px;
+    }
+
+  .top-news h2 {
+    font-size: 4em;
     }
 }
 
@@ -78,12 +94,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.hed {
-  font-size: 2em;
+  text-transform: uppercase;
+  font-size: 2.2em;
   letter-spacing: -0.01em;
   text-align: left;
-  padding-left: 0.5em;
-  padding-top: 1em;
-  border-top: 1px solid lightgrey;
+  padding-top: 0.5em;
+  border-top: 1px solid #efefef;
 }
 
 h2 {
@@ -116,6 +132,7 @@ a:hover {
   padding: 1em;
 }
 
+
 // top stories
 
 .top-news {
@@ -124,16 +141,6 @@ a:hover {
   height: 400px;
   margin-bottom: 7em;
   overflow: hidden;
-}
-
-.top-news span.kicker {
-  color: @anchorColor;
-}
-
-
-.hed-content {
-  padding-left: 1em;
-  padding-right: 2em;
 }
 
 .top-news h2 {
@@ -150,7 +157,7 @@ cover {
   margin: 0;}
 
 #hed-img {
-  width: 80vw;
+  width: 70vw;
   height: 100vh;
   overflow: hidden;
 }
@@ -195,10 +202,13 @@ cover {
 
 // news
 
+.newsarticle .cover {
+  height: 200px;
+  margin-top: 5px;
+}
+
 .newsarticle {
   margin-bottom: 2em;
-  padding-right: 1em;
-  padding-left: 1em;
 }
 
 .newsarticle p {
@@ -211,8 +221,10 @@ cover {
 }
 
 p.byline {
-  font-size: 0.7em;
-  color: grey;
+  color: @fontColor;
+  font-size: 0.8em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
   text-transform: uppercase;
 }
 
@@ -231,15 +243,22 @@ p.byline {
 
 // views
 
+.views .byline {
+  font-size: 0.8em;
+}
+
 .views .cover {
-  margin-left: 1em;
+  margin-left: 0em;
   margin-right: 1em;
   position: relative;
-  width: 30%;
-  max-height: 120px;
+  width: 40%;
+  height: 200px;
+  margin-bottom: 2em;
   float: left;
   clear: both;
 }
+
+
 
 @media (max-width: 600px) {
 
@@ -249,13 +268,13 @@ p.byline {
 }
 
 .viewarticle {
-  height: 150px;
-  margin-bottom: 0em;
-  padding-bottom: 2em;
+  height: 220px;
+  margin-bottom: 1em;
+  padding-bottom: 0em;
 }
 
 .viewarticle p {
-  font-size: 0.7em;
+  font-size: 0.85em;
 }
 
 .viewarticle h2 {
@@ -264,140 +283,30 @@ p.byline {
   margin-right: 0.5em;
 }
 
-//alternative code for horizontal scrolling
-
-//@media (max-width: 450px) {
-  //.viewsscroll > div {
-    //transform: rotate(-90deg);
-    //transform-origin: right top;
-    //transform: rotate(-90deg) translateY(-16px);
-  //}
-
-  //.viewarticle {
-    //transform: rotate(90deg);
-    //transform-origin: right top;
-    //height: 320px !important;
-    //margin-bottom: 5em;
-    //padding-bottom: 5em;
-    //margin-left: 1em;
-  //}
-
-  //.views .cover {
-  // margin-left: 0;
-    //margin-right: 0;
-    //width: 100%;
-    //max-height: 200px;
-    //float: none;
-    //margin-bottom: 0.5em;
-  //}
-
-  //.viewarticle p {
-    //padding-left: 1.2em;
-  //}
-
-  //.viewarticle h2 {
-    //padding-left: 0.5em;
-  //}
-
-  //.viewarticle .kicker {
-    //padding-left: 1em;
-
-  //}
-//}
-
-// debate
-
-.debate {
-  margin-bottom: 2em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.debate h1 {
-  text-align: center;
-}
-
-.debate span.light {
-  color: @anchorColor;
-  text-transform: uppercase;
-  font-size: 0.8em;
-}
-
-.vs {
-  font-family: 'Oswald', sans-serif;
-  text-align: center;
-  font-size: 3em;
-}
-
-.vs:after {
-  content: '';
-  display: block;
-  border-bottom: 0.2px solid lightgrey;
-  width: 150px;
-  -webkit-transform-origin: 0 0;
-  transform-origin: -1em -1em;
-  -webkit-transform: rotate(-37deg) translateX(-80%);
-  transform: rotate(-37deg) translateX(-80%);
-  position: absolute;
-  left: 55%;
-  z-index: 1;
-}
-
-.debate.text {
- text-align: center;
-}
-
-.debate h3 {
-  font-size: 1.6em;
-  line-height: 1.3em;
-}
-
-.a2 {
-  text-align: right;}
-
-@media (max-width: 450px) {
-  .debate h3 {
-    text-align: center;
-    padding-bottom: 1em;}
-
-  .debate p {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-}
-
-.debate h3 a:hover {
-  color: white;
-  background: @anchorHoverColor;
-  transition: 0.1s ease-in;
-}
-
-
-figcaption {
-  font-size: 1.5em;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 // subscribe
 
 .signup {
    box-shadow: 1px 1px 10px lightgrey;
-   height: 400px;
+   height: auto;
   -webkit-font-smoothing: antialiased;
    padding: 4em;
+  margin-top: 2em;
 }
 
-.signuptext { 
+.signuptext {
    text-align: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   .signup {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #mailchimp {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -414,20 +323,26 @@ figcaption {
   padding-bottom: 1em;
 }
 
-.signup span.kicker {
-    text-align: center;
-}
 
 @media (max-width: 800px) {
   #mailchimp {
     margin-left: auto;
     margin-right: auto;
   }
+  .signup {
+  margin-top: 1em;
+}
+}
+
+@media (max-width: 450px) {
+  .signup {
+     padding: 2em;
+   }
 }
 
 #mailchimp {
   padding-bottom: 2em;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid grey;
 }
 
   #mailchimp input {
@@ -435,7 +350,6 @@ figcaption {
     border: none;
     font-size: 0.8em;
     margin-bottom: 1em;
-    padding: 1em 1em 1em;
     width: 70%;
     -webkit-appearance:none;
     -webkit-border-radius: 0;
@@ -461,37 +375,69 @@ figcaption {
 
 //footer
 
+
+
+.social {
+  font-size: 2em;
+  text-align: center;}
+
+  .pagetitle {
+    text-align: center;}
+
+  .pagetitle h2 {
+    font-size: 2em;
+    font-family: 'Oswald';
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 1em;}
+
 footer {
   position: absolute;
+  text-align: center;
   z-index: 1000;
-  height: 200px;
+  height: auto;
   top: auto;
-  font-size: 0.8em;
   color: white;
   background: @detailColor;
-  width: 100vw;
+  width: 102vw;
   margin-left: -1.25em;
-  padding: 2em;
+  padding: 4em;
 }
 
 footer h2 {
   font-size: 1.5em;
+  padding-bottom: 1em;
+}
+
+footer p {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer #mailchimp {
+  margin-left: none;
+  width: 100%;
+  margin-bottom: 2em;
 }
 
 footer #mailchimp input[type="submit"] {
-  border: 1px solid grey;
+  color: white;
   font-size: 0.80em;
 }
 
 .inbox {
-  border-right: 1px solid grey;
   padding-right: 1em;
 }
 
 .footerlogo {
   max-width: 80px;
   padding-right: 1em;
-  border-right: 1px solid grey;
 }
 
 .copyright {
@@ -499,42 +445,101 @@ footer #mailchimp input[type="submit"] {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 0.6em;
-  padding-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
+
+
 
 @media (max-width: 450px) {
-  footer #mailchimp input {
-    width: 100%;
-  }
-  footer #mailchimp input[type="submit"] {
-    width: 100%;
-    margin-top: -1.1em;
-    object-align: center;
-  }
-}
 
-@media (max-width: 800px) {
+  footer p {
+    padding-right: 0em;
+    padding-left: 0em;
+  }
+
   footer {
-    text-align: center;
-    height: 410px;
-    padding-bottom: 2em;
-  }
-
-  footer h2 {
-    padding-top: 1em;
-    padding-bottom: 0.5em;
-  }
-
-  footer #mailchimp {
-    max-width: 50%;
-  }
-  .inbox {
-    border-right: none;
-    padding-right: none;
-  }
-
-  .footerlogo {
-    padding-right: none;
-    border-right: none;
+    margin-left: 0;
   }
 }
+
+
+
+
+//special content
+
+.brexit {
+  background: #1c346b;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.brexit div.pubdate {
+  color: #849dd6;
+}
+
+.brexit a {
+  color: inherit;}
+
+.brexit p {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #e2ebff;
+  text-align: center;}
+
+.brexit h1 {
+  text-align: center;
+  color: white;
+  border: none;
+  font-size: 1.8em;}
+
+.brexit h2 {
+  color: white;
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+  font-weight: 700;}
+
+.brexit h2:hover {
+  color: #bf0101;
+}
+
+.brexit h3 {
+  margin-top: -0.8em;
+  text-align: center;
+  padding-left: 0.5em;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #bf0101;
+}
+
+.brexit .more {
+  color: white;}
+
+.brexit .pubdate {
+  color: lightgrey;
+  border-bottom: 1px solid #849dd6;
+  float: none;
+  margin-bottom: 1em;
+  padding-bottom: 1em;}
+
+.brexitstories {
+  padding: 1em;}
+
+.may {
+  height: 60px;
+  width: 60px;
+  top: -1px;
+  left: 30px;
+  -webkit-filter: drop-shadow(1px 1px 5px black);
+filter: drop-shadow(1px 1px 5px black);}
+
+.may:hover {
+  transform: rotate(10deg);
+  transition: 0.3s ease-in-out;
+}
+
+.promise p {
+  text-align: left;}
+
+.promise a {
+  text-decoration: underline;}
