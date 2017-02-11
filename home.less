@@ -5,16 +5,6 @@ html {
   background-color: @backgroundColor;
 }
 
-@media (max-height: 568px) {
-  .top-news p{
-    display: none;
-  }
-
-  .top-news .byline {
-    display: none;
-  }
-}
-
 @media (max-width: 450px) {
   .hed-content, .news, .viewsscroll, .explainer {
     padding-left: 1em;
@@ -149,14 +139,15 @@ a:hover {
 @media (max-width: 800px) {
   .top-news {
     top: -1em;
+    height: 100vh;
     overflow: visible;
-    margin-bottom: 16em;
+    margin-bottom: 2em;
   }
 
    .hed-content {
     position: absolute;
     padding-top: 1em;
-    bottom: -50%;
+    bottom: 0%;
     color: white;
   }
 
