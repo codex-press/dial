@@ -74,9 +74,10 @@ p {
   font-family: freight-text-pro, 'Lora', serif;
   font-size: 0.9em;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: @lineHeight;
   max-width: @textWidth;
   margin: 1.4rem auto;
+  padding-bottom: 0em;
 }
 
 :not(p) > address.byline:before {
@@ -116,6 +117,7 @@ p.folio {
 
 p.lede {
   font-size: 1.2em;
+  line-height: 1.2em;
   font-weight: bold;
 }
 
@@ -418,43 +420,45 @@ blockquote {
 
 }
 
-//no idea what this is
+//latest stories
 
-//.sidenav {
-    //height: 100%;
-    //width: 0;
-    //position: fixed;
-    //z-index: 1;
-    //top: 0;
-    //left: 0;
-    //background-color: #111;
-    //overflow-x: hidden;
-    //transition: 0.5s;
-    //padding-top: 60px;
-//}
+.newsarticle {
+  padding: 1em;
+  font-size: 80%;
+  line-height: 1.5em;
+  background: white !important;
+  margin-bottom: 1em;
+  box-shadow: 1px 1px 10px lightgrey;
+  transition: all .2s ease-in-out;
+}
 
-//.sidenav a {
-    //padding: 8px 8px 8px 32px;
-    //text-decoration: none;
-    //font-size: 40px;
-    //color: #818181;
-    //display: block;
-    //transition: 0.3s
-//}
+.newsarticle:hover {
+  transform: scale(1.04);
+}
 
-//.sidenav a:hover, .offcanvas a:focus{
-    //color: #f1f1f1;
-//}
+.newsarticle p {
+  color: grey;
+  margin-top: 0;
+}
 
-//.sidenav .closebtn {
-    //position: absolute;
-    //top: 0;
-    //right: 25px;
-    //font-size: 36px;
-    //margin-left: 50px;
-//}
+.newsarticle a {
+  color: black;
+  text-decoration: none;}
 
-//@media screen and (max-height: 450px) {
-  //.sidenav {padding-top: 15px;}
-  //.sidenav a {font-size: 18px;}
-//}
+.newsarticle h2 {
+  font-size: 1.4em;
+  padding-top: 0;
+}
+
+.newsarticle p.byline {
+  color: grey;
+  text-transform: uppercase;
+}
+
+.newsarticle .pubdate {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+  color: grey;
+  text-transform: uppercase;
+  float: right;
+}

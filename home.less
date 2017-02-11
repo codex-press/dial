@@ -11,11 +11,6 @@ html {
     padding-right: 1em;
   }
 
-  .signup {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-
   .newsarticle, .viewarticle {
     border-bottom: 1px solid #efefef;
   }
@@ -40,51 +35,19 @@ html {
 }
 
 @media (min-width: 800px) {
-  .top-news, .news, .views, .explainer {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
     .hed-content {
       padding-right: 1em;
       padding-top: 2em;
     }
 }
 
-@media (min-width: 1000px) {
-  #hed-img .cover {
-      position: relative;
-      top: -5em;
-      }
-}
-
-@media (min-width: 1200px) {
-  #hed-img {
-    max-width: 70vw;
-  }
-
-  #hed-img .cover {
-    position: relative;
-    top: -5em;
-    width: 86%;
-  }
-}
-
-@media (min-width: 1600px) {
-  .top-news {
-     height: 500px;
-    }
-
-  .top-news h2 {
-    font-size: 4em;
-    }
-}
 
 //general styling
 
 p {
   font-family: 'Lora', serif;
   font-color: gray;
-  font-size: 1em;
+  line-height: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -95,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.hed {
   text-transform: uppercase;
-  font-size: 2.2em;
+  font-size: 2em;
   letter-spacing: -0.01em;
   text-align: left;
   padding-top: 0.5em;
@@ -123,15 +86,25 @@ a:hover {
 }
 
 .more {
+  display: inline;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.8em;
+  font-size: 1em;
   text-transform: uppercase;
-  font-weight: bold;
-  font-style: italic;
-  text-align: right;
-  padding: 1em;
+  font-weight: 200;
+  float: right;
+  padding: 0.5em;
+  margin-top: -4.3em;
 }
 
+.top-news, .news, .views, .signup, .explainer {
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;}
+
+.newshover:hover .cover {
+     opacity: 0.95;
+     filter: grayscale(90%);
+     transition: 0.2s ease-in-out;}
 
 // top stories
 
@@ -147,56 +120,79 @@ a:hover {
   font-size: 2.5em;
 }
 
-cover {
-  background-size: cover;
-  height: 100% !important;
-  width: 100%;
+.img.grow {
+  margin: 0;
 }
 
-.img.grow {
-  margin: 0;}
-
 #hed-img {
-  width: 70vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-
 
 @media (max-width: 900px) {
   .hed-content h2 {
     font-size: 2.2em;
   }
-
 }
 
 @media (max-width: 800px) {
   .top-news {
     top: -1em;
     overflow: visible;
-    margin-bottom: 17em;
+    margin-bottom: 16em;
   }
 
    .hed-content {
+    position: absolute;
     padding-top: 1em;
-    position: relative;
-    top: 26em;
+    bottom: -50%;
+    color: white;
   }
 
-    .hed-content h2 {
-      font-size: 2em;
+  .hed-content h2 {
+    font-size: 2em;
+    margin-top: 0.3em;
     }
 
+  .hed-content a {
+    color: white;
+  }
+
+  .hed-content p {
+    color: lightgrey;
+  }
+
+  .hed-content .folio {
+    background: @anchorColor;
+    color: white;
+    padding: 5px;
+  }
+
+  .hed-content .byline {
+    color: grey;
+  }
 
    #hed-img {
     width: 110vw;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
+    z-index: -1;
     position: absolute;
     top: 1em;
     bottom: 0;
     left: -2em;
     right: 0;
+  }
+
+  #hed-img:after {
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background: linear-gradient(to bottom, rgba(255,0,0,0) 50%,rgba(0,0,0,0.9) 100%);
   }
 }
 
@@ -207,12 +203,8 @@ cover {
   margin-top: 5px;
 }
 
-.newsarticle {
-  margin-bottom: 2em;
-}
-
 .newsarticle p {
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
 .newsarticle h2 {
@@ -229,7 +221,7 @@ p.byline {
 }
 
 .pubdate {
-  font-family: "Raleway", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 0.8em;
   color: grey;
   text-transform: uppercase;
@@ -242,6 +234,12 @@ p.byline {
 
 
 // views
+
+.viewarticle {
+  height: 220px;
+  margin-bottom: 1em;
+  padding-bottom: 0em;
+}
 
 .views .byline {
   font-size: 0.8em;
@@ -258,23 +256,14 @@ p.byline {
   clear: both;
 }
 
-
-
 @media (max-width: 600px) {
-
   .viewarticle {
     margin-bottom: 1em;
   }
 }
 
-.viewarticle {
-  height: 220px;
-  margin-bottom: 1em;
-  padding-bottom: 0em;
-}
-
 .viewarticle p {
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
 .viewarticle h2 {
@@ -290,7 +279,7 @@ p.byline {
    height: auto;
   -webkit-font-smoothing: antialiased;
    padding: 4em;
-  margin-top: 2em;
+   margin-top: 2em;
 }
 
 .signuptext {
@@ -298,11 +287,6 @@ p.byline {
 }
 
 @media (min-width: 800px) {
-  .signup {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
   #mailchimp {
     width: 75%;
     margin-left: auto;
@@ -337,6 +321,8 @@ p.byline {
 @media (max-width: 450px) {
   .signup {
      padding: 2em;
+     margin-left: 1em;
+     margin-right: 1em;
    }
 }
 
@@ -373,105 +359,13 @@ p.byline {
         color: @anchorColor;
       }
 
-//footer
-
-
-
-.social {
-  font-size: 2em;
-  text-align: center;}
-
-  .pagetitle {
-    text-align: center;}
-
-  .pagetitle h2 {
-    font-size: 2em;
-    font-family: 'Oswald';
-    letter-spacing: -0.05em;
-    text-transform: uppercase;
-    color: white;
-    padding-bottom: 1em;}
-
-footer {
-  position: absolute;
-  text-align: center;
-  z-index: 1000;
-  height: auto;
-  top: auto;
-  color: white;
-  background: @detailColor;
-  width: 102vw;
-  margin-left: -1.25em;
-  padding: 4em;
-}
-
-footer h2 {
-  font-size: 1.5em;
-  padding-bottom: 1em;
-}
-
-footer p {
-  font-family: 'Raleway', sans-serif;
-  margin-top: 0;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-footer #mailchimp {
-  margin-left: none;
-  width: 100%;
-  margin-bottom: 2em;
-}
-
-footer #mailchimp input[type="submit"] {
-  color: white;
-  font-size: 0.80em;
-}
-
-.inbox {
-  padding-right: 1em;
-}
-
-.footerlogo {
-  max-width: 80px;
-  padding-right: 1em;
-}
-
-.copyright {
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  font-size: 0.6em;
-  padding-top: 2em;
-  padding-bottom: 1em;
-}
-
-
-
-@media (max-width: 450px) {
-
-  footer p {
-    padding-right: 0em;
-    padding-left: 0em;
-  }
-
-  footer {
-    margin-left: 0;
-  }
-}
-
-
 
 
 //special content
 
 .brexit {
   background: #1c346b;
-  margin-top: 2em;
-  padding: 1em;
+  padding: 2em;
 }
 
 .brexit div.pubdate {
@@ -513,7 +407,14 @@ footer #mailchimp input[type="submit"] {
 }
 
 .brexit .more {
-  color: white;}
+  color: white;
+  text-align: center;
+  float: none;
+  display: block;
+  margin-top: 0em;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .brexit .pubdate {
   color: lightgrey;

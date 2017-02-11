@@ -1,0 +1,140 @@
+@import "lib/_variables";
+
+html {
+  font-family: @font;
+  background-color: @backgroundColor;
+}
+
+p {
+  font-family: 'Lora', serif;
+  font-color: gray;
+  line-height: 1.5em;
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  line-height: 95%;
+  font-weight: 700;
+  max-width: @textWidth;
+  margin: 5rem auto 2rem auto;
+}
+
+h1.hed {
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: -0.01em;
+  text-align: left;
+  padding-top: 0.5em;
+
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin: auto;
+}
+
+a {
+  color: @anchorColor;
+  text-decoration: underline;
+}
+
+a p {
+  color: #6b6b6b;
+}
+
+a:hover {
+  color: grey;
+  transition: 0.5s;
+}
+
+
+// subscribe
+
+.signup {
+  max-width: @textWidth;
+   box-shadow: 1px 1px 10px lightgrey;
+   height: auto;
+  -webkit-font-smoothing: antialiased;
+   padding: 4em;
+   margin: 0 auto;
+}
+
+.signuptext {
+   text-align: center;
+}
+
+@media (min-width: 800px) {
+  #mailchimp {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.signup h2 {
+  text-transform: uppercase;
+  color: @anchorColor;
+  padding-bottom: 1em;
+}
+
+.signup h3 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: auto;
+  padding-bottom: 1em;
+}
+
+
+@media (max-width: 800px) {
+  #mailchimp {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .signup {
+  margin-top: 1em;
+}
+}
+
+@media (max-width: 450px) {
+  .signup {
+     padding: 2em;
+     margin-left: 1em;
+     margin-right: 1em;
+   }
+}
+
+#mailchimp {
+  padding-bottom: 2em;
+  border-bottom: 1px solid grey;
+}
+
+  #mailchimp input {
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    width: 70%;
+    -webkit-appearance:none;
+    -webkit-border-radius: 0;
+    float: left;
+	}
+		#mailchimp input.email { background: none; border: none; }
+		#mailchimp input[type="submit"] {
+      font-family: "Raleway", sans-serif;
+      text-align: center;
+      background: none;
+      border: none;
+			color: black;
+      font-weight: bold;
+			font-size: 0.83em;
+			width: 30%;
+      -webkit-appearance:none;
+      -webkit-border-radius: 0;
+
+		}
+			#mailchimp input[type="submit"]:hover {
+        color: @anchorColor;
+      }

@@ -16,3 +16,100 @@
   background-color: @selectionColor;
   color: white;
 }
+
+//footer
+
+.social {
+  font-size: 2em;
+  text-align: center;}
+
+  .pagetitle {
+    text-align: center;}
+
+  .pagetitle h2 {
+    font-size: 2em;
+    font-family: 'Oswald';
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 1em;}
+
+footer {
+  position: absolute;
+  z-index: 1000;
+  height: auto;
+  top: auto;
+  left: 0;
+  margin-top: 2em;
+
+  text-align: center;
+  color: white;
+  background: @detailColor;
+  width: 100vw;
+  padding: 4em;
+}
+
+footer h2 {
+  font-size: 1.3em;
+  padding-bottom: 0.5em;
+}
+
+footer p {
+  font-family: 'Raleway', sans-serif;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer #mailchimp input.email {
+  color: white;
+}
+
+footer #mailchimp, {
+  margin-left: none;
+  width: 100%;
+  margin-bottom: 5em;
+}
+
+footer #mailchimp input[type="submit"] {
+  color: white;
+  font-size: 0.80em;
+}
+
+.inbox {
+  padding-right: 1em;
+}
+
+.footerlogo {
+  max-width: 80px;
+  padding-right: 1em;
+}
+
+.copyright {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  padding-top: 2em;
+  margin-bottom: -2em;
+}
+
+
+
+@media (max-width: 450px) {
+
+  footer p {
+    padding-right: 0em;
+    padding-left: 0em;
+  }
+
+  footer {
+    margin-left: 0;
+  }
+}
