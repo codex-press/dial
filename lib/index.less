@@ -145,7 +145,8 @@ blockquote, aside, ul, ol {
   color: grey;
   padding-top: 0;
   margin-top: 3em;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid #efefef;
+  margin-bottom: 5em;
 }
 
 @media @floatBreak {
@@ -422,23 +423,38 @@ blockquote {
 
 //latest stories
 
-.newsarticle {
-  padding: 1em;
-  font-size: 80%;
-  line-height: 1.5em;
-  background: white !important;
-  margin-bottom: 1em;
-  box-shadow: 1px 1px 10px lightgrey;
-  transition: all .2s ease-in-out;
+.latest {
+  max-width: @textWidth;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.newsarticle:hover {
-  transform: scale(1.04);
+
+.newsarticle {
+  height: 220px;
+  line-height: 0em;
+  margin-bottom: 1em;
+  padding-bottom: 0em;
+  padding-top: 1em;
+  border-top: 1px solid #efefef;
+}
+
+.newsarticle .cover {
+  margin-left: 0em;
+  margin-right: 1em;
+  position: relative;
+  width: 40%;
+  height: 200px;
+  margin-bottom: 2em;
+  float: left;
+  clear: both;
 }
 
 .newsarticle p {
   color: grey;
+  font-size: 15px;
   margin-top: 0;
+  line-height: 1em;
 }
 
 .newsarticle a {
@@ -446,19 +462,10 @@ blockquote {
   text-decoration: none;}
 
 .newsarticle h2 {
-  font-size: 1.4em;
+  font-size: 25px;
   padding-top: 0;
 }
 
-.newsarticle p.byline {
-  color: grey;
-  text-transform: uppercase;
-}
-
-.newsarticle .pubdate {
-  font-family: "Raleway", sans-serif;
-  font-size: 0.8em;
-  color: grey;
-  text-transform: uppercase;
-  float: right;
+.newsarticle .folio {
+  font-size: 12px;
 }

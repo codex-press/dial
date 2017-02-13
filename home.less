@@ -369,7 +369,7 @@ p.byline {
 
 .brexit {
   background: #1c346b;
-  padding: 2em;
+  padding: 1em;
 }
 
 .brexit div.pubdate {
@@ -435,12 +435,40 @@ p.byline {
   width: 60px;
   top: -1px;
   left: 30px;
-  -webkit-filter: drop-shadow(1px 1px 5px black);
-filter: drop-shadow(1px 1px 5px black);}
+  -webkit-filter: drop-shadow(2px 5px 10px black);
+  filter: drop-shadow(2px 5px 10px black);}
 
 .may:hover {
-  transform: rotate(10deg);
-  transition: 0.3s ease-in-out;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation: swing;
+  animation: swing 1s;}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
 }
 
 .promise p {
