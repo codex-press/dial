@@ -1,5 +1,9 @@
 @import "lib/_variables";
 
+#dial-menu:not(.active) .bar.hide {
+    transform: none;
+  }
+
 html {
   font-family: @font;
   background-color: @backgroundColor;
@@ -13,6 +17,7 @@ html {
 
   .newsarticle, .viewarticle {
     border-bottom: 1px solid #efefef;
+    margin-bottom: 0em;
   }
 
   .newsarticle p {
@@ -202,6 +207,10 @@ a:hover {
 
 // news
 
+.newsarticle {
+  margin-bottom: 2em;
+}
+
 .newsarticle .cover {
   height: 200px;
   margin-top: 5px;
@@ -233,7 +242,7 @@ p.byline {
 }
 
 
-// explainer
+// themes
 
 
 
