@@ -1,6 +1,5 @@
 @import '_variables.less';
 
-
 figure {
   width: @textWidth;
   max-width: 100%;
@@ -10,6 +9,61 @@ figure {
 
 figure.wide {
   width: (@textWidth + 10rem);
+}
+
+figure.wider {
+  width: (@textWidth + 16rem);
+  max-height: 600px;
+  margin-top: 5em;
+}
+
+.text-center p.dek {
+  text-align: center;
+}
+
+.text-center h1.hed {
+  font-size: 3em;
+}
+
+.text-center a {
+  color: white;
+}
+
+@media (max-width: 800px) {
+figure.wider {
+  margin: 0rem -4rem 4rem -4rem;
+  width: calc(100% + 8rem);
+  max-width: initial;
+  height: 100vh;
+  max-height: 100%; }
+
+  .text-center {
+    padding: 0em 4em;
+    margin: auto;
+  }
+
+  figure:not(.wider):after {
+    content: "";
+    position: absolute;
+    height: 90%;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIALwKi78z0hIHUjR5/vxjHgVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCTyyXZTfUuEAAAAABJRU5ErkJggg==) repeat;
+  }
+}
+
+@media (min-width: 1000px) {
+  .text-center {
+    font-size: 1.1rem;}
+}
+
+figure:not(.wider):not(.full-width):after {
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIALwKi78z0hIHUjR5/vxjHgVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCTyyXZTfUuEAAAAABJRU5ErkJggg==) repeat;
 }
 
 figcaption {
