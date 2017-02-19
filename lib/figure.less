@@ -12,8 +12,8 @@ figure.wide {
 }
 
 figure.wider {
-  width: (@textWidth + 16rem);
-  max-height: 600px;
+  width: (@textWidth + 20rem);
+  height: 600px;
   margin-top: 5em;
 }
 
@@ -22,12 +22,27 @@ figure.wider {
 }
 
 .text-center h1.hed {
-  font-size: 3em;
+  font-size: 3.5em;
 }
 
 .text-center a {
   color: white;
 }
+
+@keyframes dropTextCenter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.text-center {
+  animation: 3s ease-out 0s 1 dropTextCenter;
+}
+
 
 @media (max-width: 800px) {
 figure.wider {
@@ -40,6 +55,10 @@ figure.wider {
   .text-center {
     padding: 0em 4em;
     margin: auto;
+  }
+
+  .text-center h1.hed {
+    font-size: 3em;
   }
 
   figure:not(.wider):after {

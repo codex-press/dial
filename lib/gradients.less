@@ -1,5 +1,4 @@
 
-
 .gradient.fill {
   position: absolute;
   top: 0;
@@ -7,7 +6,7 @@
   bottom: 0;
   left: 0;
   margin: 0;
-    z-index: 1;
+  z-index: 1;
 }
 
 
@@ -72,8 +71,6 @@ html.no-background-clip {
   overflow: hidden;
 }
 
-//.red.gradient {
-  //-webkit-filter: custom(url(duotone.vs) mix(url(duotone.fs) normal source-atop), 1 1 border-box, black 255 128 0, white 0 255 0);}
 
 // mixin to generate all styles with given rotation
 .gradients(@sel, @deg) {
@@ -81,10 +78,11 @@ html.no-background-clip {
   .red.gradient@{sel} {
     background-image: linear-gradient(@deg, crimson, black);
     mix-blend-mode: multiply;
+    opacity: 0.7;
   }
 
   .blue.gradient@{sel}{
-    background-image: linear-gradient(@deg, blue, black);
+    background-image: linear-gradient(@deg, navy, black);
 
   }
 
