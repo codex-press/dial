@@ -508,7 +508,8 @@ blockquote {
   border: 1px solid black;
   text-align: left;
   margin-bottom: 2em;
-  margin-top: 2em;}
+  margin-top: 2em;
+  max-width: @textWidth;}
   
 .subscribe {
   padding-left: 20px;
@@ -573,3 +574,36 @@ blockquote {
   padding: 20px;
   border-top: 1px solid black;
 }
+
+#mailchimp {
+  padding-bottom: 2em;
+  border-bottom: 1px solid grey;
+}
+
+  #mailchimp input {
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    width: 70%;
+    -webkit-appearance:none;
+    -webkit-border-radius: 0;
+    float: left;
+	}
+		#mailchimp input.email { background: none; border: none; }
+		#mailchimp input[type="submit"] {
+      font-family: "Raleway", sans-serif;
+      text-align: center;
+      background: none;
+      border: none;
+			color: black;
+      font-weight: bold;
+			font-size: 0.83em;
+			width: 30%;
+      -webkit-appearance:none;
+      -webkit-border-radius: 0;
+
+		}
+			#mailchimp input[type="submit"]:hover {
+        color: @anchorColor;
+      }
