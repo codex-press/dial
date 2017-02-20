@@ -71,15 +71,26 @@ html.no-background-clip {
   overflow: hidden;
 }
 
+.red.gradient {
+  -webkit-filter: url(#duotone);
+  filter:  url(#duotone);
+}
+
+.defs-only {
+  position: absolute;
+  height: 0; width: 0;
+  overflow: none;
+  left: -100%;
+}
 
 // mixin to generate all styles with given rotation
 .gradients(@sel, @deg) {
 
-  .red.gradient@{sel} {
-    background-image: linear-gradient(@deg, crimson, black);
-    mix-blend-mode: multiply;
-    opacity: 0.7;
-  }
+  //.red.gradient@{sel} {
+    //background-image: linear-gradient(@deg, crimson, black);
+    //mix-blend-mode: multiply;
+    //opacity: 0.7;
+  //}
 
   .blue.gradient@{sel}{
     background-image: linear-gradient(@deg, navy, black);
