@@ -139,6 +139,7 @@ blockquote, aside, ul, ol {
 }
 
 .summary {
+  position: relative;
   background: #efefef;
     display: block;
     max-width: 34rem;
@@ -146,6 +147,17 @@ blockquote, aside, ul, ol {
     padding: 1.5em;
     line-height: 1.4em;
 }
+
+.summary:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQYV2NkQAKMIDav4sL/n+/HM4I5MAAARa0EBJHW09wAAAAASUVORK5CYII=);
+  }
 
 .summary h2 {
   font-size: 1em;}
@@ -219,11 +231,28 @@ blockquote, aside, ul, ol {
 // ------
 
 .dropcap {
+  position: relative;
+  background: @backgroundColor;
+  border: 1px solid black;
+  padding: 15px;
+  margin-right: 20px;
+  margin-top: 0.5rem;
   display: inline-block;
   float: left;
-  padding-right: .25rem;
-  font-size: 6.2em;
+  //padding-right: .25rem;
+  font-size: 6em;
   line-height: .78;
+}
+
+.dropcap:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQYV2NkQAKMIDav4sL/n+/HM4I5MAAARa0EBJHW09wAAAAASUVORK5CYII=);
 }
 
 code {
@@ -511,7 +540,7 @@ blockquote {
   text-align: left;
   margin: 2em auto;
   max-width: @textWidth;}
-  
+
 .signup:before {
     content: "";
     position: absolute;
@@ -541,12 +570,12 @@ blockquote {
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row;}
-  
+
 .socialmedia a {
   color: black;
   text-decoration: none;}
-  
-  
+
+
 @media (max-width: 800px) {
   .socialmedia {
   padding-top: 20px;
@@ -554,7 +583,7 @@ blockquote {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;}
-  
+
   .fb {
     border-right: none !important;}
 }
@@ -578,7 +607,7 @@ blockquote {
     padding: 5px;
     border-top: 1px solid black;
     border-right: 1px solid black;}
-  
+
 .tw {
   border: 0;
   padding: 0;
@@ -595,7 +624,7 @@ blockquote {
   padding: 5px;
   border-top: 1px solid black;
 }
-  
+
 .fb:hover,
 .tw:hover {
   background: #f2f2f2;}
