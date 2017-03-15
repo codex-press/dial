@@ -233,10 +233,10 @@ blockquote, aside, ul, ol {
       text-align: right;
       font-size: 20px;
     }
-	  
+
      .bar a,
 	  .bar a:visited {
-      color: white; 
+      color: white;
     }
 
     .bar {
@@ -508,6 +508,16 @@ blockquote {
   margin-bottom: 2em;
   float: left;
   clear: both;
+}
+
+.newsarticle img:before {
+ content: "";
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ z-index: -1;
+ background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQYV2NkQAKMIDav4sL/n+/HM4I5MAAARa0EBJHW09wAAAAASUVORK5CYII=);
+ //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIALwKi78z0hIHUjR5/vxjHgVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCTyyXZTfUuEAAAAABJRU5ErkJggg==) repeat;
 }
 
 .newsarticle p {
