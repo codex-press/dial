@@ -49,7 +49,7 @@
 
   .open {
     position: absolute;
-    font-size: 25px !important;
+    font-size: 25px;
     height: 100%;
     width: 50px;
     padding: 12px 3px;
@@ -87,9 +87,30 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
 
+  }
+
+  .menu-main {
     transform: translateX(-100%);
     transform-origin: 0 0;
     transition: transform 250ms ease-in;
+    touch-action: pan-y;
+    -webkit-user-drag: none;
+    z-index: 1000002;
+  }
+
+  .menu-social {
+    transform: translateX(-100%);
+    transform-origin: 0 0;
+    transition: transform 300ms ease-in;
+    touch-action: pan-y;
+    -webkit-user-drag: none;
+    z-index: 1000002;
+  }
+
+  .menu-meta {
+    transform: translateX(-100%);
+    transform-origin: 0 0;
+    transition: transform 350ms ease-in;
     touch-action: pan-y;
     -webkit-user-drag: none;
     z-index: 1000002;
