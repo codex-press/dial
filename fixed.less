@@ -7,7 +7,6 @@ body {
 
 article {
   margin: 0;
-	overflow: hidden;
 }
 
 article:before {
@@ -85,6 +84,10 @@ article:before {
 }
 
 @media (max-width: 450px) {
+  .signup {
+    width: 80%;
+  }
+
 	.signup h1 {
 	  font-family: 'Raleway', sans-serif;
 	  font-size: 3rem;
@@ -124,16 +127,11 @@ article:before {
     padding-bottom: 20px;
 }
 
-@media (max-width: 800px) {
-  .socialmedia {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;}
-
 .socialmedia {
   padding-top: 20px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
@@ -141,6 +139,15 @@ article:before {
   color: black;
   text-decoration: none;
 }
+
+
+@media (max-width: 800px) {
+  .socialmedia {
+  padding-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;}
 
   .fb {
     border-right: none !important;
@@ -153,12 +160,16 @@ article:before {
 
 .fb {
     border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     text-align: center;
     letter-spacing: .04em;
     text-transform: uppercase;
-    width: 100% !important;
+    display: block;
+    width: 100%;
 		color: #ffef19;
     padding: 5px;
     border-top: 2px solid #ffef19;
@@ -167,13 +178,17 @@ article:before {
 
 .tw {
   border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   letter-spacing: .04em;
 	color: #ffef19;
   text-transform: uppercase;
   font-size: 14px;
-  width: 100% !important;
+  display: block;
+  width: 100%;
   padding: 5px;
   border-top: 2px solid #ffef19;
 }
