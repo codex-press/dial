@@ -17,7 +17,7 @@ html {
 
 
 @media (max-width: 450px) {
-  .hed-content, .news, .viewsscroll, .explainer {
+  .hed-content, .news, .viewsscroll, .signup {
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -123,6 +123,8 @@ a:hover {
 
 // top stories
 
+
+
 .top-news {
   position: relative;
   top: 5em;
@@ -151,10 +153,10 @@ a:hover {
   }
 }
 
-@media (max-width: 800px) {
+
   .top-news {
-    top: -1em;
-    height: 100vh;
+    top: -0em;
+    height: 70vh;
     overflow: visible;
     margin-bottom: 2em;
   }
@@ -190,16 +192,22 @@ a:hover {
   }
 
    #hed-img {
-    width: 110vw;
-    height: 100vh;
+    width: 100vw;
+    height: 70vh;
     overflow: hidden;
     z-index: -1;
     position: absolute;
-    top: 1em;
+    top: 50%;
     bottom: 0;
-    left: -2em;
-    right: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+
+  #hed-img .cover {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);}
 
   #hed-img:after {
     position: absolute;
@@ -213,7 +221,16 @@ a:hover {
     background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.9) 100%);
     background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.9) 100%);
   }
-}
+
+  @media (max-width: 800px) {
+  .top-news {
+    height: 100vh;
+  }
+
+  #hed-img {
+   height: 100vh;
+  }
+  }
 
 // news
 
@@ -252,164 +269,162 @@ p.byline {
 }
 
 
-// themes
-
-
-
-// views
-
-.viewarticle {
-  height: 220px;
-  margin-bottom: 1em;
-  padding-bottom: 0em;
-}
-
-.views .byline {
-  font-size: 0.8em;
-}
-
-.views .cover {
-  margin-left: 0em;
-  margin-right: 1em;
-  position: relative;
-  width: 40%;
-  height: 200px;
-  margin-bottom: 2em;
-  float: left;
-  clear: both;
-}
-
-@media (max-width: 600px) {
-  .viewarticle {
-    margin-bottom: 1em;
-  }
-}
-
-@media (max-width: 450px) {
-  .viewarticle {
-    height: auto;
-  }
-}
-
-.viewarticle p {
-  font-size: 0.9em;
-}
-
-.viewarticle h2 {
-  font-size: 1.4em;
-  padding-top: 0.2em;
-  margin-right: 0.5em;
-}
-
 // subscribe
 
 .signup {
-   box-shadow: 1px 1px 10px lightgrey;
-   height: auto;
-  -webkit-font-smoothing: antialiased;
-   padding: 4em;
-   margin-top: 2em;
+	padding: 1em;
+	z-index: 10000;
+	text-align: center;
+	position: relative;
+	box-shadow: none;
+	padding: 0;
+	border: 1px solid black;
+	text-align: left;
 }
 
-
-.signuptext {
-   text-align: center;
+.signup p {
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
 }
 
-.follow {
-  text-align: center;
+	@media (min-width: 800px) {
+  h1 {
+    font-size: 12rem;}
+	}
+
+.signup:before {
+    content: none;
 }
 
-@media (min-width: 800px) {
-  #mailchimp {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .follow {
-    position: relative;
-    bottom: 0;
-    padding-left: 7em;
-    padding-right: 7em;
-    padding-top: 2em;
-  }
-
-  .fb {
-    float: right;
-  }
-
-  .tw {
-    float: left;
-  }
+.subscribe {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
-.signup h2 {
-  text-transform: uppercase;
-  color: @anchorColor;
-  padding-bottom: 1em;
+.subscribe h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
-.signup h3 {
-  font-size: 2em;
-  font-weight: 400;
-  margin: auto;
-  padding-bottom: 1em;
+.socialmedia {
+  padding-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.socialmedia a {
+  color: black;
+  text-decoration: none;
 }
 
 
 @media (max-width: 800px) {
-  #mailchimp {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .signup {
-  margin-top: 1em;
-}
+  .socialmedia {
+  padding-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;}
+
+  .fb {
+    border-right: none !important;
+	}
 }
 
-@media (max-width: 450px) {
-  .signup {
-     padding: 2em;
-     margin-left: 1em;
-     margin-right: 1em;
-   }
+#mailchimp {
+  width: 100%;
+}
+
+.fb {
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.tw {
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border-top: 1px solid black;
+}
+
+.tw a,
+.fb a {
+	color: inherit;
+}
+
+.fb:hover,
+.tw:hover {
+  color: black;
 }
 
 #mailchimp {
   padding-bottom: 2em;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid black;
 }
 
   #mailchimp input {
     font-family: 'Raleway', sans-serif;
     border: none;
-    font-size: 0.8em;
+    font-size: 12px;
     margin-bottom: 1em;
     width: 70%;
+		color: rgb(85, 82, 228);
     -webkit-appearance:none;
     -webkit-border-radius: 0;
-    float: left;
+		position: absolute;
 	}
+
 		#mailchimp input.email { background: none; border: none; }
+
 		#mailchimp input[type="submit"] {
       font-family: "Raleway", sans-serif;
-      text-align: center;
       background: none;
       border: none;
-			color: black;
       font-weight: bold;
-			font-size: 0.83em;
+			font-size: 12px;
 			width: 30%;
       -webkit-appearance:none;
       -webkit-border-radius: 0;
-
+			float: right;
+			right: 1em;
+			text-align: right;
 		}
-			#mailchimp input[type="submit"]:hover {
-        color: @anchorColor;
+
+	#mailchimp input[type="submit"]:hover {
+        color: inherit;
       }
 
-
+@media (max-width: 450px) {
+      .signup {
+        margin: 1em;
+      }
+    }
 
 //special content
 
