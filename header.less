@@ -1,7 +1,6 @@
 @import "lib/_variables";
 
 
-
 #dial-menu {
 
   font-size: 16px;
@@ -17,21 +16,21 @@
     left: 0;
     right: 0;
     z-index: 100000;
-    background-color: @backgroundColor;
     padding: 6px;
     height: 50px;
     transition: transform 0.3s ease-out;
-    border-bottom: 1px solid #efefef;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0) 100%) !important;
+     border: none;
   }
 
-  .bar a {
-    text-decoration: none;
-    color: @fontColor;
-  }
+   .bar a, {
+      color: white;
+    }
+
 
   .bar a:visited {
     text-decoration: none;
-    color: @fontColor;
+    color: white;
   }
 
   &:not(.active) .bar.hide {
@@ -42,27 +41,30 @@
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 24px;
     max-width: 100%;
-    text-align: center;
+    text-align: left;
+    padding-left: 45px;
+    padding-top: 2px;
+    font-size: 20px;
   }
 
   .open {
+    font-size: 20px !important;
+    color: white;
     position: absolute;
-    font-size: 25px !important;
     height: 100%;
     width: 50px;
-    padding: 12px 3px;
+    padding: 14px 3px;
     text-align: center;
     top: 0;
     left: 0;
-    border-right: 1px solid #efefef;
   }
 
   .open:hover {
-  background: #f2f2f2;
- }
-
+    color: white;
+    background: none;
+  }
+  
   .open,
   .close {
     font-size: 2em;
