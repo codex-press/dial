@@ -17,12 +17,12 @@ html {
 
 
 @media (max-width: 450px) {
-  .hed-content, .news, .viewsscroll, .signup {
+  .hed-content, .news, .viewsscroll, .list {
     padding-left: 1em;
     padding-right: 1em;
   }
 
-  .newsarticle, .viewarticle {
+  .newsarticle {
     border-bottom: 1px solid #efefef;
     margin-bottom: 0em;
   }
@@ -38,6 +38,10 @@ html {
   body {
     padding: 0;
   }
+
+  .heading h1.hed {
+    padding-left: 0.3em;
+  }
 }
 
 @media (max-width: 800px) {
@@ -46,14 +50,13 @@ html {
   }
 }
 
+
 @media (min-width: 800px) {
     .hed-content {
       padding-right: 1em;
       padding-top: 2em;
     }
 }
-
-
 
 //general styling
 
@@ -73,9 +76,16 @@ h1.hed {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: -0.01em;
-  text-align: left;
   padding-top: 0.5em;
   border-top: 1px solid #efefef;
+}
+
+.heading {
+  color: white;
+}
+
+.heading h1.hed {
+  font-size: 3em;
 }
 
 h2 {
@@ -93,23 +103,13 @@ a p {
   color: #6b6b6b;
 }
 
-a:hover {
-  color: grey;
-  transition: 0.5s;
+.newshover:hover h2 {
+  text-decoration: underline @green;
+  text-decoration-skip: ink;
+  transition: 0.3s;
 }
 
-.more {
-  display: inline;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 200;
-  float: right;
-  padding: 0.5em;
-  margin-top: -4.3em;
-}
-
-.top-news, .news, .views, .signup, .explainer {
+.heading, .top-news, .news, .views, .explainer, .list {
    max-width: 1000px;
    margin-left: auto;
    margin-right: auto;}
@@ -119,6 +119,29 @@ a:hover {
      filter: grayscale(90%);
      transition: 0.2s ease-in-out;}
 
+//article:after {
+  //content: ' ';
+  //position: absolute;
+  //z-index: -100;
+  //top: -5em;
+  //left: -5em;
+  //width: 120vw;
+  //height: 50vh;
+  //transform: rotate(-3deg);
+  //background: linear-gradient(45deg, rgba(37,130,55,0.8) 0%,rgba(37,115,162,0.8) 100%);
+//}
+
+//article:before {
+  //content: ' ';
+  //position: absolute;
+  //z-index: -100;
+  //top: -5em;
+  //left: -5em;
+  //width: 120vw;
+  //height: 50vh;
+  //transform: rotate(3deg);
+  //background: linear-gradient(45deg, rgba(37,121,128,0.8) 0%,rgba(37,115,162,0.8) 100%);
+//}
 
 
 // top stories
@@ -128,13 +151,15 @@ a:hover {
 .top-news {
   position: relative;
   top: 5em;
-  height: 400px;
   margin-bottom: 7em;
   overflow: hidden;
+  height: 100vh;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .top-news h2 {
-  font-size: 2.5em;
+  text-transform: uppercase;
 }
 
 .img.grow {
@@ -147,29 +172,46 @@ a:hover {
   overflow: hidden;
 }
 
-@media (max-width: 900px) {
-  .hed-content h2 {
-    font-size: 2.2em;
+
+.top-news .newshover:hover .cover {
+     opacity: 1;
+     filter: brightness(100%);
+     transition: 0.2s ease-in-out;
+     }
+
+  .top-news .newshover:hover h2 {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: @green;
   }
-}
+
+  .top-news .newshover:hover .folio,
+  .top-news .newshover:hover p,
+  .top-news .newshover:hover .topstories {
+    filter: opacity(0);
+    transition: 0.2s ease-in-out;
+  }
 
 
   .top-news {
     top: -0em;
-    height: 70vh;
+    height: 100vh;
     overflow: visible;
     margin-bottom: 2em;
   }
 
    .hed-content {
     position: absolute;
+    width: 100%;
     padding-top: 1em;
-    bottom: 0%;
     color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   .hed-content h2 {
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 0.3em;
     }
 
@@ -182,7 +224,7 @@ a:hover {
   }
 
   .hed-content .folio {
-    background: @anchorColor;
+    background: @green;
     color: white;
     padding: 5px;
   }
@@ -193,7 +235,7 @@ a:hover {
 
    #hed-img {
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     overflow: hidden;
     z-index: -1;
     position: absolute;
@@ -207,6 +249,7 @@ a:hover {
    position: relative;
    top: 50%;
    left: 50%;
+   height: 100vh;
    transform: translate(-50%, -50%);}
 
   #hed-img:after {
@@ -222,17 +265,25 @@ a:hover {
     background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.9) 100%);
   }
 
-  @media (max-width: 800px) {
-  .top-news {
-    height: 100vh;
-  }
+  @media (min-width: 800px) {
+      .hed-content {
+        padding-right: 1em;
+        padding-top: 2em;
+      }
 
-  #hed-img {
-   height: 100vh;
-  }
+      .top-news,
+      .hed-content,
+      #hed-img {
+        max-height: 75vh;
+      }
   }
 
 // news
+
+.news {
+  background: white;
+  //box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
 
 .newsarticle {
   margin-bottom: 2em;
@@ -268,29 +319,109 @@ p.byline {
   float: right;
 }
 
+//lists
+
+.list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list .listarticle {
+  height: 220px;
+  line-height: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-bottom: 1px solid #efefef;
+}
+
+.listarticle h2 {
+  font-size: 1.4em;
+}
+
+.list .newsinfo {
+  padding-top: 1em;
+}
+
+@media (max-width: 700px) {
+  .list p.dek {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+
+
+  .list h2 {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .list .listarticle {
+    padding-top: 0;
+    height: 100px;
+  }
+
+  .list .newsinfo {
+    padding-top: 0em;
+  }
+}
+
+.list .listarticle .cover {
+  margin-left: 0em;
+  margin-right: 1em;
+  position: relative;
+  width: 35%;
+  height: auto;
+  max-height: 200px;
+  margin-bottom: 2em;
+  float: left;
+  clear: both;
+}
+
+.list .newsarticle a {
+  color: inherit;
+  text-decoration: none;}
+
+.list .newsarticle:hover{
+  transition: 0.3s ease-in-out;
+}
+
+
 
 // subscribe
 
 .signup {
-	padding: 1em;
+	padding-left: 10%;
+  padding-right: 10%;
 	z-index: 10000;
 	text-align: center;
 	position: relative;
 	box-shadow: none;
 	padding: 0;
-	border: 1px solid black;
-	text-align: left;
+  left: -1em;
+  width: 105%;
+  background: @green;
+  color: white;
+  overflow: hidden;
 }
 
-.signup p {
-	font-family: 'Ubuntu', sans-serif;
-	text-align: center;
+.signup:after {
+  content: ' ';
+  position: absolute;
+  top: -5em;
+  left: -2em;
+  width: 130vw;
+  height: 90vh;
+  z-index: -1;
+  transform: rotate(-25deg);
+  background: linear-gradient(90deg, rgba(14,212,135,0.8) 25%,rgba(37,115,162,0.7) 100%);
 }
 
-	@media (min-width: 800px) {
-  h1 {
-    font-size: 12rem;}
-	}
+.signup  h2 {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
 
 .signup:before {
     content: none;
@@ -299,7 +430,9 @@ p.byline {
 .subscribe {
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
+  padding-top: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .subscribe h3 {
@@ -309,195 +442,62 @@ p.byline {
     padding-bottom: 20px;
 }
 
-.socialmedia {
-  padding-top: 20px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.socialmedia a {
-  color: black;
-  text-decoration: none;
-}
-
-
-@media (max-width: 800px) {
-  .socialmedia {
-  padding-top: 20px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;}
-
-  .fb {
-    border-right: none !important;
-	}
-}
-
 #mailchimp {
-  width: 100%;
-}
-
-.fb {
-    border: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    display: block;
-    width: 100%;
-    padding: 5px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-}
-
-.tw {
-  border: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  font-size: 14px;
-  display: block;
-  width: 100%;
-  padding: 5px;
-  border-top: 1px solid black;
-}
-
-.tw a,
-.fb a {
-	color: inherit;
-}
-
-.fb:hover,
-.tw:hover {
-  color: black;
-}
-
-#mailchimp {
+  max-width: 90%;
   padding-bottom: 2em;
-  border-bottom: 1px solid black;
+  margin: 0 auto;
 }
 
   #mailchimp input {
     font-family: 'Raleway', sans-serif;
     border: none;
-    font-size: 12px;
-    margin-bottom: 1em;
-    width: 70%;
-		color: rgb(85, 82, 228);
     -webkit-appearance:none;
     -webkit-border-radius: 0;
-		position: absolute;
 	}
 
-		#mailchimp input.email { background: none; border: none; }
+		#mailchimp input.email {
+      border: none;
+      background: #fff;
+      box-sizing: border-box;
+      font: 18px/30px Arial, sans-serif;
+      height: 40px;
+      margin: 30px auto;
+      padding: 10px 60px 10px 20px;
+      width: 90%;
+    }
 
 		#mailchimp input[type="submit"] {
       font-family: "Raleway", sans-serif;
-      background: none;
-      border: none;
-      font-weight: bold;
-			font-size: 12px;
-			width: 30%;
+      background: @red;
+      float: right;
+      transform: translate(0px, -70px);
+      height: 40px;
+      width: 140px;
+      text-transform: uppercase;
+      font-weight: 400;
+			font-size: 14px;
+      border-radius: 4rem;
       -webkit-appearance:none;
-      -webkit-border-radius: 0;
-			float: right;
-			right: 1em;
-			text-align: right;
 		}
 
 	#mailchimp input[type="submit"]:hover {
-        color: inherit;
+        box-shadow: 1px 1px 5px #14453D;
       }
 
-@media (max-width: 450px) {
-      .signup {
-        margin: 1em;
-      }
-    }
 
-//special content
 
-.brexit {
-  background: #1c346b;
-  padding: 1em;
-}
 
-.brexit div.pubdate {
-  color: #849dd6;
-}
-
-.brexit a {
-  color: inherit;}
-
-.brexit p {
-  padding-left: 1em;
-  padding-right: 1em;
-  color: #e2ebff;
-  text-align: center;}
-
-.brexit h1 {
-  text-align: center;
-  color: white;
-  border: none;
-  font-size: 1.8em;}
-
-.brexit h2 {
-  color: white;
-  font-size: 1.2em;
-  padding-bottom: 0.5em;
-  font-weight: 700;}
-
-.brexit h2:hover {
-  color: #bf0101;
-}
-
-.brexit h3 {
-  margin-top: -0.8em;
-  text-align: center;
-  padding-left: 0.5em;
-  text-transform: uppercase;
-  font-size: 2em;
-  color: #bf0101;
-}
-
-.brexit .more {
-  color: white;
-  text-align: center;
-  float: none;
-  display: block;
-  margin-top: 0em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.brexit .pubdate {
-  color: lightgrey;
-  border-bottom: 1px solid #849dd6;
-  float: none;
-  margin-bottom: 1em;
-  padding-bottom: 1em;}
-
-.brexitstories {
-  padding: 1em;}
+//theresa may's head
 
 .may {
-  height: 60px;
-  width: 60px;
   top: -1px;
   left: 30px;
   -webkit-filter: drop-shadow(2px 5px 10px black);
   filter: drop-shadow(2px 5px 10px black);}
+
+  .may img {
+    transform: scale(0.8);
+  }
 
 .may:hover {
   -webkit-transform-origin: top center;
@@ -532,8 +532,45 @@ p.byline {
   }
 }
 
-.promise p {
-  text-align: left;}
 
-.promise a {
-  text-decoration: underline;}
+.views {
+  display: none;}
+
+.none {
+  display: none;}
+
+
+@media (min-width: 451px) {
+.newsarticle {
+    margin-bottom: 3em;
+}
+}
+
+.explainer {display: none;}
+
+
+
+footer .social {
+  margin-top: 1em;}
+
+  footer {
+    overflow: hidden;
+  }
+
+  footer:after {
+    content: ' ';
+    position: absolute;
+    top: -5em;
+    left: -5em;
+    width: 120vw;
+    height: 100vh;
+    z-index: -1;
+    transform: rotate(20deg);
+    background: linear-gradient(35deg, rgba(37,115,162,0.8) 0%, rgba(14,212,135,0.8) 75%);
+  }
+
+.flex.ten-columns>* {
+  width: auto;}
+
+.top-news {
+  margin-bottom: 0em;}

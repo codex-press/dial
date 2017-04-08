@@ -1,0 +1,87 @@
+
+@import 'lib/_variables.less';
+@import 'lib/index.less';
+
+
+@media (min-width: 450px) {
+  body, article {
+    padding: 0;
+  }
+
+  p,
+  h1.hed,
+  p.dek {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .signup {
+    margin: 0 auto;
+    max-width: 32rem;
+  }
+}
+
+h1.hed {
+  color: white !important;
+}
+
+article {
+  background: @backgroundColorDark;
+  color: white;}
+
+.folio {
+  color: white;}
+
+.signup,
+.signup a {
+ background: #262626;
+ color: white;
+ border-color: white;}
+
+p a {
+  color: white;
+}
+
+.fb,
+.tw,
+#mailchimp input[type=submit] {
+  color: white;
+  border-color: white;}
+
+.fb:hover,
+.tw:hover {
+  background: none;}
+
+h1.hed {
+  font-size: 3rem;
+  color: white;
+  }
+
+.none {display: none;}
+
+h1.hed {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: 700;
+  color: @fontColor;
+  letter-spacing: -0.03em;
+}
+
+p.dek {
+
+}
+
+
+.subhed {
+  h1&, h2&, h3&, h4&, h5&, h6& {
+    margin: 3rem auto 1rem;
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+p.intro,
+.intro p {
+  text-align: justify;
+}
