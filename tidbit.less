@@ -61,6 +61,7 @@ figure {
   margin: -1em -1em;}
 
 .folio {
+  font-size: 12px !important;
   display: inline-block;
   color: rgb(61,220,151);
   background: white;
@@ -121,17 +122,33 @@ figure {
 
 
 article:before {
-    content: ' ';
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 150vw;
-    height: 100vh;
-    background: @green;
-    filter: opacity(0.95);
-    //background: rgba(255, 10, 201, 0.6);
-  }
+  content: ' ';
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 150vw;
+  height: 100vh;
+  background: ;
+  filter: opacity(0.8);
+  //background: rgba(255, 10, 201, 0.6);
+}
+
+article.purple:before {
+  background: @purple;
+}
+
+article.red:before{
+  background: @red;
+}
+
+article.green:before{
+  background: @green;
+}
+
+article.blue:before{
+  background: @blue;
+}
 
 .readmore {
   z-index: 1000;
