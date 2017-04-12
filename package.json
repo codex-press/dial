@@ -1,0 +1,22 @@
+{
+  "name": "dial",
+  "version": "1.0.0",
+  "description": "Future greatness to come",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codex-press/dial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codex-press/dial/issues"
+  },
+  "homepage": "https://github.com/codex-press/dial#readme",
+  "dependencies": {
+    "slick-carousel": "^1.6.0"
+  }
+}
