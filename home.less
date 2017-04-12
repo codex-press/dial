@@ -220,8 +220,8 @@ a p {
 .ticker {
   width: 3000px;
   display: inline-block;
-  height: 2rem;
-  line-height: 2rem;
+  height: 1rem;
+  line-height: 1rem;
   white-space: nowrap;
   padding-right: 100%;
   animation-iteration-count: infinite;
@@ -243,7 +243,6 @@ a p {
   color: black;
   font-size: 12px;}
 
-
 @keyframes ticker {
   0% {
     transform: translate3d(0, 0, 0);
@@ -255,12 +254,8 @@ a p {
   }
 }
 
-.ticker:hover
-{
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-     animation-play-state: paused;
+.ticker:hover {
+   animation-play-state: paused;
 }
 
 @keyframes vibrate {
@@ -269,7 +264,7 @@ a p {
     }
     25% {
         top: -3px;
-        transform: rotate(1deg);
+        transform: rotate(2deg);
     }
     50% {
         top: 0px;
@@ -277,7 +272,7 @@ a p {
     }
     75% {
         top: 3px;
-        transform: rotate(-1deg);
+        transform: rotate(-2deg);
     }
     100% {
         top: 0px;
@@ -286,8 +281,8 @@ a p {
 }
 
 .ticker h4:hover {
-  color: #43C59E;
-  animation: vibrate 0.1s linear 0s infinite;
+  color: @green;
+  animation: vibrate 0.1s linear 0s 3;
 }
 
 .ticker-wrap {
