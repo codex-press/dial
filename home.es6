@@ -10,6 +10,7 @@ article.ready.then(() => {
     centerPadding: '40px',
     slidesToShow: 3,
     mobileFirst: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 800,
@@ -21,6 +22,7 @@ article.ready.then(() => {
           arrows: false,
           centerMode: true,
           infinite: false,
+          variableWidth: true,
           centerPadding: '40px',
           slidesToShow: 1
         }
