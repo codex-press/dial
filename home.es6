@@ -20,6 +20,7 @@ article.ready.then(() => {
         settings: {
           arrows: false,
           centerMode: true,
+          infinite: false,
           centerPadding: '40px',
           slidesToShow: 1
         }
