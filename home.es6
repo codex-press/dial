@@ -6,6 +6,7 @@ article.ready.then(() => {
 
   $('.feature-container').slick({
     centerMode: true,
+    infinite: false,
     centerPadding: '40px',
     slidesToShow: 3,
     mobileFirst: true,
