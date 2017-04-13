@@ -383,12 +383,18 @@ a p {
   background-position: 50% 50% !important;
 }
 
-.feature:hover {
-  transform: scale(1.05);
+@media (min-width: 800px) {
+  .feature:hover {
+    transform: scale(1.05);
+  }
 }
 
 .slick-list {
     overflow: visible;
+}
+
+.slick-slide {
+  width: 289px;
 }
 
 // news
