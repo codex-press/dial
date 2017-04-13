@@ -12,16 +12,16 @@ article.ready.then(() => {
       slidesToShow: 3,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 800,
           settings: {
             arrows: false,
             centerMode: true,
             centerPadding: '40px',
-            slidesToShow: 3
+            slidesToShow: 1
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 475,
           settings: {
             arrows: false,
             centerMode: true,

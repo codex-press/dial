@@ -322,13 +322,12 @@ a p {
 
 @media (max-width: 1045px) {
   .feature-container {
-    width: calc(246px * 3);
+    width: 860px;
   }
 
   .feature {
     height: 360px;
     width: 203px !important;
-    margin: 1 auto;
   }
 
   .feature h2 {
@@ -338,17 +337,17 @@ a p {
 
 @media (max-width: 800px) {
   .feature-container {
-    width: auto;
-    margin-top: -2.5em;
+    width: 100%;
+    margin-top: -4em;
   }
 
   .feature {
     display: flex;
     flex-direction: row;
     height: 500px;
-    width: 281.25px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 280px !important;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
   .feature h2 {
@@ -390,6 +389,9 @@ a p {
   transform: scale(1.05);
 }
 
+.slick-list {
+    overflow: visible;
+}
 
 // news
 
@@ -585,71 +587,13 @@ p.byline {
         box-shadow: 1px 1px 5px #14453D;
       }
 
-
-
-
-//theresa may's head
-
-.may {
-  top: -1px;
-  left: 30px;
-  -webkit-filter: drop-shadow(2px 5px 10px black);
-  filter: drop-shadow(2px 5px 10px black);}
-
-  .may img {
-    transform: scale(0.8);
-  }
-
-.may:hover {
-  -webkit-transform-origin: top center;
-  transform-origin: top center;
-  -webkit-animation: swing;
-  animation: swing 1s;}
-
-@keyframes swing {
-  20% {
-    -webkit-transform: rotate3d(0, 0, 1, 15deg);
-    transform: rotate3d(0, 0, 1, 15deg);
-  }
-
-  40% {
-    -webkit-transform: rotate3d(0, 0, 1, -10deg);
-    transform: rotate3d(0, 0, 1, -10deg);
-  }
-
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, 5deg);
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
-  }
-
-  to {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
-  }
-}
-
-
-.views {
-  display: none;}
-
-.none {
-  display: none;}
-
+//misc
 
 @media (min-width: 451px) {
-.newsarticle {
-    margin-bottom: 3em;
+  .newsarticle {
+      margin-bottom: 3em;
+  }
 }
-}
-
-.explainer {display: none;}
-
-
 
 footer .social {
   margin-top: 1em;}
