@@ -4,8 +4,8 @@ import 'slick-carousel';
 
 article.ready.then(() => {
 
-  window.addEventListener('resize', function(){
-      if(window.innerWidth < 800){
+  // window.addEventListener('resize', function(){
+  //     if(window.innerWidth < 800){
 
 
     $('.feature-container').slick({
@@ -31,6 +31,6 @@ article.ready.then(() => {
         }
       ]
     });
-  }
-  })
+  // }
+  // })
 })
