@@ -2,11 +2,11 @@ import $ from 'jquery';
 import article from 'article';
 import 'slick-carousel';
 
+article.ready.then(() => {
 
-window.addEventListener('resize', function(){
-    if(window.innerWidth < 800){
+  window.addEventListener('resize', function(){
+      if(window.innerWidth < 800){
 
-  article.ready.then(() => {
 
     $('.feature-container').slick({
       centerMode: true,
@@ -31,7 +31,6 @@ window.addEventListener('resize', function(){
         }
       ]
     });
+  }
   })
-
-}
 })
