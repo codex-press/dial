@@ -1,10 +1,6 @@
 @import "lib/_variables";
 @import (inline) "./node_modules/slick-carousel/slick/slick.css";
 
-#dial-menu:not(.active) .bar.hide {
-    transform: none !important;
-  }
-
 @media (max-width: 450px) {
   footer {
     margin-left: 0em !important;
@@ -124,6 +120,35 @@ a p {
 
 // hero
 
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  margin-left: -1em;
+}
+
+.hero-container .hero {
+  width: 50%;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-container .hero {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-container {
+    margin: 0;
+  }
+}
+
 .hero {
   margin: 0em -1em 1em -1em;
   height: 80vh;
@@ -181,7 +206,9 @@ a p {
 }
 
 .hed-details:hover h2 {
-  text-decoration: underline @green;
+  text-decoration: underline;
+  text-decoration-color: @green;
+  -webkit-text-decoration-color: @green;
   text-decoration-skip: ink;
 }
 
@@ -322,12 +349,12 @@ a p {
 
 @media (max-width: 1045px) {
   .feature-container {
-    width: 750px;
+    width: 800px;
   }
 
   .feature {
-    height: 360px;
-    width: 203px;
+    height: 390px;
+    width: 225px;
   }
 
   .feature h2 {
@@ -517,12 +544,12 @@ p.byline {
 	text-align: center;
 	position: relative;
 	box-shadow: none;
+  margin-top: 1em;
 	padding: 0;
   left: -1em;
   width: 105%;
   background: @green;
   color: white;
-  overflow: hidden;
 }
 
 .signup  h2 {

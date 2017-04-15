@@ -1,9 +1,5 @@
 @import "lib/_variables";
 
-#dial-menu:not(.active) .bar.hide {
-    transform: none !important;
-  }
-
 html {
   font-family: @font;
   background-color: @backgroundColor;
@@ -56,3 +52,46 @@ a:hover {
   color: @green;
   transition: 0.5s;
 }
+
+
+#mailchimp {
+  max-width: 90%;
+  padding-bottom: 2em;
+  margin: 0 auto;
+}
+
+  #mailchimp input {
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    -webkit-appearance:none;
+    -webkit-border-radius: 0;
+	}
+
+		#mailchimp input.email {
+      border: none;
+      background: #fff;
+      box-sizing: border-box;
+      font: 18px/30px Arial, sans-serif;
+      height: 40px;
+      margin: 30px auto;
+      padding: 10px 60px 10px 20px;
+      width: 90%;
+    }
+
+		#mailchimp input[type="submit"] {
+      font-family: "Raleway", sans-serif;
+      background: @red;
+      float: right;
+      transform: translate(0px, -70px);
+      height: 40px;
+      width: 140px;
+      text-transform: uppercase;
+      font-weight: 400;
+			font-size: 14px;
+      border-radius: 4rem;
+      -webkit-appearance:none;
+		}
+
+	#mailchimp input[type="submit"]:hover {
+        box-shadow: 1px 1px 5px #14453D;
+      }
