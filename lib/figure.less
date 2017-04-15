@@ -20,7 +20,7 @@ figure.wider {
 .text-center {
   margin-left: 1em;
   margin-right: 1em;
-  animation: 3s ease-out 0s 1 dropTextCenter;
+  animation: 4s ease-in 0s 1 dropTextCenter;
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@ figure.wider {
 }
 
 .text-center h1.hed {
-  font-size: 3.5em;
+  font-size: 3em;
   padding: 0.2em;
 }
 
@@ -46,6 +46,10 @@ figure.wider {
 
 @keyframes dropTextCenter {
   0% {
+    opacity: 0;
+  }
+
+  25% {
     opacity: 0;
   }
 
@@ -102,7 +106,7 @@ figure.wider {
 
 @media (max-width: 322px) {
   .text-center h1.hed {
-    font-size: 1.8em !important;
+    font-size: 1.8em;
   }
 }
 
@@ -111,11 +115,9 @@ figure.wider {
   .text-center h1.hed {
     font-size: 2.2em;
     padding: 0.2em;
-    text-align: left;
   }
 
   .text-center p.dek {
-    text-align: left;
     padding-left: 0.5em;
     padding-right: 0.5em;
   }

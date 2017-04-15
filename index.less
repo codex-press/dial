@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Lora|Ubuntu|Raleway:500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Lora|Ubuntu');
 
 @import "lib/_variables.less";
 @import "header";
 
 .folio {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
+  font-family: @headingFont;
+  font-weight: 300;
   text-transform: uppercase;
   color: @green;
   font-size: 0.8em;
@@ -38,7 +38,7 @@ span.outline {
 
   .pagetitle h2 {
     font-size: 2em;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     letter-spacing: -0.05em;
     text-transform: uppercase;
     color: white;
@@ -51,6 +51,7 @@ footer {
   top: auto;
   left: 0;
   margin-top: 2em;
+  margin-left: auto;
 
   text-align: center;
   color: white;
@@ -61,11 +62,10 @@ footer {
 
 footer h2 {
   font-size: 1.3em;
-  padding-bottom: 0.5em;
 }
 
 footer p {
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   margin-top: -1em;
   margin-bottom: 2em;
   margin-left: auto;
@@ -84,7 +84,7 @@ footer #mailchimp input.email {
 footer #mailchimp, {
   margin-left: none;
   width: 100%;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 footer #mailchimp input[type="submit"] {
@@ -103,23 +103,9 @@ footer #mailchimp input[type="submit"] {
 
 .copyright {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   text-transform: uppercase;
   font-size: 0.6em;
   padding-top: 2em;
   margin-bottom: -2em;
-}
-
-
-
-@media (max-width: 450px) {
-
-  footer p {
-    padding-right: 0em;
-    padding-left: 0em;
-  }
-
-  footer {
-    margin-left: -1em;
-  }
 }

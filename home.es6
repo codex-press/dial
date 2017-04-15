@@ -28,7 +28,7 @@ function on() {
   $('.feature-container').slick({
     centerMode: true,
     infinite: false,
-    centerPadding: '40px',
+    centerPadding: '60px',
     slidesToShow: 3,
     speed: 150,
     mobileFirst: true,
@@ -39,6 +39,7 @@ function on() {
         settings: {
           arrows: false,
           centerMode: true,
+          initialSlide: 1,
           infinite: false,
           variableWidth: true,
           centerPadding: '40px',
@@ -49,4 +50,3 @@ function on() {
     ]
   });
 }
-

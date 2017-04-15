@@ -5,22 +5,19 @@ html {
   background-color: @backgroundColor;
 }
 
-
-
 p {
-  font-family: 'Lora', serif;
+  font-family: @bodyFont;
   font-color: gray;
   font-size: 1em;
   line-height: 1.5em;
-  max-width: @textWidth;
   margin: 1rem auto;
+  max-width: 1000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   line-height: 95%;
   font-weight: 700;
-  max-width: @textWidth;
   margin: 5rem auto 2rem auto;
 }
 
@@ -28,15 +25,15 @@ h1.hed {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: -0.01em;
-  text-align: left;
   padding-top: 0.5em;
 
 }
 
 h2 {
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 000;
   margin: auto;
+  padding-top: 1em;
 }
 
 a {
@@ -53,15 +50,60 @@ a:hover {
   transition: 0.5s;
 }
 
+.about {
+  margin-bottom: 2em;
+}
+
+.about,
+.masthead {
+  position: relative;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about p {
+  font-size: 1.5em;
+}
+
+.masthead h2 {
+  text-transform: uppercase;
+  text-align: left;
+  border-top: 1px solid @lightGrey;
+  margin-bottom: 1em;
+}
+
+
+.member {
+  background: white;
+  color: @fontColor;
+}
+
+.member .start {
+  font-style: italic;
+  color: black;
+}
+
+.member p {
+  color: grey;
+}
+
+.member a {
+  color: @fontColor;
+}
+
+.member a:hover {
+  color: @green;
+}
 
 #mailchimp {
-  max-width: 90%;
+  max-width: 100%;
   padding-bottom: 2em;
   margin: 0 auto;
 }
 
   #mailchimp input {
-    font-family: 'Raleway', sans-serif;
+    font-family: @headingFont;
     border: none;
     -webkit-appearance:none;
     -webkit-border-radius: 0;
@@ -79,10 +121,11 @@ a:hover {
     }
 
 		#mailchimp input[type="submit"] {
-      font-family: "Raleway", sans-serif;
+      position: relative;
+      font-family: @headingFont;
       background: @red;
       float: right;
-      transform: translate(0px, -70px);
+      top: -4.35rem;
       height: 40px;
       width: 140px;
       text-transform: uppercase;
@@ -90,8 +133,10 @@ a:hover {
 			font-size: 14px;
       border-radius: 4rem;
       -webkit-appearance:none;
+      transition: 0.1s ease-in;
 		}
 
 	#mailchimp input[type="submit"]:hover {
+        transform: scale(1.05);
         box-shadow: 1px 1px 5px #14453D;
       }

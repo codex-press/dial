@@ -35,7 +35,7 @@ article {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   line-height: 95%;
   font-weight: 700;
   max-width: @textWidth;
@@ -72,7 +72,7 @@ h1.large, h1.xlarge, h1.xxlarge {
 }
 
 p {
-  font-family: freight-text-pro, 'Lora', serif;
+  font-family: freight-text-pro, @bodyFont;
   font-size: 0.9em;
   font-weight: 400;
   line-height: @lineHeight;
@@ -86,7 +86,7 @@ p {
 }
 
 :not(p) > address.byline {
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   font-size: 0.75em;
   line-height: 2;
   width: @textWidth;
@@ -123,7 +123,7 @@ div > time.pubdate {
 
 p.folio {
   margin-top: 0em;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.85em;
 }
 
@@ -152,7 +152,7 @@ blockquote, aside, ul, ol {
 
 .summary {
   position: relative;
-  background: #efefef;
+  background: @lightGrey;
     display: block;
     max-width: 34rem;
     margin: 1em auto;
@@ -175,13 +175,13 @@ blockquote, aside, ul, ol {
   font-size: 1em;}
 
 .authorbox p {
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   font-size: 0.8em;
   font-weight: 300;
   color: grey;
   padding-top: 0;
   margin-top: 3em;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid @lightGrey;
   margin-bottom: 5em;
 }
 
@@ -308,14 +308,15 @@ li {
 // quotes
 
 aside.pullquote {
-  font-family: 'Raleway', sans-serif;
-  color: @green;
+  font-family: @headingFont;
+  color: @fontColor;
   font-weight: bold;
   text-align: left;
   margin: 1rem auto;
   padding-top: 1rem;
   font-size: 1.6rem;
   line-height: 1;
+  max-width: @textWidth;
 }
 
 aside.pullquote:before {
@@ -323,13 +324,13 @@ aside.pullquote:before {
   display: block;
   position: relative;
   width: 45%;
-  border-top: 5px solid gray;
+  border-top: 5px solid @green;
   top: -0.3em;
 }
 
 aside.pullquote.left,
 aside.pullquote.right {
-  width: 33%;
+  width: 25%;
 }
 
 aside.pullquote:after {
@@ -337,7 +338,7 @@ aside.pullquote:after {
   display: none;
   position: relative;
   width: 45%;
-  border-top: 5px solid @detailColor;
+  border-top: 5px solid @green;
   margin-top: 1.3em;
   top: -0.8em;
 }
@@ -348,7 +349,7 @@ aside.pullquote.right:before {
   position: relative;
   width: 45%;
   margin-left: 7em;
-  border-top: 5px solid @detailColor;
+  border-top: 5px solid @green;
   top: -0.3em;
 }
 
@@ -358,7 +359,7 @@ aside.pullquote.right:after {
   position: relative;
   width: 45%;
   margin-left: 7em;
-  border-top: 5px solid @detailColor;
+  border-top: 5px solid @green;
   margin-top: 1.3em;
   top: -0.8em;
 }
@@ -409,7 +410,7 @@ aside.sidebar {
 }
 
 blockquote {
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   font-weight: bold;
   font-size: 1.2em;
   margin: 1rem auto;
@@ -477,7 +478,7 @@ blockquote {
   margin-bottom: 1em;
   padding-bottom: 0em;
   padding-top: 1em;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid @lightGrey;
 }
 
 .newsarticle .cover {
@@ -529,8 +530,8 @@ blockquote {
 }
 
 .post {
-  border: 1px solid #efefef;
-  box-shadow: 1px 1px 10px #efefef;
+  border: 1px solid @lightGrey;
+  box-shadow: 1px 1px 10px @lightGrey;
   max-width: 34rem;
   margin: 1em auto;
   height: 202px;}
@@ -626,7 +627,7 @@ blockquote {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: @headingFont;
     font-size: 14px;
     text-align: center;
     letter-spacing: .04em;
@@ -644,7 +645,7 @@ blockquote {
   -moz-appearance: none;
   appearance: none;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: @headingFont;
   letter-spacing: .04em;
   text-transform: uppercase;
   font-size: 14px;
@@ -664,7 +665,7 @@ blockquote {
 }
 
   #mailchimp input {
-    font-family: 'Raleway', sans-serif;
+    font-family: @headingFont;
     border: none;
     font-size: 12px;
     margin-bottom: 1em;
@@ -675,7 +676,7 @@ blockquote {
 	}
 		#mailchimp input.email { background: none; border: none; }
 		#mailchimp input[type="submit"] {
-      font-family: "Raleway", sans-serif;
+      font-family: @headingFont;
       text-align: center;
       background: none;
       border: none;
