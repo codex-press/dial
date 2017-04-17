@@ -17,10 +17,27 @@ figure.wider {
   margin-top: 5em;
 }
 
+@keyframes dropTextCenter {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.00);
+  }
+}
+
 .text-center {
   margin-left: 1em;
   margin-right: 1em;
-  animation: 4s ease-in 0s 1 dropTextCenter;
+  animation: 1s ease-in 0s dropTextCenter 1;
   overflow: hidden;
 }
 
@@ -42,20 +59,6 @@ figure.wider {
 
 .text-center a {
   color: white;
-}
-
-@keyframes dropTextCenter {
-  0% {
-    opacity: 0;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 100;
-  }
 }
 
 @media (max-width: 800px) {
