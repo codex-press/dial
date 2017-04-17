@@ -604,7 +604,7 @@ p.byline {
       font-family: @headingFont;
       background: @red;
       float: right;
-      top: -5em;
+      top: -70px;
       height: 40px;
       width: 140px;
       text-transform: uppercase;
@@ -615,9 +615,14 @@ p.byline {
       transition: 0.1s ease-in;
 		}
 
+
 	#mailchimp input[type="submit"]:hover {
       transform: scale(1.05);
       box-shadow: 1px 1px 5px #14453D;
+    }
+
+    #mailchimp input.email {
+      font: 12px Arial, sans-serif;
     }
 
 //misc
@@ -645,7 +650,13 @@ footer .social {
   }
 
 .flex.ten-columns>* {
-  width: auto;}
+  width: auto;
+}
 
 .top-news {
-  margin-bottom: 0em;}
+  margin-bottom: 0em;
+}
+
+body {
+  padding-bottom: 0;
+}
