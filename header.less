@@ -101,9 +101,17 @@
     transition: transform 150ms ease-in;
   }
 
+  &.active .menu-main {
+    animation: 1s ease-in 0s fadein 1;
+    animation-delay: 20ms;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    opacity: 1;
+  }
+
   &.active .menu-social {
     animation: 1s ease-in 0s fadein 1;
-    animation-delay: 9ms;
+    animation-delay: 40ms;
     animation-fill-mode:forwards;
     opacity: 0;
     opacity: 1;
@@ -113,7 +121,7 @@
 
   &.active .menu-meta {
     animation: 1s ease-in 0s fadein 1;
-    animation-delay: 18ms;
+    animation-delay: 60ms;
     animation-fill-mode:forwards;
     opacity: 0;
     opacity: 1;
@@ -123,7 +131,7 @@
 
   &.active .legal {
     animation: 1s ease-in 0s fadein 1;
-    animation-delay: 27ms;
+    animation-delay: 80ms;
     animation-fill-mode:forwards;
     opacity: 0;
     opacity: 1;
