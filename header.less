@@ -134,17 +134,42 @@
 
 }
 
+@keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
 .menu-social {
+  animation: 1s ease-in 0s fadein 1;
+  animation-delay: 9ms;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  opacity: 1;
   padding-top: 2em;
   font-size: 0.8em;
 }
 
 .menu-meta {
+  animation: 1s ease-in 0s fadein 1;
+  animation-delay: 18ms;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  opacity: 1;
   padding-top: 2em;
   font-size: 0.7em;
 }
 
 .legal {
+  animation: 1s ease-in 0s fadein 1;
+  animation-delay: 27ms;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  opacity: 1;
   font-family: @headingFont;
   position: absolute;
   bottom: 2em;
