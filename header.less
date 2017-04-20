@@ -106,8 +106,6 @@
     animation: 0.5s ease-in 0s slidein 1;
     animation-delay: 10ms;
     animation-fill-mode:forwards;
-    opacity: 0;
-    opacity: 1;
   }
 
   &.active .menu-social {
@@ -115,8 +113,6 @@
     animation: 0.5s ease-in 0s slidein 1;
     animation-delay: 210ms;
     animation-fill-mode:forwards;
-    padding-top: 2em;
-    font-size: 0.8em;
   }
 
   &.active .menu-meta {
@@ -124,8 +120,6 @@
     animation: 0.5s ease-in 0s slidein 1;
     animation-delay: 410ms;
     animation-fill-mode:forwards;
-    padding-top: 2em;
-    font-size: 0.7em;
   }
 
   &.active .legal {
@@ -168,7 +162,7 @@
   }
 
   nav a:hover {
-    color: @red;
+    color: black;
   }
 
 }
@@ -183,7 +177,15 @@
     }
 }
 
+.menu-social {
+  padding-top: 2em;
+  font-size: 0.8em;
+}
 
+.menu-meta {
+  padding-top: 2em;
+  font-size: 0.7em;
+}
 
 @media (max-width: 800px) {
   #dial-menu {
