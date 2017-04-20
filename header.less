@@ -104,21 +104,20 @@
   &.active .menu-main {
     transform: translateX(-100%);
     animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 10ms;
     animation-fill-mode:forwards;
   }
 
   &.active .menu-social {
     transform: translateX(-100%);
     animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 210ms;
+    animation-delay: 200ms;
     animation-fill-mode:forwards;
   }
 
   &.active .menu-meta {
     transform: translateX(-100%);
     animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 410ms;
+    animation-delay: 400ms;
     animation-fill-mode:forwards;
   }
 
@@ -151,6 +150,7 @@
     color: inherit;
     padding-left: 1rem;
     outline: none;
+    margin: 3px 0;
   }
 
   nav a:hover {
@@ -167,6 +167,10 @@
     100% {
       transform: translateX(0);
     }
+}
+
+.menu-main {
+  text-transform: uppercase;
 }
 
 .menu-social {
