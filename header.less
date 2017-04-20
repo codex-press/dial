@@ -123,11 +123,10 @@
   }
 
   &.active .legal {
-    font-family: @headingFont;
-    position: absolute;
-    bottom: 2em;
-    font-size: 0.6em;
-    text-decoration: underline;
+    transform: translateX(-100%);
+    animation: 0.5s ease-in 0s slidein 1;
+    animation-delay: 610ms;
+    animation-fill-mode:forwards;
   }
 
    .legal nav a {
@@ -185,6 +184,14 @@
 .menu-meta {
   padding-top: 2em;
   font-size: 0.7em;
+}
+
+.legal {
+  font-family: @headingFont;
+  position: absolute;
+  bottom: 2em;
+  font-size: 0.6em;
+  text-decoration: underline;
 }
 
 @media (max-width: 800px) {
