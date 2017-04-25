@@ -552,13 +552,15 @@ p.byline {
 	padding: 0;
   left: -1em;
   width: 105%;
-  background: @green;
+  background: @detailColor;
   color: white;
 }
 
 .signup  h2 {
   text-transform: uppercase;
   padding-bottom: 15px;
+  text-decoration: underline;
+  text-decoration-color: @green;	
 }
 
 .signup:before {
@@ -574,10 +576,9 @@ p.byline {
 }
 
 .subscribe h3 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     margin: auto;
-    padding-bottom: 20px;
 }
 
 #mailchimp {
@@ -608,7 +609,7 @@ p.byline {
     #mailchimp input[type="submit"] {
       position: relative;
       font-family: @headingFont;
-      background: @red;
+      background: @green;
       color: white;
       float: right;
       top: -70px;
