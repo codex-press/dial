@@ -11,7 +11,7 @@
 
 html {
   @media @mobile { font-size: 18px; }
-  @media @tablet { font-size: 16px; }
+  @media @tablet { font-size: 18px; }
   @media @laptop { font-size: 18px; }
   @media @desktop { font-size: 20px; }
 }
@@ -72,12 +72,12 @@ h1.large, h1.xlarge, h1.xxlarge {
 }
 
 p {
-  font-family: freight-text-pro, @bodyFont;
-  font-size: 0.9em;
-  font-weight: 400;
+  font-family: @bodyFont;
+  font-size: 1em;
+  font-weight: 200;
   line-height: @lineHeight;
   max-width: @textWidth;
-  margin: 1.4rem auto;
+  margin: 1.6rem auto;
   padding-bottom: 0em;
 }
 
@@ -175,14 +175,21 @@ blockquote, aside, ul, ol {
   font-size: 1em;}
 
 .authorbox p {
+  line-height: 1.;
+  padding: 1em 1em;
+  background: @green;
   font-family: @headingFont;
   font-size: 0.8em;
+  letter-spacing: 0.5px;
   font-weight: 300;
-  color: grey;
-  padding-top: 0;
+  color: white;
   margin-top: 3em;
-  border-top: 1px solid @lightGrey;
-  margin-bottom: 5em;
+  //border-top: 1px solid @lightGrey;
+}
+
+.authorbox a {
+  color: white;
+  font-weight: bold;
 }
 
 @media @floatBreak {
@@ -246,11 +253,15 @@ blockquote, aside, ul, ol {
 
 .dropcap {
   position: relative;
-  margin-top: 0.5rem;
+  background: @green;
+  color: white;
+  margin-right: 10px;
+  margin-top: 12px;
   display: inline-block;
   float: left;
-  padding-right: .25rem;
-  font-size: 6em;
+  padding: 0.6em;
+  font-size: 3em;
+  font-weight: 500;
   line-height: .78;
 }
 
@@ -411,11 +422,11 @@ aside.sidebar {
 
 blockquote {
   font-family: @headingFont;
-  font-weight: bold;
-  font-size: 1.2em;
+  line-height: 1.4;
+  font-size: 1em;
   margin: 1rem auto;
-  padding: 0 1rem;
-  border-left: 5px solid @detailColor;
+  padding: 0 0.5rem;
+  border-left: 5px solid @green;
 }
 
 @media (max-width: 800px) {
@@ -631,7 +642,7 @@ blockquote {
     -moz-appearance: none;
     appearance: none;
     font-family: @headingFont;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -651,7 +662,7 @@ blockquote {
   font-family: @headingFont;
   letter-spacing: .04em;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   display: block;
   width: 100%;
   padding: 5px;

@@ -42,4 +42,3 @@ article.on('scroll', () => {
 
   resetDebounced();
 });
-

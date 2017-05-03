@@ -17,15 +17,15 @@ figure.wider {
   margin-top: 5em;
 }
 
-@keyframes dropTextCenter {
+@keyframes dropText {
   0% {
     opacity: 0;
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   50% {
     opacity: 0;
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 
   100% {
@@ -34,52 +34,69 @@ figure.wider {
   }
 }
 
-.text-center {
-  opacity: 0;
-  margin-left: 1em;
-  margin-right: 1em;
-  animation: 1s ease-in 0s dropTextCenter 1;
-  animation-delay: 1s;
-  overflow: hidden;
-  animation-fill-mode:forwards;
-}
-
-.center-text-on-top p.dek,
-.text-center p.dek {
-  text-align: center;
-}
-
-.center-text-on-top h1.hed,
-.text-center h1.hed {
-  text-align: center;
-  font-size: 3em;
-  padding: 0.2em;
-}
-
-.text-center .folio {
-  margin-top: 2em;
-  display: inline-block;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-.center-text-on-top a,
-.text-center a {
-  color: white;
-}
-
 .center-text-on-top {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 4em;
+  margin: 0 4rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   text-align: center;
-  animation: 1s ease-in 0s dropTextCenter 1;
+  animation: 1s ease-in 0s dropText 1;
+  animation-fill-mode: forwards;
+}
+
+.center-text-on-top .folio {
+  opacity: 0;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  animation: 1s ease-in 0s dropText 1;
+  animation-fill-mode: forwards;
+}
+
+.center-text-on-top h1.hed,{
+  opacity: 0;
+  text-align: center;
+  font-size: 3em;
+  padding: 0.2em;
+  margin-top: 1em;
+  animation: 1s ease-in 0s dropText 1;
+  animation-delay: 150ms;
+  animation-fill-mode: forwards;
+}
+
+.center-text-on-top p.dek {
+  opacity: 0;
+  text-align: center;
+  animation: 1s ease-in 0s dropText 1;
+  animation-delay: 300ms;
+  animation-fill-mode:forwards;
+
+  margin-top: 0;
+  line-height: 1;
+}
+
+.center-text-on-top .sharing-icons {
+  opacity: 0;
+  width: auto;
+  animation: 1s ease-in 0s dropText 1;
+  animation-delay: 450ms;
+  animation-fill-mode: forwards;
+}
+
+.center-text-on-top .sharing-icons a {
+  color: white;
+}
+
+
+
+.center-text-on-top a {
+  color: white;
 }
 
 @media (max-width: 800px) {
@@ -110,7 +127,7 @@ figure.wider {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    margin-left: -20px;
+    margin-left: -1em;
     width: 30px;
     height: 30px;
     animation: bounce 1.5s infinite;
@@ -118,13 +135,7 @@ figure.wider {
     background-size: contain;
   }
 
-  .text-center {
-    padding: 0em 4em;
-    margin: auto;
-  }
-
-  .center-text-on-top h1.hed,
-  .text-center h1.hed {
+  .center-text-on-top h1.hed {
       font-size: 3em;
   }
 }
@@ -148,15 +159,13 @@ figure.wider {
 }
 
 @media (min-width: 1000px) {
-  .center-text-on-top,
-  .text-center {
+  .center-text-on-top {
     font-size: 1.1rem;}
 }
 
 
 @media (max-width: 600px) {
-  .center-text-on-top h1.hed,
-  .text-center h1.hed {
+  .center-text-on-top h1.hed {
     font-size: 2.2em;
     padding: 0.2em;
   }
@@ -168,8 +177,7 @@ figure.wider {
 }
 
 @media (max-width: 450px) {
-  .center-text-on-top h1.hed,
-  .text-center h1.hed {
+  .center-text-on-top h1.hed {
     font-size: 1.8em;
   }
 }
@@ -213,7 +221,7 @@ figure.full-window:after {
   position: absolute;
   bottom: 10px;
   left: 50%;
-  margin-left:-20px;
+  margin-left: -1em;
   width: 30px;
   height: 30px;
   animation: bounce 1.5s infinite;
@@ -232,7 +240,6 @@ figure.full-window:after {
       transform: translateY(-15px);
    }
  }
-
 
 // at the top of the story it's got no margin
  article > figure.full-window:first-child,
@@ -395,3 +402,19 @@ html.javascript [x-cp-figure] {
   }
 
 }
+
+// @media (max-width: 800px) {
+//   .full-window,
+//   .wider {
+//     position: fixed !important;
+//     transition: 350ms ease-in-out;
+//     z-index: 1000;
+//     width: calc(100% + 2rem) !important;
+//     height: 100vh;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     margin-left: -1rem !important;
+//     //transform: translateY(-100%);
+//   }
+// }
