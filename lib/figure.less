@@ -87,13 +87,20 @@ figure.wider {
   }
 }
 
-.center-text-on-top p.dek {
+.center-text-on-top p.dek,
+.center-text-on-top .byline,
+.center-text-on-top .pubdate {
   opacity: 0;
   text-align: center;
   animation: 1s ease-in 0s dropText 1;
   animation-delay: 300ms;
   animation-fill-mode:forwards;
 
+  color: white;
+
+}
+
+.center-text-on-top p.dek {
   margin-top: 0;
   line-height: 1;
 }
