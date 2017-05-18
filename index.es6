@@ -2,6 +2,11 @@ import article from 'article';
 import dom from 'dom';
 import * as env from 'env';
 import * as u from 'utility';
+import {typekit} from 'utility';
+
+// Proxima Nova: regular, italic, bold italic
+
+typekit({kitId: 'jtj0kdc'});
 
 article.ready.then(() => {
 
@@ -43,8 +48,4 @@ article.on('scroll', () => {
   resetDebounced();
 });
 
-import {typekit} from 'utility';
 
-// Proxima Nova: regular, italic, bold italic
-
-typekit({kitId: 'jtj0kdc'});
