@@ -1,6 +1,57 @@
 @import "lib/_variables";
 @import (inline) "./node_modules/slick-carousel/slick/slick.css";
 
+//background image and top text
+
+#dial-menu {
+  display: none;
+}
+
+figure.background {
+  position: fixed !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin-top: -3em;
+  margin-left: -1em;
+  z-index: -5;
+  background-size: cover;
+}
+
+.background img {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+@media (max-width: 450px) {
+  .background {
+    margin-left: 0 !important;
+  }
+}
+
+.top {
+  //width: 200%;
+  //position: absolute;
+  //top: 45%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.top h1 {
+  font-size: 3em;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.top .pubdate {
+  float: none;
+  color: black;
+  font-size: 1em;
+}
+
+// breakpoints
+
 @media (max-width: 450px) {
   footer {
     margin-left: 0em !important;
@@ -51,6 +102,7 @@ html {
       padding-top: 2em;
     }
 }
+
 
 //general styling
 
@@ -116,6 +168,18 @@ a p {
  margin-right: auto;
 }
 
+@media (min-width: 1000px) {
+  .news {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .news {
+    margin: 0 -1em;
+  }
+}
+
 // hero
 
 .hero-container {
@@ -153,7 +217,7 @@ a p {
 }
 
 .hero {
-  margin: 0em -1em 1em -1em;
+  margin: 0em -1em;
   height: 80vh;
 }
 
@@ -173,6 +237,20 @@ a p {
   position: relative;
   height: 100%;
   background-position: 50% 50% !important;
+  max-width: none !important;
+}
+
+.hero .cover:before  {
+   content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: inherit;
+  background: #000;
+  -webkit-filter: opacity(.3);
+  filter: opacity(.3);
 }
 
 .hero .shim {
@@ -180,13 +258,74 @@ a p {
 }
 
 .hero .hed-details {
-  bottom: 0;
   z-index: 1;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
   width: 100%;
   margin: 0;
   padding: 1em;
-  max-width: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .hero .hed-details {
+    width: 70%;
+  }
+
+  .hero {
+    max-width: 90vw;
+    margin: auto;
+  }
+
+   .hero h2 {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero h2 {
+    font-size: 5em;
+  }
+
+  .hero .hed-details {
+    width: 60%;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .hero h2 {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero .hed-details {
+    width: 90%;
+  }
+
+   .hero h2 {
+    font-size: 3em;
+  }
+
+  .hero .dek {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero .hed-details {
+    width: 90%;
+  }
+
+   .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero .dek {
+    font-size: 0.8em;
+  }
 }
 
 .hero h2 {
@@ -218,7 +357,6 @@ a p {
 .hed-details:hover .folio,
 .hed-details:hover .dek,
 .hed-details:hover .byline {
-  filter: opacity(0);
   transition: 0.2s ease-in-out;
 }
 
@@ -235,8 +373,10 @@ a p {
 }
 
 .hero .dek {
-  margin-top: 0.8em;
-  color: lightgrey;
+  margin-top: 1em;
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
   font-family: @bodyFont;
 }
 
@@ -273,7 +413,7 @@ a p {
   text-transform: uppercase;
   font-weight: 300;
   color: black;
-  font-size: 12px;}
+  font-size: 13px;}
 
 @keyframes ticker {
   0% {
@@ -324,6 +464,7 @@ a p {
   height: 3rem;
   padding-left: 100%;
   position: relative;
+  margin-bottom: 1em;
 }
 
 // feature
@@ -332,34 +473,36 @@ a p {
   position: inherit;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -3.5em;
+  margin-top: -2.5em;
+  max-width: 884px;
 }
 
 .feature {
   box-shadow: 1px 1px 10px #8e8e8e;
   display: inline-block;
-  margin: 20px;
+  margin: 7.2px;
   vertical-align: top;
   transition: transform .3s;
-  height: 500px;
-  width: 290px;
+  height: 380px;
+  width: 280px;
   overflow: hidden;
 }
 
 .feature h2 {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 700;
   padding: 5px;
 }
 
-@media (max-width: 1045px) {
+@media (max-width: 1200px) {
   .feature-container {
     width: 810px;
   }
 
   .feature {
-    height: 390px;
-    width: 225px;
+    height: 350px;
+    width: 250px;
+    margin: 8.6px;
   }
 
   .feature h2 {
@@ -432,8 +575,14 @@ a p {
 // news
 
 .news {
-  background: white;
-  //box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  background: #ffe2ee;
+  padding-bottom: 4em;
+  margin-bottom: 0;
+}
+
+.news h1 {
+  margin-top: 0;
+  padding-top: 1.5em;
 }
 
 .newsarticle {
@@ -562,6 +711,7 @@ p.byline {
   padding-bottom: 15px;
   text-decoration: underline;
   text-decoration-color: @green;
+  line-height: 1.2;
 }
 
 .signup:before {
