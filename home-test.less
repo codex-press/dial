@@ -1,0 +1,672 @@
+@import "lib/_variables";
+@import (inline) "./node_modules/slick-carousel/slick/slick.css";
+
+@media (max-width: 450px) {
+  footer {
+    margin-left: 0em !important;
+  }}
+
+html {
+  background-color: @backgroundColor;
+}
+
+@media (max-width: 450px) {
+  .hed-details, .news, .viewsscroll, .list {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .newsarticle {
+    border-bottom: 1px solid @lightGrey;
+    margin-bottom: 0em;
+  }
+
+  .newsarticle p {
+    margin-bottom: 1em;
+  }
+
+  .views h1 {
+    padding-left: 0.3em;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .heading h1.hed {
+    padding-left: 0.3em;
+  }
+}
+
+@media (max-width: 800px) {
+  .cover {
+    height: 100%;
+  }
+}
+
+
+@media (min-width: 800px) {
+    .hed-content {
+      padding-right: 1em;
+      padding-top: 2em;
+    }
+}
+
+//general styling
+
+p {
+  font-family: @bodyFont;
+  font-color: gray;
+  line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headingFont;
+  line-height: 95%;
+  font-weight: 700;
+}
+
+h1.hed {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: -0.01em;
+  padding-top: 0.5em;
+  font-weight: 700;
+}
+
+.heading {
+  color: white;
+}
+
+.heading h1.hed {
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: auto;
+}
+
+a {
+  color: @fontColor;
+  text-decoration: none;
+}
+
+a p {
+  color: #6b6b6b;
+}
+
+
+.newshover h2 {
+  text-decoration-color: transparent;
+}
+
+.newshover:hover h2 {
+  text-decoration: underline;
+  text-decoration-color: @green;
+  text-decoration-skip: ink;
+  transition: 0.3s;
+}
+
+.heading, .hed-details, .news, .views, .explainer, .list {
+ max-width: 1000px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+// hero
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  margin-left: -1em;
+}
+
+.hero-container .hero {
+  width: 50%;
+  margin: 0;
+}
+
+@media (min-width: 450px) {
+  .hero-container {
+    margin-top: -1em;
+  }
+}
+@media (max-width: 800px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-container .hero {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-container {
+    margin: 0;
+  }
+}
+
+.hero {
+  margin: 0em -1em 1em -1em;
+  height: 80vh;
+}
+
+
+@media (max-width: 450px) {
+  .hero {
+    margin: 0;
+  }
+}
+
+.hero a {
+  display: block;
+  height: 100%;
+}
+
+.hero .cover {
+  position: relative;
+  height: 100%;
+  background-position: 50% 50% !important;
+}
+
+.hero .shim {
+  padding-top: 0 !important;
+}
+
+.hero .hed-details {
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  max-width: none;
+}
+
+.hero h2 {
+  display: inline;
+  color: white;
+  font-size: 3em;
+}
+
+@media (max-width: 450px) {
+  .hero h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    height: 100vh;
+    max-height: none;
+  }
+}
+
+.hed-details:hover h2 {
+  text-decoration: underline;
+  text-decoration-color: @green;
+  -webkit-text-decoration-color: @green;
+  text-decoration-skip: ink;
+}
+
+.hed-details:hover .folio,
+.hed-details:hover .dek,
+.hed-details:hover .byline {
+  filter: opacity(0);
+  transition: 0.2s ease-in-out;
+}
+
+.hero .folio {
+  display: inline-block;
+  position: relative;
+  background: @green;
+  font-weight: 400;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 1em;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.hero .dek {
+  margin-top: 0.8em;
+  color: lightgrey;
+  font-family: @bodyFont;
+}
+
+.hero .byline {
+  margin-top: 0.8em;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+// news ticker
+
+.ticker {
+  width: 3000px;
+  display: inline-block;
+  height: 1rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 55s;
+
+  & h4 {
+    display: inline-block;
+    padding: 0 0rem;
+    font-size: 2rem;
+    color: black;
+  }
+}
+
+.ticker h4 {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: black;
+  font-size: 12px;}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker:hover {
+   animation-play-state: paused;
+}
+
+@keyframes vibrate {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: -3px;
+        transform: rotate(2deg);
+    }
+    50% {
+        top: 0px;
+        transform: rotate(0deg);
+    }
+    75% {
+        top: 3px;
+        transform: rotate(-2deg);
+    }
+    100% {
+        top: 0px;
+         transform: rotate(0deg);
+    }
+}
+
+.ticker h4:hover {
+  color: @green;
+  animation: vibrate 0.1s linear 0s 3;
+}
+
+.ticker-wrap {
+  width: 110%;
+  left: -5%;
+  overflow: hidden;
+  height: 3rem;
+  padding-left: 100%;
+  position: relative;
+}
+
+// feature
+
+.feature-container {
+  position: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -3.5em;
+}
+
+.feature {
+  box-shadow: 1px 1px 10px #8e8e8e;
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
+  transition: transform .3s;
+  height: 500px;
+  width: 290px;
+  overflow: hidden;
+}
+
+.feature h2 {
+  font-size: 2em;
+  font-weight: 700;
+  padding: 5px;
+}
+
+@media (max-width: 1045px) {
+  .feature-container {
+    width: 810px;
+  }
+
+  .feature {
+    height: 390px;
+    width: 225px;
+  }
+
+  .feature h2 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 800px) {
+  .feature-container {
+    width: 100%;
+    margin-top: -3.5em;
+  }
+
+  .feature {
+    height: 450px;
+    width: 280px;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .feature h2 {
+    font-size: 2em;
+  }
+}
+
+.feature-title:before {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: inherit;
+  background: black;
+  filter: opacity(0.2);
+}
+
+.feature .feature-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  font-size: 1em;
+}
+
+.feature .cover {
+  height: 100%;
+  background-position: 50% 50% !important;
+}
+
+@media (min-width: 800px) {
+  .feature:hover {
+    transform: scale(1.05);
+  }
+}
+
+.slick-list {
+    overflow: visible;
+}
+
+.slick-slide {
+  width: 289px;
+}
+
+// news
+
+.news {
+  background: white;
+  //box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.newsarticle {
+  margin-bottom: 2em;
+}
+
+.newsarticle .cover {
+  height: 200px;
+  margin-top: 5px;
+}
+
+.newsarticle p {
+  font-size: 0.9em;
+}
+
+.newsarticle h2 {
+  font-size: 1.4em;
+  padding-top: 0.5em;
+}
+
+p.byline {
+  color: @fontColor;
+  font-size: 0.8em;
+  font-family: @headingFont;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.pubdate {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.8em;
+  color: grey;
+  text-transform: uppercase;
+  float: right;
+}
+
+//lists
+
+.list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list .listarticle {
+  height: 220px;
+  line-height: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-bottom: 1px solid @lightGrey;
+}
+
+.listarticle h2 {
+  font-size: 1.4em;
+}
+
+.list .newsinfo {
+  padding-top: 1em;
+}
+
+@media (max-width: 700px) {
+  .list p.dek {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+
+
+  .list h2 {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .list .listarticle {
+    padding-top: 0;
+    height: 100px;
+  }
+
+  .list .newsinfo {
+    padding-top: 0em;
+  }
+}
+
+.list .listarticle .cover {
+  margin-left: 0em;
+  margin-right: 1em;
+  position: relative;
+  width: 35%;
+  height: auto;
+  max-height: 200px;
+  margin-bottom: 2em;
+  float: left;
+  clear: both;
+}
+
+.list .newsarticle a {
+  color: inherit;
+  text-decoration: none;}
+
+.list .newsarticle:hover{
+  transition: 0.3s ease-in-out;
+}
+
+
+
+// subscribe
+
+.signup {
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 10000;
+  text-align: center;
+  position: relative;
+  box-shadow: none;
+
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  max-width: 1000px;
+}
+
+.signup  h2 {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  text-decoration: underline;
+  text-decoration-color: @green;
+}
+
+.signup:before {
+    content: none;
+}
+
+.subscribe {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.subscribe h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: auto;
+}
+
+#mailchimp {
+  max-width: 500px;
+  padding-bottom: 2em;
+  margin: 0 auto;
+}
+
+  #mailchimp input {
+    font-family: @headingFont;
+    border: 1px solid @green;
+    -webkit-appearance:none;
+    -webkit-border-radius: 0;
+	}
+
+		#mailchimp input.email {
+      border: 1px solid @green;
+      background: #fff;
+      box-sizing: border-box;
+      font: 18px/30px Arial, sans-serif;
+      height: 40px;
+      margin: 30px auto;
+      padding: 10px 60px 10px 20px;
+      width: 80%;
+      border-radius: 4rem;
+    }
+
+    #mailchimp input[type="submit"] {
+      position: relative;
+      font-family: @headingFont;
+      background: @green;
+      color: white;
+      float: right;
+      top: -70px;
+      right: 10%;
+      height: 40px;
+      width: 100px;
+      text-transform: uppercase;
+      font-weight: 400;
+			font-size: 12px;
+      border-top-right-radius: 4rem;
+      border-bottom-right-radius: 4rem;
+      -webkit-appearance:none;
+      transition: 0.1s ease-in;
+		}
+
+	#mailchimp input[type="submit"]:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 5px #14453D;
+    }
+
+    #mailchimp input.email {
+      font: 12px Arial, sans-serif;
+    }
+
+//misc
+
+@media (min-width: 451px) {
+  .newsarticle {
+      margin-bottom: 3em;
+  }
+}
+
+footer .social {
+  margin-top: 1em;}
+
+  footer {
+    overflow: hidden;
+    max-height: 500px;
+  }
+
+  footer #mailchimp {
+    margin-bottom: 0em !important;
+  }
+
+  footer .social {
+    margin-bottom: 0;
+  }
+
+.flex.ten-columns>* {
+  width: auto;
+}
+
+.top-news {
+  margin-bottom: 0em;
+}
+
+body {
+  padding-bottom: 0;
+}
