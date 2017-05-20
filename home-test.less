@@ -3,14 +3,24 @@
 
 //background image and top text
 
+html {
+  background: @pink;
+}
+
 #dial-menu {
   display: none;
 }
 
+.mobile-background {
+  position: static !important;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0 -1em;
+}
+
 figure.background {
   position: fixed !important;
-  width: 100vw !important;
-  height: 100vh !important;
   margin-top: -3em;
   margin-left: -1em;
   z-index: -5;
@@ -30,19 +40,28 @@ figure.background {
 }
 
 .top {
-  //width: 200%;
-  //position: absolute;
-  //top: 45%;
-  //left: 50%;
-  //transform: translate(-50%, -50%);
+  margin: 0 -1em;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: 1000px) {
+  .top {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
 }
 
 .top h1 {
   font-size: 3em;
   margin-top: 1em;
   margin-bottom: 0;
+}
+
+.top p {
+  padding: 10px 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .top .pubdate {
@@ -56,7 +75,8 @@ figure.background {
 @media (max-width: 450px) {
   footer {
     margin-left: 0em !important;
-  }}
+  }
+}
 
 html {
   background-color: @backgroundColor;
@@ -284,23 +304,6 @@ a p {
   }
 }
 
-@media (min-width: 1600px) {
-  .hero h2 {
-    font-size: 5em;
-  }
-
-  .hero .hed-details {
-    width: 60%;
-  }
-}
-
-
-@media (min-width: 1600px) {
-  .hero h2 {
-    font-size: 5em;
-  }
-}
-
 @media (max-width: 1000px) {
   .hero .hed-details {
     width: 90%;
@@ -339,6 +342,10 @@ a p {
   .hero h2 {
     font-size: 2em;
   }
+
+  .hero .dek {
+    font-size: 0.9em;
+  }
 }
 
 @media (max-width: 800px) {
@@ -347,6 +354,17 @@ a p {
     max-height: none;
   }
 }
+
+@media (min-width: 1600px) {
+  .hero h2 {
+    font-size: 5em;
+  }
+
+  .hero .hed-details {
+    width: 60%;
+  }
+}
+
 
 .hed-details:hover h2 {
   text-decoration: underline;
@@ -414,7 +432,12 @@ a p {
   text-transform: uppercase;
   font-weight: 300;
   color: black;
-  font-size: 13px;}
+  font-size: 13px;
+}
+
+.ticker #byline {
+  font-weight: 400;
+}
 
 @keyframes ticker {
   0% {
@@ -475,18 +498,46 @@ a p {
   margin-left: auto;
   margin-right: auto;
   margin-top: -2.5em;
-  max-width: 892px;
+  max-width: 938px;
 }
 
 .feature {
   box-shadow: 1px 0.5px 5px @backgroundColorDark;
   display: inline-block;
-  margin: 7.2px;
+  margin: 15px;
   vertical-align: top;
   transition: transform .3s;
   height: 380px;
   width: 280px;
   overflow: hidden;
+}
+
+.feature p {
+  font-size: 1.2em;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  color: white;
+  opacity: 0;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.feature:hover p {
+  opacity: 1;
+  transition: 350ms ease-in-out;
+}
+
+.feature:hover h2 {
+  opacity: 0;
+  transition: 350ms ease-in-out;
+}
+
+.feature:hover .feature-title {
+  background: linear-gradient(45deg, #0ed487 0%,#7db9e8 100%);;
+  transition: 350ms ease-in-out;
 }
 
 .feature h2 {
@@ -497,13 +548,13 @@ a p {
 
 @media (max-width: 1200px) {
   .feature-container {
-    width: 660px;
+    width: 698px;
   }
 
   .feature {
     height: 300px;
     width: 200px;
-    margin: 8.6px;
+    margin: 15px;
   }
 
   .feature h2 {
@@ -699,19 +750,29 @@ p.byline {
   text-align: center;
   position: relative;
   box-shadow: none;
+  background: @pink;
 
-  margin-top: 1em;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
   max-width: 1000px;
 }
 
+@media (max-width: 1000px) {
+  .signup {
+    margin: 0 -1em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .signup {
+    max-width: 90vw;
+  }
+}
+
 .signup  h2 {
   text-transform: uppercase;
-  padding-bottom: 15px;
-  text-decoration: underline;
-  text-decoration-color: @green;
   line-height: 1.2;
 }
 
@@ -782,20 +843,29 @@ p.byline {
 }
 
 footer .social {
-  margin-top: 1em;}
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
 
-  footer {
-    overflow: hidden;
-    max-height: 500px;
-  }
+footer {
+  background: none;
+  color: black;
+  overflow: hidden;
+  max-height: 500px;
+}
 
-  footer #mailchimp {
-    margin-bottom: 0em !important;
-  }
+footer a {
+  color: black;
+}
 
-  footer .social {
-    margin-bottom: 0;
-  }
+.pagetitle h2 {
+  color: black;
+}
+
+footer #mailchimp {
+  margin-bottom: 0em !important;
+}
+
 
 .flex.ten-columns>* {
   width: auto;
