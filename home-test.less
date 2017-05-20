@@ -23,6 +23,7 @@ div.space h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 3em;
+  padding: 0 1em;
 }
 
 span.outline {
@@ -66,12 +67,14 @@ figure.background {
   font-size: 3em;
   margin-top: 1em;
   margin-bottom: 0;
+  color: @green;
 }
 
 .top p {
   padding: 10px 0px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  letter-spacing: 3px;
 }
 
 .top .pubdate {
@@ -543,11 +546,12 @@ a p {
 .feature:hover p {
   opacity: 1;
   transition: 350ms ease-in-out;
+  transition-delay: 100ms;
 }
 
 .feature:hover h2 {
   opacity: 0;
-  transition: 350ms ease-in-out;
+  transition: 0ms ease-in-out;
 }
 
 .feature:hover .feature-title {
