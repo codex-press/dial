@@ -11,12 +11,26 @@ html {
   display: none;
 }
 
-.mobile-background {
-  position: static !important;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  margin: 0 -1em;
+div.space {
+  height: 50vh;
+}
+
+div.space p {
+  display: none;
+}
+
+div.space h2 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+span.outline {
+  -webkit-text-stroke-color: black;
 }
 
 figure.background {
@@ -523,6 +537,11 @@ a p {
   opacity: 0;
   font-weight: bold;
   line-height: 1;
+}
+
+.feature:hover {
+  box-shadow: 1px 0.5px 10px @backgroundColorDark;
+  transition: 350ms ease-in-out;
 }
 
 .feature:hover p {
