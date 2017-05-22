@@ -39,7 +39,7 @@ function on() {
         settings: {
           arrows: false,
           centerMode: true,
-          initialSlide: 1,
+          initialSlide: 0,
           infinite: false,
           variableWidth: true,
           centerPadding: '40px',
