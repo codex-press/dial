@@ -7,6 +7,17 @@ figure {
   margin: 1rem auto;
 }
 
+@media (max-width: 450px) {
+  figure {
+    max-width: calc(100% + 4rem);
+    margin: 1rem -2rem;
+  }
+
+  figure img {
+    //width: calc(100% + 3rem) !important;
+  }
+}
+
 figure.wide {
   width: (@textWidth + 10rem);
 }
@@ -220,14 +231,68 @@ figure.wider {
     //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIALwKi78z0hIHUjR5/vxjHgVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCTyyXZTfUuEAAAAABJRU5ErkJggg==) repeat;
   }
 
+
+
 figcaption {
-  margin-top: 10px;
-  background: @green;
-  color: white;
   font-family: 'Ubuntu', sans-serif;
-  padding: 10px;
   font-size: .7em;
   line-height: 1.3em;
+  padding-top: 10px;
+}
+
+@media (max-width: 450px) {
+  figcaption {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+figcaption.block {
+  background: black;
+  color: white;
+  padding: 15px;
+}
+
+figcaption a {
+  color: white;
+}
+
+span.photo-credit {
+  font-family: 'Lora', serif;
+  color: inherit;
+  font-weight: 200;
+}
+
+span.photo-credit:before {
+  content: "  ";
+}
+
+@media (min-width: 1300px) {
+  figcaption.block {
+    position: absolute;
+    width: 300px;
+    top: 40px;
+    left: calc(100% - 10px);
+    padding: 4em 2em;
+  }
+
+  figcaption:before {
+    content: "";
+    display: block;
+    margin-bottom: 15px;
+    height: 5px;
+    width: 25px;
+    background: white;
+  }
+
+  span.photo-credit {
+    font-family: 'Lora', serif;
+    color: white;
+  }
+
+  span.photo-credit:before {
+    content: "  ";
+  }
 }
 
 figure.full-width,

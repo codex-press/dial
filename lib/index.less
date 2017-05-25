@@ -111,7 +111,7 @@ div > time.pubdate {
 }
 
 .sharing-icons {
-  width: @textWidth;
+  width: 34rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
@@ -142,6 +142,16 @@ p.lede {
     margin: 1.6rem auto;
     padding-bottom: 0em;
   }
+}
+
+.article-meta:after {
+  content: "";
+  display: block;
+  margin-bottom: 15px;
+  height: 2px;
+  width: 200px;
+  background: @detailColor;
+  margin: auto;
 }
 
 section > p:first-child,
@@ -190,7 +200,7 @@ blockquote, aside, ul, ol {
   max-width: @textWidth;
   margin: 2rem auto;
   padding: 0.1rem 1rem;
-  background: @green;
+  background: @detailColor;
   font-family: @headingFont;
   font-size: 0.8em;
   letter-spacing: 0.5px;
@@ -270,7 +280,7 @@ blockquote, aside, ul, ol {
 
 .dropcap {
   position: relative;
-  background: @green;
+  background: @detailColor;
   color: white;
   margin-right: 10px;
   margin-top: 12px;
@@ -284,10 +294,6 @@ blockquote, aside, ul, ol {
 
 code {
   background-color: @codeBackgroundColor;
-}
-
-.photo-credit {
-  color: @photoCreditColor;
 }
 
 p a {
@@ -338,58 +344,20 @@ li {
 aside.pullquote {
   font-family: @headingFont;
   color: @fontColor;
-  font-weight: bold;
-  text-align: left;
-  margin: 1rem auto;
-  padding-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1.2rem auto;
+  padding: 1.6rem;
+  line-height: 1.8;
   font-size: 1.6rem;
-  line-height: 1;
-  width: @textWidth;
-}
-
-aside.pullquote:before {
-  content: '';
-  display: block;
-  position: relative;
-  width: 45%;
-  border-top: 5px solid @green;
-  top: -0.3em;
+  width: 38rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 aside.pullquote.left,
 aside.pullquote.right {
   width: 25%;
-}
-
-aside.pullquote:after {
-  content: '';
-  display: none;
-  position: relative;
-  width: 45%;
-  border-top: 5px solid @green;
-  margin-top: 1.3em;
-  top: -0.8em;
-}
-
-aside.pullquote.right:before {
-  content: '';
-  display: block;
-  position: relative;
-  width: 45%;
-  margin-left: 7em;
-  border-top: 5px solid @green;
-  top: -0.3em;
-}
-
-aside.pullquote.right:after {
-  content: '';
-  display: none;
-  position: relative;
-  width: 45%;
-  margin-left: 7em;
-  border-top: 5px solid @green;
-  margin-top: 1.3em;
-  top: -0.8em;
 }
 
 aside.pullquote .attribution:before {
@@ -408,33 +376,46 @@ aside.sidebar {
   }
 }
 
-@media @floatBreak {
+.article-text {
+  max-width: 34rem;
+  margin: 0 auto;
+}
 
-  aside.pullquote.left,
-  aside.sidebar.left {
-    float: left;
-    clear: both;
-    margin-right: 1rem;
-  }
+aside.pullquote.left,
+aside.sidebar.left {
+  float: left;
+  clear: both;
+  margin-right: 1rem;
+}
 
-  aside.pullquote.right,
-  aside.sidebar.right {
-    float: right;
-    clear: both;
-    margin-left: 1rem;
-  }
+aside.pullquote.right,
+aside.sidebar.right {
+  float: right;
+  clear: both;
+  margin-left: 1rem;
+}
 
-  aside.pullquote.right,
-  aside.pullquote.left {
-    @oneThirdLine: (@lineHeight / 3);
-    margin-top: ~'@{oneThirdLine}rem';
-  }
+aside.pullquote.right,
+aside.pullquote.left {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 50%;
+  text-align: left;
+  @oneThirdLine: (@lineHeight / 3);
+  //margin-top: ~'@{oneThirdLine}rem';
+}
 
-  aside.sidebar.right,
-  aside.sidebar.left {
-    margin-top: 0;
-  }
+aside.sidebar.right,
+aside.sidebar.left {
+  margin-top: 0;
+}
 
+.title:after {
+  content: "";
+  position: relative;
+  width: 200px;
+  bottom: 1px solid white;
 }
 
 blockquote {
@@ -443,52 +424,35 @@ blockquote {
   font-size: 1em;
   margin: 1rem auto;
   padding: 0 0.5rem;
-  border-left: 5px solid @green;
+  border-left: 5px solid @detailColor;
 }
 
 @media (max-width: 800px) {
-
-  aside.sidebar.left,
-  aside.pullquote.left {
-  font-size: 1.2em;
-  }
-
-  aside.sidebar.right,
-  aside.pullquote.right {
-  font-size: 1.2em;
-  }
-}
-
-
-// this causes the lines above and below the quotes to align left
-
-@media (max-width: 1087px) {
-
   aside.pullquote.left,
-  aside.pullquote.right {
-    width: @textWidth;
+  aside.sidebar.left {
+    margin-right: 0;
   }
 
-  aside.pullquote.right:before,
-  aside.pullquote.right:after {
-    margin-left: 0em;
+  aside.pullquote.right,
+  aside.sidebar.right {
+    margin-left: 0;
   }
-}
 
-// on extra large screens they stay somewhat in the middle
-
-@media (min-width: 1400px) {
-
-  aside.sidebar.left,
+  aside.pullquote.right,
   aside.pullquote.left {
-    margin-left: 5%;
+    text-align: left;
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    @oneThirdLine: (@lineHeight / 3);
+    //margin-top: ~'@{oneThirdLine}rem';
   }
 
   aside.sidebar.right,
-  aside.pullquote.right {
-    margin-right: 5%;
+  aside.sidebar.left {
+    margin-top: 0;
   }
-
 }
 
 //latest stories
@@ -722,3 +686,17 @@ blockquote {
 			#mailchimp input[type="submit"]:hover {
         color: @green;
       }
+
+article.feature h2 {
+    display: table;
+   font-size: 1em;
+   text-transform: uppercase;
+   background: black;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   margin-top: 2em;
+   margin-left: auto;
+   margin-right: auto;
+   font-weight: 400;
+  }

@@ -3,7 +3,6 @@
 
 //background image and top text
 
-
 #dial-menu {
   display: none;
 }
@@ -73,16 +72,6 @@ figure.background {
 }
 
 // breakpoints
-
-@media (max-width: 450px) {
-  footer {
-    margin-left: 0em !important;
-  }
-}
-
-html {
-  background-color: @backgroundColor;
-}
 
 @media (max-width: 450px) {
   .hed-details, .news, .viewsscroll, .list {
@@ -203,7 +192,53 @@ a p {
   }
 }
 
-// hero
+// featured stories
+
+.feature-section {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.feature-section .cover {
+  position: relative;
+  height: 100%;
+  background-position: 50% 50% !important;
+  max-width: none !important;
+}
+
+.feature-section .cover:before  {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: inherit;
+  background: #000;
+  -webkit-filter: opacity(.3);
+  filter: opacity(.3);
+}
+
+.feature-section .hed-details {
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.feature-stories {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+
+// hero - normal
 
 .hero-container {
   display: flex;
@@ -264,7 +299,7 @@ a p {
 }
 
 .hero .cover:before  {
-   content: ' ';
+  content: ' ';
   position: absolute;
   top: 0;
   left: 0;
@@ -355,7 +390,6 @@ a p {
   }
 }
 
-
 .hed-details:hover h2 {
   text-decoration: underline;
   text-decoration-color: @green;
@@ -407,6 +441,63 @@ a p {
 
   .hero .dek {
     font-size: 0.8em;
+  }
+}
+
+// hero - outline
+
+.hero.outline .folio,
+.hero.outline .dek {
+  display: none;
+  background: none;
+}
+
+.hero.outline .hed-details:hover h2 {
+  -webkit-text-fill-color: white;
+  text-decoration: none;
+}
+
+.hero.outline .cover:before {
+  content: none;
+  background: none;
+}
+
+.hero.outline h2 {
+  text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .hero.outline h2 {
+    font-size: 8em;
+    -webkit-text-stroke-width: 1px;
+
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero.outline h2 {
+    font-size: 12em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero.outline h2 {
+    font-size: 4em;
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero.outline h2 {
+    font-size: 22em;
+  }
+
+  .hero.outline .hed-details {
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -495,9 +586,9 @@ a p {
   margin-bottom: 1em;
 }
 
-// feature
+// cards
 
-.feature-container {
+.card-container {
   position: inherit;
   margin-left: auto;
   margin-right: auto;
@@ -505,7 +596,7 @@ a p {
   max-width: 938px;
 }
 
-.feature {
+.card {
   box-shadow: 1px 1px 10px #8a8a8a;
   display: inline-block;
   margin: 15px;
@@ -516,13 +607,13 @@ a p {
   overflow: hidden;
 }
 
-.feature h2 {
+.card h2 {
   font-size: 1.6em;
   font-weight: 700;
   padding: 5px;
 }
 
-.feature .feature-title {
+.card .card-title {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -534,7 +625,7 @@ a p {
   font-size: 1em;
 }
 
-.feature p {
+.card p {
   position: absolute;
   text-align: left;
   font-size: 14px;
@@ -547,23 +638,23 @@ a p {
   margin-top: 10px;
 }
 
-.feature p.dek {
+.card p.dek {
   line-height: 1.2;
   color: @fontColor;
   text-transform: none;
   font-family: @bodyFont;
 }
 
-.feature:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
-.feature:hover p {
+.card:hover p {
   opacity: 1;
   position: relative;
 }
 
-.feature:hover h2 {
+.card:hover h2 {
   position: relative;
   font-size: 18px;
   padding-left: 10px;
@@ -575,12 +666,12 @@ a p {
   margin-left: 0;
 }
 
-.feature:hover .feature-title {
+.card:hover .card-title {
   background: white;
   justify-content: flex-start;
 }
 
-.feature-title:not(:hover):before {
+.card-title:not(:hover):before {
   content: ' ';
   position: absolute;
   z-index: -1;
@@ -594,58 +685,58 @@ a p {
 }
 
 @media (min-width: 1200px) {
-  .feature:hover h2 {
+  .card:hover h2 {
     font-size: 22px;
   }
 
-  .feature p {
+  .card p {
     font-size: 18px;
   }
 }
 
 @media (max-width: 1200px) {
-  .feature-container {
+  .card-container {
     width: 698px;
   }
 
-  .feature {
+  .card {
     height: 300px;
     width: 200px;
     margin: 15px;
   }
 
-  .feature h2 {
+  .card h2 {
     font-size: 1.4em;
   }
 }
 
 @media (max-width: 800px) {
-  .feature-container {
+  .card-container {
     width: 100%;
     margin-top: -2.5em;
   }
 
-  .feature {
+  .card {
     height: 400px;
     margin-left: 1em;
     margin-right: 1em;
   }
 
-  .feature h2 {
+  .card h2 {
     font-size: 1.5em;
     padding: 10px;
   }
-	
-  .feature:hover h2 {
+
+  .card:hover h2 {
     font-size: 22px;
   }
 
-  .feature p {
+  .card p {
     font-size: 18px;
   }
 }
 
-.feature .cover {
+.card .cover {
   height: 100%;
   background-position: 50% 50% !important;
 }
