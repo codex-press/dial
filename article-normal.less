@@ -1,0 +1,68 @@
+@import 'lib/_variables.less';
+@import 'lib/index.less';
+
+.title-content {
+  display: block;
+  margin-top: 4em;
+}
+
+@media (min-width: 1200px) {
+  .article-wrapper {
+    width: 48rem;
+    margin: 2em auto 0em auto;
+  }
+
+  .article-meta {
+    float: right;
+    width: 25%;
+    margin-top: 1.5em;
+  }
+
+  .article-meta:after {
+    display: none;
+  }
+
+  .article-text {
+    float: left;
+    width: 66%;
+  }
+
+  .title-content {
+    width: 48rem;
+    margin: 4em auto 2em auto;
+  }
+
+  .title-content h1.hed,
+  .title-content .dek,
+  .title-content .folio {
+    max-width: none;
+  }
+
+  .title-content h1.hed {
+    font-size: 2.5em;
+  }
+
+  .title-content .dek {
+    font-size: 1.1em;
+  }
+}
+
+.wider figcaption .photo-credit {
+  color: white;
+}
+
+@media (min-width: 800px) {
+  .center-text-on-top {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .center-text-on-top {
+    display: flex;
+  }
+
+  .title-content {
+    display: none;
+  }
+}

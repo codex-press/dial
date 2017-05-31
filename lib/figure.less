@@ -19,9 +19,14 @@ figure.wide {
 }
 
 figure.wider {
-  width: 90%;
-  height: 600px;
-  margin-top: 5em;
+  width: calc(100% + 4rem);
+  height: 500px;
+  margin: 0 -2em 2em;
+  max-width: none;
+}
+
+figure.wider img {
+  width: 100%;
 }
 
 @keyframes dropText {
