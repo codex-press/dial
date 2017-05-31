@@ -18,14 +18,16 @@ figure.wide {
   width: (@textWidth + 10rem);
 }
 
-figure.wider {
+figure.wider,
+figure.article-wide-hero {
   width: calc(100% + 4rem);
   height: 500px;
   margin: 0 -2em 2em;
   max-width: none;
 }
 
-figure.wider img {
+figure.wider img,
+figure.article-wide-hero img {
   width: 100%;
 }
 
@@ -132,7 +134,8 @@ figure.wider img {
 }
 
 @media (max-width: 800px) {
-  figure.wider {
+  figure.wider,
+  figure.article-wide-hero {
     margin: 0rem -2rem 4rem;
     width: calc(100% + 4rem);
     max-width: initial;
@@ -152,7 +155,8 @@ figure.wider img {
     //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIALwKi78z0hIHUjR5/vxjHgVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCTyyXZTfUuEAAAAABJRU5ErkJggg==) repeat;
   }
 
-  figure.wider:after, {
+  figure.wider:after,
+  figure.article-wide-hero:after {
     content: '';
     z-index: 1000;
     color: white;
