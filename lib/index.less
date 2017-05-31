@@ -30,10 +30,6 @@ article {
    padding: 0em 1em 1em 1em;
 }
 
-.full-window h1 {
-  text-align: center;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: @headingFont;
   line-height: 95%;
@@ -357,6 +353,7 @@ aside.pullquote {
 aside.pullquote.left,
 aside.pullquote.right {
   width: 25%;
+  line-height: 1.2;
 }
 
 aside.pullquote .attribution:before {
@@ -396,7 +393,8 @@ aside.sidebar.right {
 
 aside.pullquote.right,
 aside.pullquote.left {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
   border: none;
   width: 50%;
@@ -510,14 +508,16 @@ blockquote {
 
 @media (max-width: 450px) {
   body {
-    padding: 0; }
+    padding: 0;
+  }
 
   .latest .cover {
-    display: none;}
+    display: none;
+  }
 
-    .newsarticle {
-      height: auto;
-}
+  .newsarticle {
+    height: auto;
+  }
 }
 
 .post {
