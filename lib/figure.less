@@ -240,6 +240,8 @@ figcaption {
   line-height: 1.3em;
   padding-top: 10px;
   color: black;
+  max-width: 34rem;
+  margin: 0 auto;
 }
 
 figcaption.block {
@@ -293,7 +295,7 @@ figcaption.block span.photo-credit a {
 }
 
 @media (min-width: 1300px) {
-  figcaption.block {
+  figure:not(.wide) figcaption.block {
     position: absolute;
     width: 300px;
     top: 40px;
@@ -301,7 +303,7 @@ figcaption.block span.photo-credit a {
     padding: 4em 2em;
   }
 
-  figcaption.block:before {
+  figure:not(.wide) figcaption.block:before {
     content: "";
     display: block;
     margin-bottom: 15px;

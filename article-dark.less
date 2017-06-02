@@ -40,6 +40,11 @@ p a {
 
 .authorbox {
   background: white;
+  color: black;
+}
+
+.authorbox p {
+  color: black;
 }
 
 figcaption {
@@ -54,4 +59,37 @@ aside.pullquote {
 .dropcap {
   background: white;
   color: black;
+}
+
+.article-meta:after {
+  content: "";
+  display: block;
+  margin: 20px auto;
+  height: 2px;
+  width: 200px;
+  background: white;
+}
+
+figcaption.block {
+  background: white;
+  color: black;
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+figcaption.block .photo-credit {
+  color: black !important;
+}
+
+@media (min-width: 1300px) {
+
+  figure:not(.wide) figcaption.block:before {
+    content: "";
+    display: block;
+    margin-bottom: 15px;
+    height: 5px;
+    width: 25px;
+    background: black;
+  }
+
 }
