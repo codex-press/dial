@@ -420,6 +420,7 @@ a p {
 }
 
 .feature {
+  position: relative;
   box-shadow: 1px 1px 10px #8e8e8e;
   display: inline-block;
   margin: 20px;
@@ -428,12 +429,13 @@ a p {
   height: 500px;
   width: 290px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .feature h2 {
   font-size: 2em;
   font-weight: 700;
-  padding: 5px;
+  padding: 10px;
 }
 
 @media (max-width: 1045px) {
@@ -737,6 +739,13 @@ body {
 
 .text-left .hed-details {
   text-align: left;
+}
+
+@media (min-width: 800px) {
+  .text-left .hed-details {
+    width: 50%;
+    margin-left: -6em;
+  }
 }
 
 .text-left .hed-details h2 {

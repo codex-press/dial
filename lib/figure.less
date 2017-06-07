@@ -121,6 +121,8 @@ figure.article-wide-hero img {
 .center-text-on-top p.dek {
   margin-top: 0;
   line-height: 1;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 .center-text-on-top .sharing-icons {
@@ -137,6 +139,72 @@ figure.article-wide-hero img {
 
 .center-text-on-top a {
   color: white;
+}
+
+.center-text-on-top.left h1.hed {
+  margin-top: 0em;
+}
+
+.center-text-on-top.left p.dek {
+  font-size: 1.2em;
+}
+
+.center-text-on-top.left h1.hed,
+.center-text-on-top.left p.dek {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 50%;
+}
+
+.center-text-on-top.left h1.hed {
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 4em;
+  /*color: #ffdc9b !important;*/
+  /*mix-blend-mode: exclusion;*/
+}
+
+@media (max-width: 1400px) {
+  .center-text-on-top.left h1.hed,
+  .center-text-on-top.left p.dek {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .center-text-on-top.left h1.hed {
+    font-size: 4em;
+  }
+
+  .center-text-on-top.left h1.hed,
+  .center-text-on-top.left p.dek {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  .center-text-on-top.left h1.hed {
+    font-size: 3em;
+    margin-top: 1em;
+  }
+
+  .center-text-on-top.left p.dek {
+  font-size: 1em;
+}
+
+}
+
+@media (max-width: 450px) {
+  .center-text-on-top.left h1.hed {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 360px) {
+  .center-text-on-top.left h1.hed {
+    font-size: 2em;
+  }
 }
 
 @media (max-width: 800px) {
