@@ -730,3 +730,107 @@ footer .social {
 body {
   padding: 0;
 }
+
+//hero modifiers
+
+//1. Text on the left of the image
+
+.text-left .hed-details {
+  text-align: left;
+}
+
+.text-left .hed-details h2 {
+  text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+  .text-left .hed-details h2 {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .text-left .hed-details h2 {
+    font-size: 5em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .text-left .hed-details h2 {
+    font-size: 7em;
+  }
+}
+
+.text-left .hed-details .folio {
+  text-align: center;
+  background: none;
+  padding: 0;
+}
+
+//2. Outline text
+
+.outline h2 {
+  text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.hero.outline .folio,
+.hero.outline .dek {
+  display: none;
+  background: none;
+}
+
+.outline .hed-details:hover h2 {
+  -webkit-text-fill-color: white;
+  text-decoration: none;
+}
+
+.feature.outline .feature-title:before,
+.feature.blue .feature-title:before,
+.hero.outline .cover:before,
+.hero.text-left .cover:before {
+  content: none;
+  background: none;
+}
+
+@media (max-width: 1000px) {
+  .hero.outline h2 {
+    font-size: 8em;
+    -webkit-text-stroke-width: 1px;
+
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero.outline h2 {
+    font-size: 12em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero.outline h2 {
+    font-size: 4em;
+    -webkit-text-stroke-width: 1px;
+
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero.outline h2 {
+    font-size: 22em;
+  }
+
+  .hero.outline .hed-details {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 1045px) {
+  .feature.blue h2,
+  .feature.outline h2 {
+    font-size: 3em;
+  }
+}
