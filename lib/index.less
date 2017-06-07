@@ -189,27 +189,28 @@ blockquote, aside, ul, ol {
   }
 
 .summary h2 {
-  font-size: 1em;}
+  font-size: 1em;
+}
 
 .authorbox {
   max-width: @textWidth;
   margin: 2rem auto;
-  padding: 0.1rem 1rem;
-  background: @detailColor;
   font-family: @headingFont;
   font-size: 0.8em;
   letter-spacing: 0.5px;
   font-weight: 300;
-  color: white;
 }
 
-.authorbox a {
-  color: white;
-  font-weight: bold;
+.authorbox p {
+  margin-top: 20px;
 }
 
-.authorbox a:hover {
-  color: black;
+.authorbox:before {
+  content: "";
+  display: block;
+  height: 7px;
+  width: 35px;
+  background: black;
 }
 
 @media @floatBreak {
