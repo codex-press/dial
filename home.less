@@ -1,6 +1,10 @@
 @import "lib/_variables";
 @import (inline) "./node_modules/slick-carousel/slick/slick.css";
 
+article {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQoU2NkQAOf/n//z8fIyYgujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQAFGCfwqf1W7gAAAABJRU5ErkJggg==);
+}
+
 @media (max-width: 450px) {
   footer {
     margin-left: 0em !important;
@@ -73,6 +77,8 @@ h1.hed {
   letter-spacing: -0.01em;
   padding-top: 0.5em;
   font-weight: 700;
+  margin: 0.2em -100em;
+  transform: translateX(1.6%);
 }
 
 .heading {
@@ -319,7 +325,6 @@ a p {
     font-size: 0.8em;
   }
 }
-
 
 // news ticker
 
@@ -723,5 +728,5 @@ footer .social {
 }
 
 body {
-  padding-bottom: 0;
+  padding: 0;
 }
