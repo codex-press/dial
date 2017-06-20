@@ -30,12 +30,10 @@
     color: white;
   }
 
-  @media (max-width: 800px) {
-    &:not(.active) .bar.hide {
-      transform: translateY(-100%);
-    }
+  &:not(.active) .bar.hide {
+    transform: translateY(-100%);
   }
-
+  
   .logo {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -105,21 +103,21 @@
   &.active .menu-main {
     transform: translateX(-100%);
     animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 10ms;
+    animation-delay: 5ms;
     animation-fill-mode:forwards;
   }
 
   &.active .menu-social {
     transform: translateX(-100%);
     animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 110ms;
+    animation-delay: 55ms;
     animation-fill-mode:forwards;
   }
 
   &.active .menu-meta {
     transform: translateX(-100%);
     animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 210ms;
+    animation-delay: 105ms;
     animation-fill-mode:forwards;
   }
 
@@ -211,6 +209,11 @@
       transition: transform .3s ease-out;
       transform: none;
     }
+    
+    &:not(.active) .bar.hide {
+     transform: none;
+    }
+  
 
     .logo {
       text-align: right;
