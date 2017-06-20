@@ -250,20 +250,25 @@ a p {
   }
 }
 
+
+@media (max-width: 800px) {
+  .hero {
+    height: 75vh;
+    max-height: none;
+  }
+}
+
 @media (max-width: 450px) {
+  .hero {
+    height: 50vh;
+  }
+  
   .hero h2 {
     font-size: 2em;
   }
 
   .hero .dek {
     font-size: 0.9em;
-  }
-}
-
-@media (max-width: 800px) {
-  .hero {
-    height: 50vh;
-    max-height: none;
   }
 }
 
@@ -276,7 +281,6 @@ a p {
     width: 60%;
   }
 }
-
 
 .hed-details:hover h2 {
   text-decoration: underline;
