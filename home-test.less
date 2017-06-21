@@ -166,6 +166,16 @@ a p {
   border-radius: 5px;
 }
 
+@media (max-width: 600px) {
+  .hero {
+    margin: 1em;
+  }
+
+  body {
+    margin-top: 6em;
+  }
+}
+
 .hero a {
   display: block;
   height: 100%;
@@ -180,9 +190,8 @@ a p {
 }
 
 .hero:hover {
-  transform: scale(1.03);
+  box-shadow: 1px 1px 25px #8f8f8f;
   transition: 0.3s ease-in-out;
-  box-shadow: 1px 1px 25px #8e8e8e;
 }
 
 .hero .cover:before  {
@@ -197,6 +206,21 @@ a p {
   background: #000;
   -webkit-filter: opacity(.3);
   filter: opacity(.3);
+}
+
+.hero:hover .cover:before {
+  content: ' ';
+ position: absolute;
+ border-radius: 5px;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ padding: inherit;
+ background: #000;
+ -webkit-filter: opacity(0.5);
+ filter: opacity(0.5);
+ transition: 0.35s ease-in-out;
 }
 
 .hero .shim {
