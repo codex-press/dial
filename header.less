@@ -19,7 +19,7 @@
     padding: 6px;
     height: 50px;
     width: 150px;
-    transition: transform .3s ease-out;
+    transition: transform .25s ease-in-out;
     border: none;
     transform: rotate(-90deg);
   }
@@ -33,7 +33,7 @@
   &:not(.active) .bar.hide {
     transform: translateY(-100%);
   }
-  
+
   .logo {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -209,11 +209,11 @@
       transition: transform .3s ease-out;
       transform: none;
     }
-    
+
     &:not(.active) .bar.hide {
      transform: none;
     }
-  
+
 
     .logo {
       text-align: right;
