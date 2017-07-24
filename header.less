@@ -194,42 +194,41 @@
   text-decoration: underline;
 }
 
-@media (max-width: 800px) {
-  #dial-menu {
+#dial-menu {
 
-    .bar {
-      position: fixed;
-      background: none;
-      top: 0;
-      left: 0;
-      z-index: 100000;
-      padding: 6px;
-      height: 50px;
-      width: 100%;
-      transition: transform .3s ease-out;
-      transform: none;
-    }
+  .bar {
+    position: fixed;
+    background: none;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    padding: 6px;
+    height: 50px;
+    width: 100%;
+    transition: transform .3s ease-out;
+    transform: none;
+  }
 
-    &:not(.active) .bar.hide {
-     transform: none;
-    }
+  &:not(.active) .bar.hide {
+   transform: none;
+  }
 
 
-    .logo {
-      text-align: right;
-      padding-right: 5px;
-    }
+  .logo {
+    text-align: right;
+    padding-right: 5px;
+  }
 
-    .bar:after {
-      content: "";
-      background: #000;
-      background-size: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
+  .bar:after {
+    content: "";
+    background: #000;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
   }
 }
+
