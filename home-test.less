@@ -128,7 +128,7 @@ a p {
   display: flex;
   flex-direction: row;
   width: calc(100vw - 7em);
-  margin: 4em;
+  margin: 3em;
 }
 
 .hero-container .hero {
@@ -168,6 +168,10 @@ a p {
   .hero {
     margin: 1em;
   }
+  
+  .hero-container {
+    width: calc(100vw - 3em);
+    margin: 0;
 }
 
 .hero a {
@@ -261,10 +265,6 @@ border-bottom-right-radius: 10px;
 }
 
 @media (max-width: 800px) {
-  .hero .hed-details {
-    width: 90%;
-  }
-
    .hero h2 {
     font-size: 3em;
   }
@@ -300,10 +300,6 @@ border-bottom-right-radius: 10px;
   .hero h2 {
     font-size: 5em;
   }
-
-  .hero .hed-details {
-    width: 60%;
-  }
 }
 
 .hed-details:hover h2 {
@@ -326,8 +322,8 @@ border-bottom-right-radius: 10px;
 .hero .dek {
   margin-top: 1em;
   color: white;
-  font-size: 1.4em;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: normal;
   font-family: @bodyFont;
 }
 
@@ -339,11 +335,7 @@ border-bottom-right-radius: 10px;
 }
 
 @media (max-width: 450px) {
-  .hero .hed-details {
-    width: 90%;
-  }
-
-   .hero h2 {
+    .hero h2 {
     font-size: 2em;
   }
 
