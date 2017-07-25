@@ -127,13 +127,13 @@ a p {
 .hero-container {
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  margin-left: -1em;
+  width: calc(100vw - 7em);
+  margin: 4em;
 }
 
 .hero-container .hero {
   width: 50%;
-  margin: 0;
+  margin: 1em;
 }
 
 @media (min-width: 450px) {
@@ -678,46 +678,6 @@ body {
 
 //hero modifiers
 
-//1. Text on the left of the image
-
-.text-left .hed-details {
-  text-align: left;
-}
-
-@media (min-width: 800px) {
-  .text-left .hed-details {
-    width: 50%;
-    margin-left: -6em;
-  }
-}
-
-.text-left .hed-details h2 {
-  text-transform: uppercase;
-}
-
-@media (min-width: 800px) {
-  .text-left .hed-details h2 {
-    font-size: 4.5em;
-  }
-}
-
-@media (min-width: 1000px) {
-  .text-left .hed-details h2 {
-    font-size: 5em;
-  }
-}
-
-@media (min-width: 1600px) {
-  .text-left .hed-details h2 {
-    font-size: 7em;
-  }
-}
-
-.text-left .hed-details .folio {
-  text-align: center;
-  background: none;
-  padding: 0;
-}
 
 //2. Outline text
 
