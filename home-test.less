@@ -427,7 +427,6 @@ p.byline {
   height: 300px;
   margin-bottom: 4em;
   border-top: 1px solid @lightGrey;
-
 }
 
 .top-story .news-article {
@@ -440,6 +439,7 @@ p.byline {
 }
 
 .top-story .cover {
+  background-position: 50% 50% !important;
   width: 48%;
 }
 
@@ -494,8 +494,13 @@ p.byline {
     float: none;
     margin: 0;
   }
+}
 
-
+@media (max-width: 450px) {
+  .top-story .cover {
+    transform: translateX(-2em);
+    width: calc(100% + 4em);
+  }
 }
 
 //lists
@@ -536,8 +541,6 @@ p.byline {
   float: none;
   margin-bottom: 1em;
 }
-
-
 
 // subscribe
 
