@@ -308,7 +308,7 @@ a p {
 // feature
 
 .news {
-  margin: 4em 2em 0em;
+  margin: 2em 2em 0em;
 }
 
 .feature-container {
@@ -386,9 +386,7 @@ a p {
 
 // news
 
-.newsarticle {
 
-}
 
 .newsarticle .cover {
   height: 300px;
@@ -421,71 +419,122 @@ p.byline {
   padding-top: 5px;
 }
 
-//lists
-
-.list {
-  margin-left: auto;
-  margin-right: auto;
+.top-story-container {
+  max-width: 1000px;
 }
 
-.list .listarticle {
-  height: 220px;
-  line-height: 1em;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  padding-top: 1em;
+.top-story {
+  height: 300px;
+  margin-bottom: 4em;
+  border-top: 1px solid @lightGrey;
+
 }
 
-.listarticle h2 {
-  font-size: 1.4em;
+.top-story .news-article {
+  display: table;
 }
 
-.list .newsinfo {
-  padding-top: 1em;
+.top-story h2 {
+  text-transform: uppercase;
+  font-size: 2em;
 }
 
-@media (max-width: 700px) {
-  .list p.dek {
-    display: none;
-  }
+.top-story .cover {
+  width: 48%;
 }
 
-@media (max-width: 450px) {
-
-
-  .list h2 {
-    font-size: 1em;
-    font-weight: 600;
-  }
-
-  .list .listarticle {
-    padding-top: 0;
-    height: 100px;
-  }
-
-  .list .newsinfo {
-    padding-top: 0em;
-  }
-}
-
-.list .listarticle .cover {
-  margin-left: 0em;
-  margin-right: 1em;
-  position: relative;
-  width: 35%;
-  height: auto;
-  max-height: 200px;
-  margin-bottom: 2em;
+.top-story.left .cover {
   float: left;
   clear: both;
+  margin-right: 2em;
 }
 
-.list .newsarticle a {
-  color: inherit;
-  text-decoration: none;}
+.top-story.right .cover {
+  float: right;
+  clear: both;
+  margin-left: 2em;
+}
 
-.list .newsarticle:hover{
-  transition: 0.3s ease-in-out;
+.top-story.left .pubdate,
+.top-story.left .newsinfo {
+  text-align: left;
+  float: none;
+}
+
+.top-story.right .pubdate,
+.top-story.right .newsinfo {
+  text-align: right;
+  float: none;
+}
+
+.top-story .newsinfo {
+  margin-top: 1em;
+}
+
+@media (max-width: 800px) {
+  .top-story {
+    height: auto;
+    margin-bottom: 2em;
+    padding-top: 2em;
+  }
+
+  .top-story.left .newsinfo,
+  .top-story.right .newsinfo,
+  .top-story.left .pubdate,
+  .top-story.right .pubdate {
+    text-align: center;
+  }
+
+  .top-story .cover {
+    width: 100%;
+  }
+
+  .top-story.left .cover,
+  .top-story.right .cover {
+    float: none;
+    margin: 0;
+  }
+
+
+}
+
+//lists
+
+.list-item {
+  height: 120px;
+}
+
+.side-bar .cover {
+  float: left;
+  clear: both;
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+}
+
+.side-bar {
+  background: @lightGrey;
+  padding: 2em;
+}
+
+.side-bar h1 {
+ font-size: 2em;
+}
+
+.article-list  {
+  margin-bottom: 1em;
+}
+
+.article-list h2 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.article-list .pubdate {
+  font-size: 0.8em;
+  font-weight: 400;
+  float: none;
+  margin-bottom: 1em;
 }
 
 
