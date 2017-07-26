@@ -37,6 +37,8 @@ function on() {
       {
         breakpoint: 310,
         settings: {
+          dots: false,
+          focusOnSelect: true,
           arrows: false,
           centerMode: false,
           initialSlide: 0,

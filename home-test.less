@@ -10,7 +10,7 @@ body {
 p {
   font-family: @bodyFont;
   font-color: gray;
-  line-height: 1.5em;
+  line-height: 1.4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -176,9 +176,13 @@ a p {
   transition: 0.35s ease-in-out;
 }
 
+.hero .cover {
+  background-size: fill;
+}
+
 .hero .hed-details {
   z-index: 1;
-  width: 100%;
+  width: 85%;
   margin: 0;
   padding: 1em;
   bottom: 0;
@@ -190,7 +194,7 @@ a p {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 125%;
   height: 140%;
   padding: 0;
   background: linear-gradient(transparent 1%, black 70%);
@@ -240,7 +244,7 @@ a p {
   .hero {
     height: 100vh;
   }
-  
+
   .hero h2 {
     font-size: 2em;
   }
@@ -317,7 +321,7 @@ a p {
   margin: 10px;
   vertical-align: top;
   transition: transform .3s;
-  width: 290px;
+  //width: 290px;
   overflow: hidden;
   z-index: 1;
 }
@@ -366,17 +370,18 @@ a p {
   background-position: 50% 50% !important;
 }
 
-.feature:hover {
-  transform: scale(1.05);
+.feature:hover .cover {
+  transform: scale(1.02);
+  transition: 350ms ease-in-out;
 }
 
 
 .slick-list {
-    overflow: visible;
+  overflow: visible;
 }
 
 .slick-slide {
-  width: 289px;
+  width: 290px;
 }
 
 // news
