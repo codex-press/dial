@@ -1,48 +1,8 @@
 @import "lib/_variables";
 @import (inline) "./node_modules/slick-carousel/slick/slick.css";
 
-@media (max-width: 450px) {
-  footer {
-    margin-left: 0em !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .hed-details, .news, {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  .newsarticle {
-    border-bottom: 1px solid @lightGrey;
-    margin-bottom: 0em;
-  }
-
-  .newsarticle p {
-    margin-bottom: 1em;
-  }
-
-  .views h1 {
-    padding-left: 0.3em;
-  }
-
-  .heading h1.hed {
-    padding-left: 0.3em;
-  }
-}
-
-@media (max-width: 800px) {
-  .cover {
-    height: 100%;
-  }
-}
-
-
-@media (min-width: 800px) {
-    .hed-content {
-      padding-right: 1em;
-      padding-top: 2em;
-    }
+body {
+  padding: 0;
 }
 
 //general styling
@@ -111,9 +71,9 @@ a p {
   transition: 0.3s;
 }
 
-.heading, .hed-details, .news, .views, .explainer, .list {
-   margin-left: auto;
-   margin-right: auto;
+.newshover:hover .cover {
+  filter: brightness(0.7);
+  transition: 350ms ease-in-out;
 }
 
 // hero
@@ -121,7 +81,7 @@ a p {
 .hero-container {
   display: flex;
   flex-direction: row;
-  margin: 0em 4em;
+  margin: 0;
 }
 
 .hero-container .hero {
@@ -130,9 +90,11 @@ a p {
 }
 
 .hero {
-  margin: 0em 4em;
   height: 80vh;
-  //border-radius: 10px;
+}
+
+.hero .shim {
+  padding-top: 0 !important;
 }
 
 @media (min-width: 450px) {
@@ -181,7 +143,6 @@ a p {
 }
 
 .hero .cover {
-  //border-radius: 10px;
   position: relative;
   height: 100%;
   background-position: 50% 50% !important;
@@ -189,9 +150,8 @@ a p {
 }
 
 .hero .cover:before  {
-   content: ' ';
+  content: ' ';
   position: absolute;
-  //border-radius: 5px;
   top: 0;
   left: 0;
   width: 100%;
@@ -204,17 +164,16 @@ a p {
 
 .hero:hover .cover:before {
   content: ' ';
- position: absolute;
- //border-radius: 5px;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- padding: inherit;
- background: #000;
- -webkit-filter: opacity(0.3);
- filter: opacity(0.3);
- transition: 0.35s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: inherit;
+  background: #000;
+  -webkit-filter: opacity(0.3);
+  filter: opacity(0.3);
+  transition: 0.35s ease-in-out;
 }
 
 .hero .hed-details {
@@ -224,7 +183,6 @@ a p {
   padding: 1em;
   bottom: 0;
   left: 0;
-  text-align: left;
 }
 
 .hero .hed-details:before {
@@ -302,7 +260,6 @@ a p {
   height: 7px;
   width: 100%;
   background: @green;
-  z-index: -1;
 }
 
 .hero .folio {
@@ -312,9 +269,6 @@ a p {
   font-weight: 400;
   color: #fff;
   margin-bottom: 1em;
-  -webkit-transform: none;
-  transform: none;
-  z-index: 100;
 }
 
 .hero.top {
@@ -363,7 +317,7 @@ a p {
 // feature
 
 .news {
-  margin: 4em 2em 2em;
+  margin: 4em 2em 0em;
 }
 
 .feature-container {
@@ -384,7 +338,6 @@ a p {
 .feature h2 {
   font-size: 2em;
   font-weight: 700;
-  padding: 10px;
 }
 
 @media (max-width: 800px) {
@@ -426,11 +379,10 @@ a p {
   background-position: 50% 50% !important;
 }
 
-@media (min-width: 800px) {
-  .feature:hover {
-    transform: scale(1.05);
-  }
+.feature:hover {
+  transform: scale(1.05);
 }
+
 
 .slick-list {
     overflow: visible;
@@ -443,11 +395,11 @@ a p {
 // news
 
 .newsarticle {
-  margin-bottom: 2em;
+
 }
 
 .newsarticle .cover {
-  height: 200px;
+  height: 300px;
   margin-top: 5px;
 }
 
@@ -469,11 +421,12 @@ p.byline {
 }
 
 .pubdate {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 0.8em;
+  font-family: @bodyFont;
+  font-size: 0.9em;
   color: grey;
   text-transform: uppercase;
   float: right;
+  padding-top: 5px;
 }
 
 //lists
@@ -489,7 +442,6 @@ p.byline {
   margin-bottom: 1em;
   padding-bottom: 1em;
   padding-top: 1em;
-  border-bottom: 1px solid @lightGrey;
 }
 
 .listarticle h2 {
@@ -551,12 +503,10 @@ p.byline {
 .signup {
   padding-left: 10%;
   padding-right: 10%;
-  z-index: 10000;
   text-align: center;
   position: relative;
   box-shadow: none;
 
-  margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -582,7 +532,6 @@ p.byline {
 .subscribe h3 {
     font-size: 20px;
     font-weight: 300;
-    margin: auto;
 }
 
 #mailchimp {
@@ -599,7 +548,7 @@ p.byline {
 }
 
 #mailchimp input.email {
-  border-bottom: 1px solid black;
+  border: 1px solid black;
   background: none;
   box-sizing: border-box;
   font: 18px 'proxima-nova',sans-serif;
@@ -610,6 +559,7 @@ p.byline {
 }
 
 #mailchimp input[type="submit"] {
+  border-left: 1px solid black;
   position: relative;
   font-family: Oswald, sans-serif;
   background: none;
@@ -625,37 +575,35 @@ p.byline {
   -webkit-appearance: none;
 }
 
-//misc
-
-@media (min-width: 451px) {
-  .newsarticle {
-      margin-bottom: 3em;
-  }
+#mailchimp input[type="submit"]:hover {
+  background: black;
+  color: white;
 }
+
+
+//misc
 
 footer .social {
   margin-top: 1em;
 }
 
-  footer {
-    overflow: hidden;
-    max-height: 500px;
-  }
-
-  footer #mailchimp {
-    margin-bottom: 0em !important;
-  }
-
-  footer .social {
-    margin-bottom: 0;
-  }
-
-.top-news {
-  margin-bottom: 0em;
+footer {
+  overflow: hidden;
+  max-height: 500px;
 }
 
-body {
-  padding: 0;
+footer #mailchimp {
+  margin-bottom: 0em !important;
+}
+
+footer .social {
+  margin-bottom: 0;
+}
+
+@media (max-width: 450px) {
+  footer {
+    margin-left: 0em !important;
+  }
 }
 
 //hero modifiers
