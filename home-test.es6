@@ -26,7 +26,7 @@ function off() {
 
 function on() {
   $('.feature-container').slick({
-    centerMode: true,
+    centerMode: false,
     infinite: false,
     centerPadding: '60px',
     slidesToShow: 3,
@@ -38,7 +38,7 @@ function on() {
         breakpoint: 310,
         settings: {
           arrows: false,
-          centerMode: true,
+          centerMode: false,
           initialSlide: 0,
           infinite: false,
           variableWidth: true,
