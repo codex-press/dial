@@ -13,9 +13,9 @@ article.ready.then(() => {
 let lastWidth = 100000;
 
 function resize() {
-  if (lastWidth > 1600 && window.innerWidth < 1600)
+  if (lastWidth > 2500 && window.innerWidth < 2500)
     on();
-  else if (lastWidth < 1600 && window.innerWidth > 1600)
+  else if (lastWidth < 2500 && window.innerWidth > 2500)
     off();
   lastWidth = window.innerWidth;
 }
