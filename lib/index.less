@@ -146,7 +146,7 @@ p.lede {
   margin: 20px auto;
   height: 2px;
   width: 200px;
-  background: @detailColor;
+  background: @detailColorDark;
 }
 
 section > p:first-child,
@@ -276,7 +276,7 @@ blockquote, aside, ul, ol {
 
 span.dropcap {
   position: relative;
-  background: @detailColor;
+  background: @detailColorDark;
   color: white;
   margin-right: 10px;
   margin-top: 12px;
@@ -300,7 +300,7 @@ code {
 p a {
   color: black;
   text-decoration: underline;
-  text-decoration-color: @green;
+  text-decoration-color: @detailColor;
   text-decoration-skip: ink;
 }
 
@@ -310,7 +310,7 @@ h2 a {
 }
 
 a:hover {
-  color: @green;
+  color: @detailColor;
 }
 
 a:visited {
@@ -361,7 +361,7 @@ aside.pullquote {
 aside.pullquote.left,
 aside.pullquote.right {
   width: 25%;
-  line-height: 1.2;
+  line-height: 1.05;
 }
 
 aside.pullquote .attribution:before {
@@ -486,6 +486,7 @@ blockquote {
   margin-bottom: 2em;
   float: left;
   clear: both;
+  background-position: 50% 50% !important;
 }
 
 .newsarticle p {
@@ -500,8 +501,13 @@ blockquote {
   text-decoration: none;}
 
 .newsarticle:hover{
-  color: grey;
+  color: @detailColor;
   transition: 0.3s ease-in-out;
+}
+
+.newsarticle:hover .cover {
+  filter: brightness(0.7);
+  transition: 350ms ease-in-out;
 }
 
 .newsarticle h2 {
@@ -565,21 +571,20 @@ blockquote {
     float: none;
     width: 100%;
     clear: none;
-    height: 200px;
     margin-top: 5em;
   }
-  
+
   .latest h3 {
     margin-top: 0;
   }
-  
+
   .latest .cover {
     width: 200px;
     height: 120px;
     margin-right: 1em;
     margin-bottom: 1em;
   }
-  
+
   .newsarticle {
     margin-bottom: 80px;
   }
@@ -589,7 +594,7 @@ blockquote {
   .newsarticle {
     margin-bottom: 0;
   }
-    
+
   .latest .cover {
     display: block;
     width: 100%;
@@ -726,7 +731,7 @@ blockquote {
 
 		}
 			#mailchimp input[type="submit"]:hover {
-        color: @green;
+        color: @detailColor;
       }
 
 article.feature h2 {
