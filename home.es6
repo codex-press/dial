@@ -13,20 +13,20 @@ article.ready.then(() => {
 let lastWidth = 100000;
 
 function resize() {
-  if (lastWidth > 800 && window.innerWidth < 800)
+  if (lastWidth > 2500 && window.innerWidth < 2500)
     on();
-  else if (lastWidth < 800 && window.innerWidth > 800)
+  else if (lastWidth < 2500 && window.innerWidth > 2500)
     off();
   lastWidth = window.innerWidth;
 }
 
 function off() {
-  $('.feature-container').slick('unslick');
+  $('.horizontal-scroll-container').slick('unslick');
 }
 
 function on() {
-  $('.feature-container').slick({
-    centerMode: true,
+  $('.horizontal-scroll-container').slick({
+    centerMode: false,
     infinite: false,
     centerPadding: '60px',
     slidesToShow: 3,
@@ -37,8 +37,10 @@ function on() {
       {
         breakpoint: 310,
         settings: {
+          dots: false,
+          focusOnSelect: true,
           arrows: false,
-          centerMode: true,
+          centerMode: false,
           initialSlide: 0,
           infinite: false,
           variableWidth: true,

@@ -21,11 +21,11 @@ function resize() {
 }
 
 function off() {
-  $('.feature-container').slick('unslick');
+  $('.horizontal-scroll-container').slick('unslick');
 }
 
 function on() {
-  $('.feature-container').slick({
+  $('.horizontal-scroll-container').slick({
     centerMode: false,
     infinite: false,
     centerPadding: '60px',
