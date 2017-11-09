@@ -1,14 +1,12 @@
-import $ from 'jquery';
-import article from 'article';
-import 'slick-carousel';
+import $ from './vendor/jquery.js';
+import { article } from '/app/index.js';
+import './vendor/slick.js';
 
-article.ready.then(() => {
 
-  window.addEventListener('resize', resize);
-  resize();
+console.log('wtf', $)
 
-});
-
+article.ready.then(resize)
+window.addEventListener('resize', resize)
 
 let lastWidth = 100000;
 
