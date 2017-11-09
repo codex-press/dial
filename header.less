@@ -1,60 +1,51 @@
 @import "lib/_variables";
 
+@import url('https://fonts.googleapis.com/css?family=Oswald:400');
 
-#dial-menu {
 
-  font-size: 16px;
+body > header {
 
   & {
     font-family: "Raleway", sans-serif;
-    user-select: none;
   }
 
   .bar {
-    position: fixed;
-    top: 50px;
-    left: -50px;
-    background: @detailColorDark;
-    z-index: 100000;
-    padding: 6px;
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 20px;
     height: 50px;
-    width: 150px;
-    transition: transform .25s ease-in-out;
-    border: none;
-    transform: rotate(-90deg);
-  }
-
-  .bar a,
-  .bar a:visited {
-    text-decoration: none;
+    background: black;
     color: white;
+    transition: transform .3s ease-out;
+    font-size: 16px;
+    user-select: none;
+    z-index: 10000;
   }
 
-  &:not(.active) .bar.hide {
+  html.scrolling-down & .bar {
     transform: translateY(-100%);
   }
 
   .logo {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+    text-align: right;
+    padding-right: 5px;
+  }
+
+  .bar a {
     text-decoration: none;
-    max-width: 100%;
-    text-align: left;
-    padding-left: 60px;
-    padding-top: 2px;
-    font-size: 20px;
+    color: white;
   }
 
   .open {
-    font-size: 20px !important;
-    color: white;
-    position: absolute;
-    height: 100%;
-    width: 50px;
-    padding: 14px 3px;
-    text-align: center;
-    top: 0;
-    left: 0;
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    font-size: 20px;
+    cursor: pointer;
   }
 
   .open:hover {
@@ -62,7 +53,43 @@
     background: none;
   }
 
-  .open,
+  .dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+    background-color: #aaa;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: content-box;
+    border: 5px solid black;
+  }
+ 
+  .dot.active {
+    background-color: white;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    max-width: 100%;
+    font-size: 20px;
+  }
+
   .close {
     font-size: 2em;
     cursor: pointer;
@@ -94,37 +121,6 @@
     z-index: 1000002;
   }
 
-
-  &.active nav {
-    transform: none;
-    transition: transform 150ms ease-in;
-  }
-
-  &.active .menu-main {
-    transform: translateX(-100%);
-    animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 5ms;
-    animation-fill-mode:forwards;
-  }
-
-  &.active .menu-social {
-    transform: translateX(-100%);
-    animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 55ms;
-    animation-fill-mode:forwards;
-  }
-
-  &.active .menu-meta {
-    transform: translateX(-100%);
-    animation: 0.5s ease-in 0s slidein 1;
-    animation-delay: 105ms;
-    animation-fill-mode:forwards;
-  }
-
-   .legal nav a {
-    display: inline;
-  }
-
   &:before {
     content: ' ';
     position: fixed;
@@ -144,6 +140,35 @@
     opacity: 1;
   }
 
+  &.active nav {
+    transform: none;
+    transition: transform 150ms ease-in;
+  }
+
+  .menu-main,
+  .menu-social,
+  .menu-meta {
+    transform: translateX(-100%);
+    animation: 0.5s ease-in 0s slidein 1;
+    animation-fill-mode:forwards;
+  }
+
+  .menu-social {
+    animation-delay: 55ms;
+    padding-top: 2em;
+    font-size: 0.8em;
+  }
+
+  .menu-meta {
+    animation-delay: 105ms;
+    padding-top: 2em;
+    font-size: 0.7em;
+  }
+
+  .menu-main {
+    text-transform: uppercase;
+  }
+
   nav a {
     display: block;
     text-decoration: none;
@@ -157,74 +182,22 @@
     color: @detailColor;
   }
 
+  .legal {
+    font-family: @headingFont;
+    position: absolute;
+    bottom: 2em;
+    font-size: 0.6em;
+    text-decoration: underline;
+  }
+
 }
+
 
 @keyframes slidein {
-    0% {
-      transform: translateX(-100%);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-}
-
-.menu-main {
-  text-transform: uppercase;
-}
-
-.menu-social {
-  padding-top: 2em;
-  font-size: 0.8em;
-}
-
-.menu-meta {
-  padding-top: 2em;
-  font-size: 0.7em;
-}
-
-.legal {
-  font-family: @headingFont;
-  position: absolute;
-  bottom: 2em;
-  font-size: 0.6em;
-  text-decoration: underline;
-}
-
-#dial-menu {
-
-  .bar {
-    position: fixed;
-    background: none;
-    top: 0;
-    left: 0;
-    z-index: 100000;
-    padding: 6px;
-    height: 50px;
-    width: 100%;
-    transition: transform .3s ease-out;
-    transform: none;
+  0% {
+    transform: translateX(-100%);
   }
-
-  &:not(.active) .bar.hide {
-   transform: none;
-  }
-
-
-  .logo {
-    text-align: right;
-    padding-right: 5px;
-  }
-
-  .bar:after {
-    content: "";
-    background: #000;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
+  100% {
+    transform: translateX(0);
   }
 }

@@ -10,8 +10,8 @@ export default class Header {
     this.update()
 
     const el = dom.one('body > header')
-    const open = e => el.all('nav').addClass('active')
-    const close = e => el.all('nav').removeClass('active')
+    const open = e => el.addClass('active')
+    const close = e => el.removeClass('active')
     el.delegate('click', '.open', open)
     el.delegate('click', '.close, a', close)
   }
