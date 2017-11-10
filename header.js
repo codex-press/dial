@@ -33,8 +33,10 @@ export default class Header {
     }
     else {
       // XXX should slice based on index
-      const dotHTML = paths.slice(0, 11).map((p,i) => {
-        const active = index === i ? 'active' : ''
+      const start = Math.floor(index / 10) * 10
+      console.log({ start })
+      const dotHTML = paths.slice(start, start + 11).map((p,i) => {
+        const active = index - start === i ? 'active' : ''
         return `
           <a class="dot ${ active }"
             href="${ p }"

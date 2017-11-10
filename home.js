@@ -1,9 +1,6 @@
-import $ from './vendor/jquery.js';
+import './vendor/jquery.js';
 import { article } from '/app/index.js';
 import './vendor/slick.js';
-
-
-console.log('wtf', $)
 
 article.ready.then(resize)
 window.addEventListener('resize', resize)
