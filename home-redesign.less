@@ -53,7 +53,11 @@ a p {
 }
 
 .article {
-  padding: 0 2em;
+  border: 1px solid black;
+  padding: 2em;
+  &:nth-child(even) {
+    padding-top: 4em;
+  }
 }
 
 .article-info {
@@ -107,4 +111,24 @@ body > header {
   .logo {
     text-align: center !important;
   }
+}
+
+//
+
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
 }

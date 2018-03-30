@@ -1,3 +1,5 @@
+import './vendor/jquery.js';
+
 (function($) {
   $.fn.visible = function(partial) {
 
