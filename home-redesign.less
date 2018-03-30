@@ -1,4 +1,9 @@
-@import "lib/_variables";
+@import "lib/_variables.less";
+@import "header";
+
+body {
+  padding: 0;
+}
 
 p {
   font-family: @bodyFont;
@@ -42,7 +47,8 @@ a p {
 // articles-list
 
 .article-list {
-  margin: 4em auto 2em;
+  padding-top: 8em;
+  margin: 0em auto 2em;
   max-width: 1200px;
 }
 
@@ -93,4 +99,12 @@ p.byline {
   font-size: 0.8em;
   font-weight: lighter;
   text-transform: uppercase;
+}
+
+// header
+
+body > header {
+  .logo {
+    text-align: center !important;
+  }
 }

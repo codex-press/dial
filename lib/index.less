@@ -33,7 +33,7 @@ article {
 h1, h2, h3, h4, h5, h6 {
   font-family: @headingFont;
   line-height: 95%;
-  font-weight: 700;
+  font-weight: 600;
   max-width: @textWidth;
   margin: 1rem auto;
  }
@@ -69,7 +69,7 @@ h1.large, h1.xlarge, h1.xxlarge {
 
 p {
   font-family: @bodyFont;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 200;
   line-height: @lineHeight;
   max-width: @textWidth;
@@ -146,7 +146,7 @@ p.lede {
   margin: 20px auto;
   height: 2px;
   width: 200px;
-  background: @detailColorDark;
+  background: @detailColor;
 }
 
 section > p:first-child,
@@ -276,7 +276,7 @@ blockquote, aside, ul, ol {
 
 span.dropcap {
   position: relative;
-  background: @detailColorDark;
+  background: @detailColor;
   color: white;
   margin-right: 10px;
   margin-top: 12px;
@@ -307,14 +307,6 @@ p a {
 h2 a {
   color: black;
   text-decoration: none;
-}
-
-a:hover {
-  color: @detailColor;
-}
-
-a:visited {
-  color: @anchorVisitedColor;
 }
 
 .share-menu {
