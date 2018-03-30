@@ -41,9 +41,9 @@ export default class Header {
             data-in-stream="true">
           </a>
         `
-      }).join('') 
+      }).join('')
 
-      dom.elem('body > header .dots').innerHTML = dotHTML 
+      dom.elem('body > header .dots').innerHTML = dotHTML
     }
 
   }
@@ -75,5 +75,3 @@ export default class Header {
 
 //   resetDebounced();
 // });
-
-

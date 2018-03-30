@@ -1,12 +1,12 @@
 @import "lib/_variables";
-
 @import url('https://fonts.googleapis.com/css?family=Oswald:400');
 
 
 body > header {
 
   & {
-    font-family: "Raleway", sans-serif;
+    font-family: @logoFont, sans-serif;
+    user-select: none;
   }
 
   .bar {
@@ -74,7 +74,7 @@ body > header {
     box-sizing: content-box;
     border: 5px solid black;
   }
- 
+
   .dot.active {
     background-color: white;
   }

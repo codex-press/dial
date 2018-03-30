@@ -1,0 +1,96 @@
+@import "lib/_variables";
+
+p {
+  font-family: @bodyFont;
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headingFont;
+  line-height: 95%;
+  font-weight: 700;
+}
+
+h1.hed {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 3em;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: auto;
+}
+
+a {
+  color: @fontColor;
+  text-decoration: none;
+}
+
+a p {
+  color: #6b6b6b;
+}
+
+.article-hover:hover .cover {
+  filter: saturate(1);
+  transition: 200ms ease-in-out;
+}
+
+// articles-list
+
+.article-list {
+  margin: 4em auto 2em;
+  max-width: 1200px;
+}
+
+.article {
+  padding: 0 2em;
+}
+
+.article-info {
+  text-align: center;
+}
+
+.article .cover {
+  filter: saturate(0);
+}
+
+.article .cover::before {
+  content: "";
+  background-image: url();
+  background-size: 50px 50px;
+  display: block;
+  position: absolute;
+  bottom: -100px;
+}
+
+.article-info {
+  padding-top: 1em;
+}
+
+.article p {
+  font-size: 0.9em;
+}
+
+.article h2 {
+  font-size: 1.4em;
+  padding-top: 0.5em;
+}
+
+p.byline {
+  color: @fontColor;
+  font-size: 0.8em;
+  font-family: @headingFont;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.article .folio {
+  font-family: @headingFont;
+  font-size: 0.8em;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
