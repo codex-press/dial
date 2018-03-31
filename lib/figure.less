@@ -2,12 +2,11 @@
 
 figure {
   width: @textWidth;
-  max-width: 100%;
   max-height: 100vh;
-  margin: 1rem auto;
+  margin: 1em 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   figure {
     max-width: calc(100% + 2rem);
     margin: 1rem -1rem;
@@ -38,18 +37,6 @@ figure.wider img {
     max-height: 100%;
   }
 
-   figure.border:after {
-    content: "";
-    position: absolute;
-    height: 90%;
-    width: 100%;
-    top: -10px;
-    left: -10px;
-    z-index: -1;
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGklEQVQYV2PkVVz4//P9eEYGJIDCgYlTKAgAkusEBoo88swAAAAASUVORK5CYII=);
-    //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIALwKi78z0hIHUjR5/vxjHgVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCTyyXZTfUuEAAAAABJRU5ErkJggg==) repeat;
-  }
-
   figure.wider:after {
     content: '';
     z-index: 1000;
@@ -65,18 +52,6 @@ figure.wider img {
     background-size: contain;
   }
 }
-
- .border img:after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: -10px;
-    left: -10px;
-    z-index: -1;
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGklEQVQYV2PkVVz4//P9eEYGJIDCgYlTKAgAkusEBoo88swAAAAASUVORK5CYII=);
-    //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIALwKi78z0hIHUjR5/vxjHgVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCTyyXZTfUuEAAAAABJRU5ErkJggg==) repeat;
-  }
 
 figcaption {
   font-family: 'Ubuntu', sans-serif;

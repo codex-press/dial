@@ -7,13 +7,13 @@ body {
 
 p {
   font-family: @bodyFont;
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: @headingFont;
   line-height: 95%;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h1.hed {
@@ -46,35 +46,65 @@ a p {
 
 // articles-list
 
-.article-list {
-  padding-top: 8em;
-  margin: 0em auto 2em;
+.article-list, .hero {
+  margin: 0em auto;
   max-width: 1200px;
 }
 
-.article {
-  border: 1px solid black;
-  padding: 2em;
-  &:nth-child(even) {
-    padding-top: 4em;
+@media (max-width: 1200px) {
+  .article-list {
+    margin: 0em 1em 2em;
   }
 }
 
-.article-info {
-  text-align: center;
+.article:not(.hero) {
+  min-height: 350px;
+  margin-bottom: 4em;
+  border-bottom: 1px solid @lightGrey;
 }
 
 .article .cover {
+  display: block;
   filter: saturate(0);
+  background-position: 50% 50%;
+  width: 48%;
+  max-height: 350px;
+  float: left;
+  clear: both;
+  margin-right: 3em;
+  margin-top: -2em;
 }
 
-.article .cover::before {
-  content: "";
-  background-image: url();
-  background-size: 50px 50px;
+.article .cover img {
   display: block;
+  max-width: 100%;
+  max-height: 100%;
   position: absolute;
-  bottom: -100px;
+}
+
+.article:nth-child(even) .cover {
+  float: right;
+  clear: both;
+  margin-right: 0;
+  margin-left: 3em;
+}
+
+@media (max-width: 800px) {
+  .article {
+    height: auto;
+  }
+
+  .article .cover {
+    float: none;
+    width: 100%;
+    clear: none;
+  }
+
+  .article:nth-child(even) .cover {
+    float: none;
+    clear: none;
+    margin-left: 0;
+  }
 }
 
 .article-info {
@@ -82,53 +112,53 @@ a p {
 }
 
 .article p {
-  font-size: 0.9em;
+  font-size: 1.2em;
 }
 
 .article h2 {
-  font-size: 1.4em;
-  padding-top: 0.5em;
-}
-
-p.byline {
-  color: @fontColor;
-  font-size: 0.8em;
-  font-family: @headingFont;
-  font-weight: 200;
+  font-size: 2em;
   text-transform: uppercase;
+  padding-top: 0.5em;
 }
 
 .article .folio {
   font-family: @headingFont;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: lighter;
   text-transform: uppercase;
 }
 
-// header
+// hero
 
-body > header {
-  .logo {
-    text-align: center !important;
-  }
+.hero {
+  max-width: 1200px;
+  height: auto;
 }
 
-//
-
-.come-in {
-  transform: translateY(500px) opacity(0);
-  animation: come-in 0.8s ease forwards;
+.hero .article {
+  height: initial;
+  border: none;
+  margin-bottom: 0;
 }
 
-.come-in:nth-child(odd) {
-  animation-duration: 0.6s;
+.hero .article .article-info {
+  position: relative;
+  top: -80px;
+  width: 70%;
+  margin: 1em auto;
+  padding: 50px;
+  text-align: center;
+  background: white;
 }
 
-.already-visible {
-  transform: translateY(0) opacity(1);
-  animation: none;
+.hero .article .cover {
+  float: none;
+  width: 100%;
+  max-width: 1200px;
+  max-height: none;
+
 }
 
-@keyframes come-in {
-  to { transform: translateY(0) opacity(1); }
+.hero .article:nth-child(even) .cover {
+  clear: none;
 }
