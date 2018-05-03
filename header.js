@@ -7,6 +7,7 @@ export default class Header {
   constructor({ store }) {
     this.store = store
     this.store.subscribe(() => this.update())
+    this.update()
 
     const el = dom.one('body > header')
     const open = e => el.addClass('active')
@@ -14,11 +15,14 @@ export default class Header {
     el.delegate('click', '.open', open)
     el.delegate('click', '.close, a', close)
 
-    this.update()
   }
 
 
   update() {
+
+    const dots = dom.elem('body > header .dots')
+    if (!dots) return
+
     const stream = selectors.stream(this.store)
     const index = selectors.streamIndex(this.store)
 
@@ -30,7 +34,7 @@ export default class Header {
     const paths = selectors.streamPaths(this.store)
 
     if (!paths || paths.length === 1) {
-      dom.elem('body > header .dots').innerHTML = ''
+      dots.innerHTML = ''
     }
     else {
       const start = Math.floor(index / 10) * 10
@@ -44,7 +48,7 @@ export default class Header {
         `
       }).join('')
 
-      dom.elem('body > header .dots').innerHTML = dotHTML
+      dots.innerHTML = dotHTML
     }
 
   }
