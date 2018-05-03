@@ -7,13 +7,14 @@ export default class Header {
   constructor({ store }) {
     this.store = store
     this.store.subscribe(() => this.update())
-    this.update()
 
     const el = dom.one('body > header')
     const open = e => el.addClass('active')
     const close = e => el.removeClass('active')
     el.delegate('click', '.open', open)
     el.delegate('click', '.close, a', close)
+
+    this.update()
   }
 
 
