@@ -188,14 +188,27 @@ a p {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .hero .article .article-info {
     position: relative;
-    top: -50px;
+    top: -10vh;
     width: auto;
-    margin: 0em 1em 1em 1em;
+    margin: 0em 1em 0em 1em;
     padding: 25px;
     text-align: center;
     background: white;
+  }
+
+  .hero .article {
+    margin-top: 2em;
+    height: auto;
+  }
+
+  .hero .article .cover {
+    float: none;
+    height: 70vh;
+    width: 100%;
+    max-width: 1200px;
+    max-height: none;
   }
 }
